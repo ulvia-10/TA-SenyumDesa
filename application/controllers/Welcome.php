@@ -20,6 +20,11 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$data = array(
+
+			'namafolder'	=> "dashboard",
+			'namafileview'	=> "V_dashboard"
+		);
+		$this->load->view('templating/template_backend', $data);
 	}
 }

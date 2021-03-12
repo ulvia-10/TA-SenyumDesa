@@ -27,7 +27,24 @@ class Login extends CI_Controller
         $this->load->view('templating/template_start', $data);
     }
 
+    function register(){
+        $data = array(
+            'namafolder' => "login",
+            'namafileview' => "V_register"
+        );
+        $this->load->view('templating/template_register',$data);
 
+        
+    }
+    function forgetpassword(){
+        $data = array(
+            'namafolder' => "login",
+            'namafileview' => "V_forgetpassword"
+        );
+        $this->load->view('templating/template_forgetpassword',$data);
+
+        
+    }
 
     // process login
     function processLogin()
@@ -57,13 +74,23 @@ class Login extends CI_Controller
 
                 // pencocokan password
                 if (password_verify($password, $row['password'])) {
+                    
 
+                    // add session
+                    $data_session = array(
+
+                        'sess_id_profile'   => $row['id_profile'],
+                        'sess_fullname'     => $row['full_name'],
+                        'sess_level'        => $row['level']
+                    );
+                    $this->session->set_userdata( $data_session );
 
                     // switch case | pencocokan level
                     switch ($row['level']) {
 
                         case 'pusat':
                             # code... redirect atau link menuju ke ?
+                            redirect('dashboard');
                             break;
 
                         case 'korwil':
@@ -77,7 +104,7 @@ class Login extends CI_Controller
 
 
 
-                    echo "Bener";
+                    // echo "Bener ". $row['level'];
                 } else {
 
                     echo "pw salah";
@@ -99,5 +126,15 @@ class Login extends CI_Controller
 
 
         // bener | not registered | account status | password
+    }
+
+
+
+
+    // logout
+    function logout() {
+
+        $this->session->sess_destroy();
+        redirect('login');
     }
 }

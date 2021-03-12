@@ -70,7 +70,7 @@
 
     <!-- jquery -->
     <script src="<?php echo base_url() ?>assets/frontend/js/core.min.js"></script>
-
+ 
     <!-- Search -->
     <script src="<?php echo base_url() ?>assets/frontend/search/search.js"></script>
 

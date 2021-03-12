@@ -8,15 +8,12 @@
 
                 <div class="card p-2-0 p-sm-2-5 my-2-0">
 
-
-
                     <div class="mb-4 text-center">
-                        <h2 class="font-weight-normal mb-0">Welcome to <span class="text-primary">Amava</span>
+                        <h2 class="font-weight-normal mb-0">Welcome to <span class="text-primary">Senyum Desa<i class="fas fa-desktop-alt    "></i></span>
                         </h2>
                         <p class="mb-0">Login to your account.</p>
 
                     </div>
-
 
                     <!-- Flashdata -->
                     <?php echo $this->session->flashdata('msg') ?>
@@ -53,14 +50,13 @@
 
                         <div class="row mt-2">
                             <div class="col-sm-6 mb-2 mb-sm-0">
-                                <div class="custom-control custom-checkbox">
+                                <!-- <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="login-remember">
-                                    <label class="custom-control-label display-30" for="login-remember">Keep me
-                                        signed in</label>
-                                </div>
+                                    <label class="custom-control-label display-30" for="login-remember">Keep me signed in</label>
+                                </div> -->
                             </div>
                             <div class="col-sm-6 text-left text-sm-right">
-                                <a href="password-recovery.html" class="m-link-muted small">Forgot password?</a>
+                            <a href="<?php echo base_url('login/forgetpassword')?>" class="m-link-muted small">Forgot password?</a>
                             </div>
 
                             <div class="col-md-12 center">
@@ -69,10 +65,10 @@
                         </div>
 
                         <div class="text-center text-small mt-4">
-                            <span>Don't have an account yet? <a href="register.html"
+                            <span>Don't have an account yet? <a href="<?php echo base_url('login/register')?>"
                                     class="text-primary">Register</a></span>
                         </div>
-
+                
                     </form>
                     <!-- End Form -->
 
