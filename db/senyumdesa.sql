@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Mar 2021 pada 16.24
+-- Waktu pembuatan: 17 Mar 2021 pada 14.37
 -- Versi server: 10.1.35-MariaDB
 -- Versi PHP: 7.2.9
 
@@ -37,15 +37,39 @@ CREATE TABLE `akun_profile` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `photo` varchar(75) DEFAULT NULL,
   `gender` enum('P','L') NOT NULL,
-  `full_name` varchar(100) NOT NULL
+  `full_name` varchar(100) NOT NULL,
+  `id_cabang` int(11) DEFAULT NULL,
+  `cv` varchar(40) NOT NULL,
+  `tempat_lahir` varchar(40) NOT NULL,
+  `tanggal_lahir` date NOT NULL,
+  `asal` varchar(50) NOT NULL,
+  `reason_join` text NOT NULL,
+  `bukti_follow` enum('Sudah','Belum') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `akun_profile`
 --
 
-INSERT INTO `akun_profile` (`id_profile`, `username`, `password`, `level`, `status_account`, `created_at`, `photo`, `gender`, `full_name`) VALUES
-(1, 'lusi', '$2y$10$VxjO.cX5XbsnXJ1vF6Atf.sbBrkjfcdiFWPjYCexjsJ2UNGp5UONG', 'pusat', 'active', '2021-03-12 14:31:13', NULL, 'P', 'Lusi Tiana ');
+INSERT INTO `akun_profile` (`id_profile`, `username`, `password`, `level`, `status_account`, `created_at`, `photo`, `gender`, `full_name`, `id_cabang`, `cv`, `tempat_lahir`, `tanggal_lahir`, `asal`, `reason_join`, `bukti_follow`) VALUES
+(1, 'lusi', '$2y$10$VxjO.cX5XbsnXJ1vF6Atf.sbBrkjfcdiFWPjYCexjsJ2UNGp5UONG', 'pusat', 'active', '2021-03-12 14:31:13', NULL, 'P', 'Lusi Tiana ', NULL, '', '', '0000-00-00', '', '', 'Sudah');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `data_donasi`
+--
+
+CREATE TABLE `data_donasi` (
+  `id_donasi` int(11) NOT NULL,
+  `no_rekening` varchar(50) NOT NULL,
+  `nama_donatur` varchar(50) NOT NULL,
+  `tgl_donasi` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `status` varchar(50) NOT NULL,
+  `jml_donasi` int(50) NOT NULL,
+  `id_cabang` int(11) DEFAULT NULL,
+  `id_profile` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -94,7 +118,8 @@ CREATE TABLE `data_keuangan` (
   `deskripsi` varchar(250) NOT NULL,
   `tanggal_laporan` datetime NOT NULL,
   `jenis_keuangan` enum('masuk','keluar') NOT NULL,
-  `nominal` int(15) NOT NULL
+  `nominal` int(15) NOT NULL,
+  `tipe` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -118,7 +143,16 @@ CREATE TABLE `master_cabang` (
 -- Indeks untuk tabel `akun_profile`
 --
 ALTER TABLE `akun_profile`
-  ADD PRIMARY KEY (`id_profile`);
+  ADD PRIMARY KEY (`id_profile`),
+  ADD KEY `FK_akun_profile_master_cabang` (`id_cabang`);
+
+--
+-- Indeks untuk tabel `data_donasi`
+--
+ALTER TABLE `data_donasi`
+  ADD PRIMARY KEY (`id_donasi`),
+  ADD KEY `FK_data_donasi_master_cabang` (`id_cabang`),
+  ADD KEY `FK_data_donasi_akun_profile` (`id_profile`);
 
 --
 -- Indeks untuk tabel `data_informasiprofile`
@@ -179,6 +213,19 @@ ALTER TABLE `master_cabang`
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
+
+--
+-- Ketidakleluasaan untuk tabel `akun_profile`
+--
+ALTER TABLE `akun_profile`
+  ADD CONSTRAINT `FK_akun_profile_master_cabang` FOREIGN KEY (`id_cabang`) REFERENCES `master_cabang` (`id_cabang`);
+
+--
+-- Ketidakleluasaan untuk tabel `data_donasi`
+--
+ALTER TABLE `data_donasi`
+  ADD CONSTRAINT `FK_data_donasi_akun_profile` FOREIGN KEY (`id_profile`) REFERENCES `akun_profile` (`id_profile`),
+  ADD CONSTRAINT `FK_data_donasi_master_cabang` FOREIGN KEY (`id_cabang`) REFERENCES `master_cabang` (`id_cabang`);
 
 --
 -- Ketidakleluasaan untuk tabel `data_informasiprofile`
