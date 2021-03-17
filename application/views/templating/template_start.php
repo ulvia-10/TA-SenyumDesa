@@ -58,10 +58,6 @@
     </div>
     <!-- end main-wrapper section -->
 
-
-
-
-
     <!-- start scroll to top -->
     <a href="javascript:void(0)" class="scroll-to-top"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
     <!-- end scroll to top -->

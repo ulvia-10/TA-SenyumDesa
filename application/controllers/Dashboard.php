@@ -26,4 +26,5 @@ class Dashboard extends CI_Controller {
 		$this->load->view('templating/template_backend', $data);
     
 	}
+    
 }
