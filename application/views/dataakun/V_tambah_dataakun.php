@@ -75,15 +75,30 @@
                         </div>
                       </div>
 
-					<div class="row" id="element-wilayah">
+					<div class="form-group">
 
-						<div class="mb-2 row">
-							<label class="col-sm-3 col-form-label">Wilayah</label>
-							<div class="col-sm-9">
-								<input class="form-control" type="text" placeholder="Type wilayah">
+						<div class="row" id="element-wilayah">
+
+							<div class="mb-2 row">
+								<label class="col-sm-3 col-form-label">Wilayah</label>
+								<div class="col-sm-9">
+									<select name="wilayah" class="form-select digits" id="">
+										<option value="">-- Pilih salah satu --</option>
+
+										<?php
+										
+										
+											foreach ( $data_master AS $cabang) {
+
+												echo '<option value="'.$cabang['id_cabang'].'">'.$cabang['name_cabang'].'</option>';
+											}
+										?>
+									</select>
+								</div>
 							</div>
 						</div>
 					</div>
+					
 					<div class="row">
 						<label class="col-sm-3 col-form-label">Address</label>
 						<div class="col-sm-9">
@@ -105,10 +120,23 @@
 
 <script>
 
-	$('#element-wilayah').hide();
+	let elementWilayah = $('#element-wilayah');
+	
+	// sembunyikan
+	elementWilayah.hide();
 
 	// perintah event on click
-	$('input[name="level"]').click(function());
+	$('input[name="level"]').change(function() {
+
+
+		if ( this.value == "pusat" ) {
+
+			elementWilayah.fadeOut();
+		} else {
+
+			elementWilayah.fadeIn();
+		}
+	});
 	
 	
 </script>
