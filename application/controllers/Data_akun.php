@@ -50,6 +50,14 @@ class Data_akun extends CI_Controller {
 		$this->load->view('templating/template_backend', $data);
     
 	}
+
+
+
+	// proses tambah
+	function prosesTambah() {
+
+		print_r( $this->input->post() );
+	}
 }
 
     

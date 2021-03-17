@@ -2,7 +2,7 @@
 	<div class="card-header">
 		<h5>Tambah Akun Baru</h5>
 	</div>
-	<form class="form theme-form">
+	<form class="form theme-form" action="<?php echo base_url('data_akun/prosesTambah') ?>" method="POST">
 		<div class="card-body">
 			<div class="row">
 				<div class="col">
