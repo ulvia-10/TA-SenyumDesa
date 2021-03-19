@@ -12,7 +12,7 @@
 	<meta name="author" content="pixelstrap">
 	<link rel="icon" href="<?php echo base_url() ?>assets/backend/images/favicon.png" type="image/x-icon">
 	<link rel="shortcut icon" href="<?php echo base_url() ?>assets/backend/images/favicon.png" type="image/x-icon">
-	<title>Cuba - Premium Admin Template</title>
+	<title>Admin | Senyum Desa</title>
 	<!-- Google font-->
 	<link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap"
 		rel="stylesheet">
@@ -46,6 +46,8 @@
 
 	<!-- latest jquery-->
 	<script src="<?php echo base_url() ?>assets/backend/js/jquery-3.5.1.min.js"></script>
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
 </head>
 
 <body>
@@ -334,10 +336,6 @@
 				<div class="container-fluid">
 					<div class="page-title">
 						<div class="row">
-							<div class="col-6">
-								<h3>
-									Hi! Admin Pusat</h3>
-							</div>
 							<div class="col-6">
 								<ol class="breadcrumb">
 									<li class="breadcrumb-item"><a href="index.html"><i data-feather="home"></i></a></li>
