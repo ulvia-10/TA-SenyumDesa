@@ -44,7 +44,7 @@
   						<a href="<?= base_url();?>data_akun/edit/<?= $prf['id_profile'];?>" class="badge badge-success"><i
   								class="fa fa-edit "></i> </a>
   						<!-- hapus -->
-  						<a href="<?= base_url();?>data_akun/hapus/<?=$prf['id_profile'];?>" class="badge badge-danger "> <i
+  						<a href="<?= base_url();?>data_akun/delete/<?=$prf['id_profile'];?>" class="badge badge-danger "> <i
   								class="fa fa-trash" aria-hidden="true"></i></a> 
 							</td>
   						</tr>

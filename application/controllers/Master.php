@@ -53,7 +53,7 @@ class Master extends CI_Controller
     {
         $data = array(
 
-            'namafolder'    => "master",
+            'namafolder'    => "mas ter",
             'namafileview'    => "V_detailmaster_cabang"
         );
         $this->load->view('templating/template_mastercabang', $data);

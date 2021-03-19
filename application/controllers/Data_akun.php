@@ -48,6 +48,13 @@ class Data_akun extends CI_Controller {
 	
     
 	}
+	public function delete($id)
+	{
+		$this->M_dataakun->hapusdataakun($id);
+		$this->session->set_flashdata('flash-data','dihapus');
+		redirect('dataakun/index','refresh');
+    
+	}
 	public function tambah()
 	{
 
