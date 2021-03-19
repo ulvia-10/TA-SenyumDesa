@@ -25,9 +25,12 @@ class Master extends CI_Controller
         $data = array(
 
             'namafolder'    => "master",
-            'namafileview'    => "V_master_cabang"
+            'namafileview'  => "V_master_cabang",
+            'title'         => "Maaster Cabang"
         );
-        $this->load->view('templating/template_mastercabang', $data);
+        $this->load->view('templating/datatabels_header', $data);
+        $this->load->view('templating/datatabels_sidebar', $data);
+        $this->load->view('templating/datatabels_footer', $data);
     }
 
     // load view for master_cabang
@@ -36,26 +39,35 @@ class Master extends CI_Controller
         $data = array(
 
             'namafolder'    => "master",
-            'namafileview'    => "V_editmaster_cabang"
+            'namafileview'    => "V_editmaster_cabang",
+            'title'         => "Maaster Cabang"
         );
-        $this->load->view('templating/template_mastercabang', $data);
+        $this->load->view('templating/datatabels_header', $data);
+        $this->load->view('templating/datatabels_sidebar', $data);
+        $this->load->view('templating/datatabels_footer', $data);
     }
     public function tambah()
     {
         $data = array(
 
             'namafolder'    => "master",
-            'namafileview'    => "V_tambahmaster_cabang"
+            'namafileview'    => "V_tambahmaster_cabang",
+            'title'         => "Maaster Cabang"
         );
-        $this->load->view('templating/template_mastercabang', $data);
+        $this->load->view('templating/datatabels_header', $data);
+        $this->load->view('templating/datatabels_sidebar', $data);
+        $this->load->view('templating/datatabels_footer', $data);
     }
     public function detail()
     {
         $data = array(
 
             'namafolder'    => "master",
-            'namafileview'    => "V_detailmaster_cabang"
+            'namafileview'  => "V_detailmaster_cabang",
+            'title'         => "Maaster Cabang"
         );
-        $this->load->view('templating/template_mastercabang', $data);
+        $this->load->view('templating/datatabels_header', $data);
+        $this->load->view('templating/datatabels_sidebar', $data);
+        $this->load->view('templating/datatabels_footer', $data);
     }
 }
