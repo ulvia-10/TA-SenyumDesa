@@ -28,6 +28,12 @@ class Master extends CI_Controller
             'namafileview'  => "V_master_cabang",
             'title'         => "Maaster Cabang"
         );
+		 $data['master_cabang'] = $this->M_master->getallwilayah();
+        if ($this->input->post('keyword')) {
+            #code...
+            $data['master_cabang'] = $this->M_master->cariData();
+        }
+		
         $this->load->view('templating/datatabels_header', $data);
         $this->load->view('templating/datatabels_sidebar', $data);
         $this->load->view('templating/datatabels_footer', $data);
