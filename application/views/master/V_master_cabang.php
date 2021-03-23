@@ -26,38 +26,42 @@
                       data-original-title="btn btn-outline-danger-2x" style="width: 120px;" title=""> Tambah</a>
                   <div class="card-body">
                       <div class="table-responsive">
-                          <table class="display" id="basic-1">
-                              <thead>
+                         <table class="display" id="basic-1" width="100%" cellspacing="0">
+                              <thead style=" text-align: center;">
                                   <tr>
                                       <th>No</th>
-                                      <th>Id cabang</th>
                                       <th>Nama Cabang</th>
-                                      <th>status cabang</th>
-                                      <th>Tanggal cabang</th>
-                                      <th>action</th>
+                                      <th>Status Cabang</th>
+                                      <th>Tanggal</th>
+                                      <th>Action</th>
                                   </tr>
                               </thead>
-                              <tbody>
+                              <tbody style=" text-align:center;">
+                                  <?php $no = 1;
+                                    foreach ($master_cabang->result_array() as $msr) { ?>
                                   <tr>
-                                      <td>Tiger Nixon</td>
-                                      <td>System Architect</td>
-                                      <td>Edinburgh</td>
-                                      <td>61</td>
-                                      <td>2011/04/25</td>
+                                      <td> <?= $no++; ?></td>
+                                      <td><?= $msr["name_cabang"]; ?></td>
+                                      <td><?= $msr["status_cabang"]; ?></td>
+                                      <td><?= $msr["created_at"]; ?></td>
                                       <td>
                                           <!-- detail -->
-                                          <a href="<?= base_url('Master/detail'); ?>" class="badge badge-primary"><i
-                                                  class="fa fa-eye"></i></a>
+                                          <a href="<?= base_url(); ?>Master/detail/<?= $msr['id_cabang']; ?>"
+                                              class="badge badge-primary"> <i class="fa fa-eye"
+                                                  aria-hidden="true"></i></a></a>
 
-                                          <a href="<?= base_url('Master/edit'); ?>" class="badge badge-success"><i
-                                                  class="fa fa-edit "></i> </a>
+                                          <a href="<?= base_url(); ?>Master/edit/<?= $msr['id_cabang']; ?>"
+                                              class="badge badge-success"><i class="fa fa-edit "></i> </a>
                                           <!-- cetak -->
                                           <!-- hapus -->
-                                          <a href="<?= base_url('Master/hapus'); ?>" class="badge badge-danger "> <i
-                                                  class="fa fa-trash" aria-hidden="true"></i></a>
+                                          <a href="<?= base_url(); ?>Master/hapus/<?= $msr['id_cabang']; ?>"
+                                              class="badge badge-danger "> <i class="fa fa-trash"
+                                                  aria-hidden="true"></i></a>
                                       </td>
-                                  </tr>
-
+                                      </td>
+                                      <?php
+                                    }
+                                        ?>
                               </tbody>
                           </table>
                       </div>
