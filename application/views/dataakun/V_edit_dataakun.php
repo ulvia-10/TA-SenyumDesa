@@ -175,7 +175,7 @@
 		</div>
 		<div class="card-footer">
 			<div class="col-sm-9 offset-sm-3">
-				<button class="btn btn-secondary" type="submit">Edit</button>
+				<button class="btn btn-primary" type="submit">Edit</button>
 				<input class="btn btn-light" type="reset" value="Cancel">
 			</div>
 		</div>

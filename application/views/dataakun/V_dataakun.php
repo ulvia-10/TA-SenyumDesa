@@ -2,10 +2,7 @@
   <div class="col-sm-12">
   	<div class="card">
   		<div class="card-header">
-  			<h5>Zero Configuration</h5><span>DataTables has most features enabled by default, so all you need to do to
-  				use
-  				it with your own tables is to call the construction
-  				function:<code>$().DataTable();</code>.</span>
+  			<h5>Data Akun Senyum Desa</h5><span>Isi dengan teliti!</span>
   		</div>
   		<div class="card-body">
   			<div class="table-responsive">
@@ -32,23 +29,24 @@
   							<td><?=$prf["name_cabang"];?></td>
   							<td>
   								<span class="badge badge-info"><?=$prf["level"];?></span></td>
-  						
+  							<td>
+  								<!-- detail -->
+  								<a href="<?= base_url();?>data_akun/detail/<?= $prf['id_profile'];?>"
+  									class="badge badge-primary">
+  									<i class="fa fa-eye" aria-hidden="true"></i></a></a>
+
+  								<a href="<?= base_url();?>data_akun/edit/<?= $prf['id_profile'];?>"
+  									class="badge badge-success"><i class="fa fa-edit "></i> </a>
+  								<!-- hapus -->
+  								<a href="<?= base_url();?>data_akun/hapus/<?=$prf['id_profile'];?>"
+  									class="badge badge-danger "> <i class="fa fa-trash" aria-hidden="true"></i></a>
+  							</td>
+
   							<?php 
                                         }
                                          ?>
-							<td>
-								<!-- detail -->
-								<a href="<?= base_url();?>data_akun/detail/<?= $prf['id_profile'];?>" class="badge badge-primary">
-  							<i class="fa fa-eye" aria-hidden="true"></i></a></a>
-
-  						<a href="<?= base_url();?>data_akun/edit/<?= $prf['id_profile'];?>" class="badge badge-success"><i
-  								class="fa fa-edit "></i> </a>
-  						<!-- hapus -->
-  						<a href="<?= base_url();?>data_akun/delete/<?=$prf['id_profile'];?>" class="badge badge-danger "> <i
-  								class="fa fa-trash" aria-hidden="true"></i></a> 
-							</td>
   						</tr>
-  					
+
   				</table>
   			</div>
   		</div>

@@ -10,9 +10,12 @@ class M_dataakun extends CI_Model
       }
     public function get_dataakun(){ 
   
-         $query = $this->db->query('SELECT a.id_profile, a.full_name,a.username,a.level,b.id_cabang,b.name_cabang from akun_profile a, master_cabang b where a.id_profile = b.id_cabang ');
-         return $query;
-        // return $this->db->get('akun_profile');
+        // return $this->db->query($sql);
+        $query = $this->db->query('SELECT a.id_profile, a.full_name,a.username,a.level,b.id_cabang,b.name_cabang 
+        from akun_profile a, master_cabang b 
+        where a.id_cabang = b.id_cabang');
+        return $query;
+
     }
    public function getProfileByID($id){
     $query = $this->db->get_where('akun_profile', array('id_profile'=>$id));
@@ -52,5 +55,8 @@ class M_dataakun extends CI_Model
     $this->db->where('id_profile',$id);
     $this->db->delete('akun_profile');
     redirect('data_akun/delete','refresh');
+}
+public function tambahdataakun(){
+
 }
 }

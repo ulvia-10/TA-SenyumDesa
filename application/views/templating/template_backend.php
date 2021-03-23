@@ -27,8 +27,8 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/backend/css/vendors/flag-icon.css">
 	<!-- Feather icon-->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/backend/css/vendors/feather-icon.css">
-  <!-- datatables -->
-  <link rel="stylesheet" type="text/css" href="http://admin.pixelstrap.com/cuba/assets/css/vendors/datatables.css">
+	<!-- datatables -->
+	<link rel="stylesheet" type="text/css" href="http://admin.pixelstrap.com/cuba/assets/css/vendors/datatables.css">
 	<!-- Plugins css start-->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/backend/css/vendors/scrollbar.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/backend/css/vendors/animate.css">
@@ -65,7 +65,8 @@
 							<div class="u-posRelative">
 								<input class="demo-input Typeahead-input form-control-plaintext w-100" type="text"
 									placeholder="Search Cuba .." name="q" title="" autofocus>
-								<div class="spinner-border Typeahead-spinner" role="status"><span class="sr-only">Loading...</span>
+								<div class="spinner-border Typeahead-spinner" role="status"><span
+										class="sr-only">Loading...</span>
 								</div><i class="close-search" data-feather="x"></i>
 							</div>
 							<div class="Typeahead-menu"></div>
@@ -75,7 +76,8 @@
 				<div class="header-logo-wrapper col-auto p-0">
 					<div class="logo-wrapper"><a href="index.html"><img class="img-fluid"
 								src="<?php echo base_url() ?>assets/backend/images/logo/logo.png" alt=""></a></div>
-					<div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i>
+					<div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle"
+							data-feather="align-center"></i>
 					</div>
 				</div>
 				<div class="left-header col horizontal-wrapper ps-0">
@@ -100,11 +102,13 @@
 													data-feather="user-check"></i><span>Users Cards</span></a></li>
 									</ul>
 								</li>
-								<li><a href="kanban.html" data-original-title="" title=""> <i data-feather="airplay"></i><span>Kanban
+								<li><a href="kanban.html" data-original-title="" title=""> <i
+											data-feather="airplay"></i><span>Kanban
 											Board</span></a></li>
 								<li><a href="bookmark.html" data-original-title="" title=""> <i
 											data-feather="heart"></i><span>Bookmark</span></a></li>
-								<li><a href="social-app.html" data-original-title="" title=""> <i data-feather="zap"></i><span>Social
+								<li><a href="social-app.html" data-original-title="" title=""> <i
+											data-feather="zap"></i><span>Social
 											App </span></a></li>
 							</ul>
 						</li>
@@ -115,11 +119,13 @@
 						<li class="language-nav">
 							<div class="translate_wrapper">
 								<div class="current_lang">
-									<div class="lang"><i class="flag-icon flag-icon-us"></i><span class="lang-txt">EN </span></div>
+									<div class="lang"><i class="flag-icon flag-icon-us"></i><span class="lang-txt">EN
+										</span></div>
 								</div>
 								<div class="more_lang">
-									<div class="lang selected" data-value="en"><i class="flag-icon flag-icon-us"></i><span
-											class="lang-txt">English<span> (US)</span></span></div>
+									<div class="lang selected" data-value="en"><i
+											class="flag-icon flag-icon-us"></i><span class="lang-txt">English<span>
+												(US)</span></span></div>
 									<div class="lang" data-value="de"><i class="flag-icon flag-icon-de"></i><span
 											class="lang-txt">Deutsch</span></div>
 									<div class="lang" data-value="es"><i class="flag-icon flag-icon-es"></i><span
@@ -130,7 +136,8 @@
 											class="lang-txt">Português<span> (BR)</span></span></div>
 									<div class="lang" data-value="cn"><i class="flag-icon flag-icon-cn"></i><span
 											class="lang-txt">简体中文</span></div>
-									<div class="lang" data-value="ae"><i class="flag-icon flag-icon-ae"></i><span class="lang-txt">لعربية
+									<div class="lang" data-value="ae"><i class="flag-icon flag-icon-ae"></i><span
+											class="lang-txt">لعربية
 											<span> (ae)</span></span></div>
 								</div>
 							</div>
@@ -144,19 +151,23 @@
 									<h6 class="f-18 mb-0">Notitications</h6>
 								</li>
 								<li>
-									<p><i class="fa fa-circle-o me-3 font-primary"> </i>Delivery processing <span class="pull-right">10
+									<p><i class="fa fa-circle-o me-3 font-primary"> </i>Delivery processing <span
+											class="pull-right">10
 											min.</span></p>
 								</li>
 								<li>
-									<p><i class="fa fa-circle-o me-3 font-success"></i>Order Complete<span class="pull-right">1 hr</span>
+									<p><i class="fa fa-circle-o me-3 font-success"></i>Order Complete<span
+											class="pull-right">1 hr</span>
 									</p>
 								</li>
 								<li>
-									<p><i class="fa fa-circle-o me-3 font-info"></i>Tickets Generated<span class="pull-right">3 hr</span>
+									<p><i class="fa fa-circle-o me-3 font-info"></i>Tickets Generated<span
+											class="pull-right">3 hr</span>
 									</p>
 								</li>
 								<li>
-									<p><i class="fa fa-circle-o me-3 font-danger"></i>Delivery Complete<span class="pull-right">6
+									<p><i class="fa fa-circle-o me-3 font-danger"></i>Delivery Complete<span
+											class="pull-right">6
 											hr</span></p>
 								</li>
 								<li><a class="btn btn-primary" href="dashboard-02.html#">Check all notification</a></li>
@@ -174,12 +185,18 @@
 												</li>
 												<li>
 													<div class="row">
-														<div class="col-4 text-center"><i data-feather="file-text"></i></div>
-														<div class="col-4 text-center"><i data-feather="activity"></i></div>
-														<div class="col-4 text-center"><i data-feather="users"></i></div>
-														<div class="col-4 text-center"><i data-feather="clipboard"></i></div>
-														<div class="col-4 text-center"><i data-feather="anchor"></i></div>
-														<div class="col-4 text-center"><i data-feather="settings"></i></div>
+														<div class="col-4 text-center"><i data-feather="file-text"></i>
+														</div>
+														<div class="col-4 text-center"><i data-feather="activity"></i>
+														</div>
+														<div class="col-4 text-center"><i data-feather="users"></i>
+														</div>
+														<div class="col-4 text-center"><i data-feather="clipboard"></i>
+														</div>
+														<div class="col-4 text-center"><i data-feather="anchor"></i>
+														</div>
+														<div class="col-4 text-center"><i data-feather="settings"></i>
+														</div>
 													</div>
 												</li>
 												<li class="text-center">
@@ -238,7 +255,8 @@
 										<p class="f-12 font-danger">32 mins ago</p>
 									</div>
 								</li>
-								<li class="text-center"> <a class="btn btn-primary" href="dashboard-02.html#">View All </a></li>
+								<li class="text-center"> <a class="btn btn-primary" href="dashboard-02.html#">View All
+									</a></li>
 							</ul>
 						</li>
 						<li class="maximize"><a class="text-dark" href="dashboard-02.html#!"
@@ -246,17 +264,23 @@
 						<li class="profile-nav onhover-dropdown p-0 me-0">
 							<div class="media profile-media"><img class="b-r-10"
 									src="<?php echo base_url() ?>assets/backend/images/dashboard/profile.jpg" alt="">
-								<div class="media-body"><span><?php echo $this->session->userdata('sess_fullname') ?></span>
-									<p class="mb-0 font-roboto"><?php echo ucfirst($this->session->userdata('sess_level')) ?> <i
+								<div class="media-body">
+									<span><?php echo $this->session->userdata('sess_fullname') ?></span>
+									<p class="mb-0 font-roboto">
+										<?php echo ucfirst($this->session->userdata('sess_level')) ?> <i
 											class="middle fa fa-angle-down"></i></p>
 								</div>
 							</div>
 							<ul class="profile-dropdown onhover-show-div">
-								<li><a href="dashboard-02.html#"><i data-feather="user"></i><span>Account </span></a></li>
+								<li><a href="dashboard-02.html#"><i data-feather="user"></i><span>Account </span></a>
+								</li>
 								<li><a href="dashboard-02.html#"><i data-feather="mail"></i><span>Inbox</span></a></li>
-								<li><a href="dashboard-02.html#"><i data-feather="file-text"></i><span>Taskboard</span></a></li>
-								<li><a href="dashboard-02.html#"><i data-feather="settings"></i><span>Settings</span></a></li>
-								<li><a href="<?php echo base_url('login/logout') ?>"><i data-feather="log-out"> </i><span>Log
+								<li><a href="dashboard-02.html#"><i
+											data-feather="file-text"></i><span>Taskboard</span></a></li>
+								<li><a href="dashboard-02.html#"><i
+											data-feather="settings"></i><span>Settings</span></a></li>
+								<li><a href="<?php echo base_url('login/logout') ?>"><i data-feather="log-out">
+										</i><span>Log
 											Out</span></a></li>
 							</ul>
 						</li>
@@ -284,10 +308,12 @@
 			<div class="sidebar-wrapper">
 				<div>
 					<div class="logo-wrapper"><a href="index.html"><img class="img-fluid for-light"
-								src="<?php echo base_url() ?>assets/backend/images/logo/logo.png" alt=""><img class="img-fluid for-dark"
+								src="<?php echo base_url() ?>assets/backend/images/logo/logo.png" alt=""><img
+								class="img-fluid for-dark"
 								src="<?php echo base_url() ?>assets/backend/images/logo/logo_dark.png" alt=""></a>
 						<div class="back-btn"><i class="fa fa-angle-left"></i></div>
-						<div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid"> </i></div>
+						<div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid">
+							</i></div>
 					</div>
 					<div class="logo-icon-wrapper"><a href="index.html"><img class="img-fluid"
 								src="<?php echo base_url() ?>assets/backend/images/logo/logo-icon.png" alt=""></a></div>
@@ -296,7 +322,8 @@
 						<div id="sidebar-menu">
 							<ul class="sidebar-links" id="simple-bar">
 								<li class="back-btn"><a href="index.html"><img class="img-fluid"
-											src="<?php echo base_url() ?>assets/backend/images/logo/logo-icon.png" alt=""></a>
+											src="<?php echo base_url() ?>assets/backend/images/logo/logo-icon.png"
+											alt=""></a>
 									<div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2"
 											aria-hidden="true"></i></div>
 								</li>
@@ -312,8 +339,8 @@
 								<li class="sidebar-list">
 									<label class="badge badge-success">2</label>
 									<a class="sidebar-link active <?php if ( $ambilController == "dashboard" ) echo "active"; ?>"
-										href="<?php echo base_url('dashboard/index') ?>"><i data-feather="home"></i><span
-											class="lan-3">Dashboard</span></a>
+										href="<?php echo base_url('dashboard/index') ?>"><i
+											data-feather="home"></i><span class="lan-3">Dashboard</span></a>
 								</li>
 								<li class="sidebar-list">
 									<a class="sidebar-link " href="<?php echo base_url('data_akun/index') ?>"><i
@@ -338,7 +365,8 @@
 						<div class="row">
 							<div class="col-6">
 								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="index.html"><i data-feather="home"></i></a></li>
+									<li class="breadcrumb-item"><a href="index.html"><i data-feather="home"></i></a>
+									</li>
 									<li class="breadcrumb-item">Dashboard</li>
 									<li class="breadcrumb-item active">Ecommerce</li>
 								</ol>
@@ -415,7 +443,7 @@
 			</script>
 		</div>
 	</div>
-	
+
 	<!-- Bootstrap js-->
 	<script src="<?php echo base_url() ?>assets/backend/js/bootstrap/bootstrap.bundle.min.js"></script>
 	<!-- feather icon js-->
@@ -441,10 +469,13 @@
 	<script src="http://admin.pixelstrap.com/cuba/assets/js/owlcarousel/owl.carousel.js"></script>
 	<script src="http://admin.pixelstrap.com/cuba/assets/js/dashboard/dashboard_2.js"></script>
 	<script src="<?php echo base_url() ?>assets/backend/js/tooltip-init.js"></script>
-  <!-- datatable -->
-  <script src="<?php echo base_url() ?>assets/backend/js/datatables/dataTables.min.js"></script>
+	<!-- datatable -->
+	<script src="<?php echo base_url() ?>assets/backend/js/datatables/dataTables.min.js"></script>
 
-  <script>$('#basic-1').DataTable();</script>
+	<script>
+		$('#basic-1').DataTable();
+
+	</script>
 	<!-- Plugins JS Ends-->
 	<!-- Theme js-->
 	<!-- <script src="<?php echo base_url() ?>assets/backend/js/script.js"></script> -->

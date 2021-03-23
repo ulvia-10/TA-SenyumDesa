@@ -21,29 +21,29 @@ class Login extends CI_Controller
 
         $data = array(
             'namafolder'    => "login",
-            'namafileview'  => "V_login"
+            'namafileview'  => "V_login",
+            'title'         => "Login"
         );
         // templating
-        $this->load->view('templating/template_start', $data);
+        $this->load->view('templating/template_loginheader', $data);
+        $this->load->view('templating/template_loginfooter', $data);
     }
 
-    function register(){
+    function register()
+    {
         $data = array(
             'namafolder' => "login",
             'namafileview' => "V_register"
         );
-        $this->load->view('templating/template_register',$data);
-
-        
+        $this->load->view('templating/template_register', $data);
     }
-    function forgetpassword(){
+    function forgetpassword()
+    {
         $data = array(
             'namafolder' => "login",
             'namafileview' => "V_forgetpassword"
         );
-        $this->load->view('templating/template_forgetpassword',$data);
-
-        
+        $this->load->view('templating/template_forgetpassword', $data);
     }
 
     // process login
@@ -74,7 +74,7 @@ class Login extends CI_Controller
 
                 // pencocokan password
                 if (password_verify($password, $row['password'])) {
-                    
+
 
                     // add session
                     $data_session = array(
@@ -83,7 +83,7 @@ class Login extends CI_Controller
                         'sess_fullname'     => $row['full_name'],
                         'sess_level'        => $row['level']
                     );
-                    $this->session->set_userdata( $data_session );
+                    $this->session->set_userdata($data_session);
 
                     // switch case | pencocokan level
                     switch ($row['level']) {
@@ -132,7 +132,8 @@ class Login extends CI_Controller
 
 
     // logout
-    function logout() {
+    function logout()
+    {
 
         $this->session->sess_destroy();
         redirect('login');
