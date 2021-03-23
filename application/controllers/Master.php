@@ -16,6 +16,9 @@ class Master extends CI_Controller
             $this->session->set_flashdata('msg', '<div class="alert alert-warning"><b>Pemberitahuan</b> <br> <small>Maaf anda harus login terlebih dahulu</small></div>');
             redirect('login');
         }
+
+
+        $this->load->model('M_master');
     }
 
 
@@ -28,15 +31,17 @@ class Master extends CI_Controller
             'namafileview'  => "V_master_cabang",
             'title'         => "Maaster Cabang"
         );
-		 $data['master_cabang'] = $this->Master->getallwilayah();
+		 $data['master_cabang'] = $this->M_master->getallwilayah();
         if ($this->input->post('keyword')) {
             #code...
-            $data['master_cabang'] = $this->Master->cariData();
+            $data['master_cabang'] = $this->M_master->cariData();
         }
-		
-        $this->load->view('templating/datatabels_header', $data);
-        $this->load->view('templating/datatabels_sidebar', $data);
-        $this->load->view('templating/datatabels_footer', $data);
+        
+
+        $this->load->view('templating/template_backend', $data);
+        // $this->load->view('templating/datatabels_header', $data);
+        // $this->load->view('templating/datatabels_sidebar', $data);
+        // $this->load->view('templating/datatabels_footer', $data);
     }
 
     // load view for master_cabang
@@ -64,6 +69,24 @@ class Master extends CI_Controller
         $this->load->view('templating/datatabels_sidebar', $data);
         $this->load->view('templating/datatabels_footer', $data);
     }
+
+
+    // proses tambah
+    function prosesTambah() {
+
+        $this->M_master->processInsertCabang();
+    }
+
+
+
+    // proses hapus
+    function hapus( $id_cabang ) {
+
+        $this->M_master->processDeleteCabang( $id_cabang );
+    }
+
+
+
     public function detail()
     {
         $data = array(

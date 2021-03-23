@@ -24,27 +24,22 @@
                     <h5>Tambah Master Cabang</h5><span>Isi Data dengan Teliti</span>
                 </div>
                 <div class="card-body">
-                    <form class="needs-validation" novalidate="">
+                    <form class="needs-validation" novalidate="" action="<?php echo base_url('master/prosesTambah') ?>" method="POST">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <label class="form-label" for="validationCustom03">Nama Cabang</label>
-                                <input class="form-control" id="validationCustom03" type="text"
+                                <input class="form-control" name="nama_cabang" id="validationCustom03" type="text"
                                     placeholder="nama Cabang" required="">
                                 <div class="invalid-feedback">Please provide a valid Nama Cabang.</div>
                             </div>
                             <div class="col-md-3">
                                 <label class="form-label" for="validationCustom04">Status cabang</label>
-                                <select class="form-select" id="validationCustom04" required="">
+                                <select class="form-select" name="status_cabang" id="validationCustom04" required="">
                                     <option selected="" disabled="" value="">pilih...</option>
-                                    <option>...</option>
+                                    <option value="active">Aktif</option>
+                                    <option value="inactive">Tidak Aktif</option>
                                 </select>
                                 <div class="invalid-feedback">status cabang.</div>
-                            </div>
-                            <div class="col-md-3 mb-3">
-                                <label class="form-label" for="validationCustom05">Tanggal</label>
-                                <input class="form-control" id="validationCustom05" type="text" placeholder="Tanggal"
-                                    required="">
-                                <div class="invalid-feedback">Tanggal</div>
                             </div>
                         </div>
 
