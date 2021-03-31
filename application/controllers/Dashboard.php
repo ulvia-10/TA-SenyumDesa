@@ -26,6 +26,6 @@ class Dashboard extends CI_Controller
             'namafileview'  => "V_dashboard",
             'title'         => "Dashboard Admin"
         );
-        $this->load->view('templating/Template_dashboardutama', $data);
+        $this->load->view('templating/template_dashboardadmin', $data);
     }
 }
