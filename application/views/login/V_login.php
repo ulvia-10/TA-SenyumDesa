@@ -49,7 +49,7 @@
                             </div>
                             <div class="form-group">
                                 <input type="password" class="form-control" name="password" placeholder="password">
-                                <br><a class="btn-link" href="login.html#">Forgot Password?</a>
+                                <br><a class="btn-link" href="<?php echo base_url('login/forgetpassword') ?>">Forgot Password?</a>
                             </div>
                             <button type="submit" class="btn btn-primary">Login</button>
                         </form>

@@ -1,61 +1,69 @@
-<div class="container-fluid p-0">
-	<div class="row m-0">
-		<div class="col-xl-5"><img class="bg-img-cover bg-center"
-				src="http://admin.pixelstrap.com/cuba/assets/images/login/3.jpg" alt="looginpage"></div>
-		<div class="col-xl-7 p-0">
-			<div class="login-card">
-				<div>
-					<div><a class="logo" href="index.html"><img class="img-fluid for-light"
-								src="http://admin.pixelstrap.com/cuba/assets/images/logo/login.png"
-								alt="looginpage"><img class="img-fluid for-dark"
-								src="<?php echo base_url() ?>assets/frontend/images/logo/logo_dark.png" alt="looginpage"></a></div>
-					<div class="login-main">
-						<form class="theme-form">
-							<h4>Create your account</h4>
-							<p>Enter your personal details to create account</p>
-							<div class="form-group">
-								<label class="col-form-label pt-0">Your Name</label>
-								<div class="row g-2">
-									<div class="col-6">
-										<input class="form-control" type="text" required="" placeholder="First name">
-									</div>
-									<div class="col-6">
-										<input class="form-control" type="text" required="" placeholder="Last name">
-									</div>
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-form-label">Email Address</label>
-								<input class="form-control" type="email" required="" placeholder="Test@gmail.com">
-							</div>
-							<div class="form-group">
-								<label class="col-form-label">Password</label>
-								<input class="form-control" type="password" name="login[password]" required=""
-									placeholder="*********">
-								<div class="show-hide"><span class="show"></span></div>
-							</div>
-							<div class="form-group mb-0">
-								<div class="checkbox p-0">
-									<input id="checkbox1" type="checkbox">
-									<label class="text-muted" for="checkbox1">Agree with<a class="ms-2"
-											href="sign-up-one.html#">Privacy Policy</a></label>
-								</div>
-								<button class="btn btn-primary btn-block" type="submit">Create Account</button>
-							</div>
-							<h6 class="text-muted mt-4 or">Or signup with</h6>
-							<div class="social mt-4">
-								<div class="btn-showcase"><a class="btn btn-light" href="https://www.linkedin.com/login"
-										target="_blank"><i class="txt-linkedin" data-feather="linkedin"></i> LinkedIn
-									</a><a class="btn btn-light" href="https://twitter.com/login?lang=en"
-										target="_blank"><i class="txt-twitter" data-feather="twitter"></i>twitter</a><a
-										class="btn btn-light" href="https://www.facebook.com/" target="_blank"><i
-											class="txt-fb" data-feather="facebook"></i>facebook</a></div>
-							</div>
-							<p class="mt-4 mb-0">Already have an account?<a class="ms-2" href="<?php echo base_url('login/processLogin') ?>">Sign in</a>
-							</p>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="container">
+    <div class="row text-white text-center z-index-1">
+        <div class="col">
+            <h1 class="text-white">Senyum Desa</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center bg-transparent p-0 m-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Ayo Mengabdi</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- / .row -->
+</div>
+<!-- / .container -->
+<div class="shape-1 bottom">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#fff" fill-opacity="1"
+            d="M0,288L48,288C96,288,192,288,288,266.7C384,245,480,203,576,208C672,213,768,267,864,245.3C960,224,1056,128,1152,96C1248,64,1344,96,1392,112L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        </path>
+    </svg>
+</div>
+</section>
+
+<!--hero section end-->
+
+
+<!--body content start-->
+
+<div class="page-content">
+
+    <!--login start-->
+
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 col-12">
+                    <img class="img-fluid" src="http://themeht.com/winck/ltr/assets/images/about/01.png" alt="">
+                </div>
+                <div class="col-lg-5 col-12">
+                    <div>
+                        <h2 class="mb-3">Register</h2>
+                        <!-- Flashdata -->
+                        <?php echo $this->session->flashdata('msg') ?>
+                        <form action="<?php echo base_url('login/processLogin') ?>" method="POST">
+
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="username" placeholder="username">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="password" placeholder="password">
+                                <br><a class="btn-link" href="login.html#">Forgot Password?</a>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </form>
+                        <div class="d-flex align-items-center mt-4"> <span class="text-muted me-1">Already have an 
+                                account?</span>
+                            <a href="<?php echo base_url('login/index') ?>">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--login end-->
+
+
+    <!--newsletter start-->

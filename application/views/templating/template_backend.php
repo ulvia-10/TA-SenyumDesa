@@ -327,12 +327,7 @@
 									<div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2"
 											aria-hidden="true"></i></div>
 								</li>
-								<li class="sidebar-main-title">
-									<div>
-										<h6 class="lan-1">General</h6>
-										<p class="lan-2">Dashboards,widgets & layout.</p>
-									</div>
-								</li>
+							
 
 								<?php $ambilController = $this->uri->segment(1); ?>
 

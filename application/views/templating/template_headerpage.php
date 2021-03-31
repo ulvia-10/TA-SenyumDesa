@@ -67,6 +67,7 @@
 
         <div id="ht-preloader">
             <div class="loader clear-loader"> <span>S</span>
+            <span>S</span>
                 <span>e</span>
                 <span>n</span>
                 <span>y</span>

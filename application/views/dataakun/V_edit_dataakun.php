@@ -1,6 +1,6 @@
 <div class="card">
 	<div class="card-header">
-		<h5>Update Exist Account</h5>
+		<h5>Update Exist Account
 	</div>
 	<form class="form theme-form" action="<?php echo base_url('data_akun/prosesTambah') ?>" method="POST">
 		<div class="card-body">
@@ -9,53 +9,53 @@
 					<div class="mb-2 row">
 						<label class="col-sm-3 col-form-label">Name</label>
 						<div class="col-sm-9">
-							<input class="form-control" type="text" placeholder="Type full name">
+							<input class="form-control" type="text" placeholder="Type full name" name="full_name" id="full_name">
 						</div>
 					</div>
 					<div class="mb-3 row">
 						<label class="col-sm-3 col-form-label">Username</label>
 						<div class="col-sm-9">
-							<input class="form-control" type="text" placeholder="Type username">
+							<input class="form-control" type="text" placeholder="Type username" name="username" id="username">
 						</div>
 					</div>
 					<div class="mb-3 row">
 						<label class="col-sm-3 col-form-label">Email</label>
 						<div class="col-sm-9">
-							<input class="form-control" id="exampleInputEmail1" type="email"
-								placeholder="Demo@gmail.com">
+							<input class="form-control" id="exampleInputEmail1" type="email" name="email" id="email"
+								placeholder="Masukkan email yang valid">
 						</div>
 					</div>
 
 					<div class="mb-3 row">
 						<label class="col-sm-3 col-form-label">Password</label>
 						<div class="col-sm-9">
-							<input class="form-control" type="password" placeholder="Input max length 6" maxlength="6">
+							<input class="form-control" type="password" placeholder="Input max length 6" maxlength="6" name="password" id="password">
 						</div>
 					</div>
 
 					<div class="mb-3 row">
 						<label class="col-sm-3 col-form-label">Telephone</label>
 						<div class="col-sm-9">
-							<input class="form-control m-input digits" type="tel" value="91-(999)-999-999"
+							<input class="form-control m-input digits" type="tel" placeholder="91-(999)-999-999"  name="telp" id="telp"
 								maxlength="12">
 						</div>
 					</div>
 					<div class="mb-2 row">
 						<label class="col-sm-3 col-form-label">Tempat Lahir</label>
 						<div class="col-sm-9">
-							<input class="form-control" type="text" placeholder="Type your born place ">
+							<input class="form-control" type="text" placeholder="Type your born place" name="tempat_lahir" id="tempat_lahir">
 						</div>
 					</div>
 					<div class="mb-3 row">
 						<label class="col-sm-3 col-form-label">Tanggal lahir</label>
 						<div class="col-sm-9">
-							<input class="form-control digits" type="date" value="2018-01-01">
+							<input class="form-control digits" type="date" value="2018-01-01" name="tanggal_lahir" id="tanggal_lahir">
 						</div>
 					</div>
 					<div class="mb-2 row">
 						<label class="col-sm-3 col-form-label">Asal</label>
 						<div class="col-sm-9">
-							<input class="form-control" type="text" placeholder="Type asal kampus/instansi/kerja">
+							<input class="form-control" type="text" placeholder="Type asal kampus/instansi/kerja" name="asal" id="asal">
 						</div>
 					</div>
 					<div class="row">
@@ -78,18 +78,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="mb-3 row">
-						<label class="col-sm-3 col-form-label">Date</label>
-						<div class="col-sm-9">
-							<input class="form-control digits" type="date" value="2018-01-01">
-						</div>
-					</div>
 					<div class="row">
 						<div class="col">
 							<div class="mb-3 row">
 								<label class="col-sm-3 col-form-label">Pas Foto</label>
 								<div class="col-sm-9">
-									<input class="form-control" type="file">
+									<input class="form-control" type="file" name="photo" id="photo">
 								</div>
 							</div>
 						</div>
@@ -167,7 +161,7 @@
 					<div class="row">
 						<label class="col-sm-3 col-form-label">Address</label>
 						<div class="col-sm-9">
-							<textarea class="form-control" rows="5" cols="5" placeholder="Type Address"></textarea>
+							<textarea class="form-control" rows="5" cols="5" placeholder="Type Address" name="address" id="address"></textarea>
 						</div>
 					</div>
 				</div>
@@ -175,7 +169,7 @@
 		</div>
 		<div class="card-footer">
 			<div class="col-sm-9 offset-sm-3">
-				<button class="btn btn-primary" type="submit">Edit</button>
+				<button class="btn btn-secondary" type="submit">Edit</button>
 				<input class="btn btn-light" type="reset" value="Cancel">
 			</div>
 		</div>

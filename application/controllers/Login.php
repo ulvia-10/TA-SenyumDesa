@@ -22,7 +22,7 @@ class Login extends CI_Controller
         $data = array(
             'namafolder'    => "login",
             'namafileview'  => "V_login",
-            'title'         => "Login"
+            'title'         => "Login Page | Senyum Desa"
         );
         // templating
         $this->load->view('templating/template_loginheader', $data);
@@ -33,9 +33,13 @@ class Login extends CI_Controller
     {
         $data = array(
             'namafolder' => "login",
-            'namafileview' => "V_register"
+            'namafileview' => "V_register",
+            'title' => "Register | Senyum Desa"
+
         );
-        $this->load->view('templating/template_register', $data);
+      // templating
+      $this->load->view('templating/template_loginheader', $data);
+      $this->load->view('templating/template_loginfooter', $data);
     }
     function forgetpassword()
     {
@@ -43,7 +47,8 @@ class Login extends CI_Controller
             'namafolder' => "login",
             'namafileview' => "V_forgetpassword"
         );
-        $this->load->view('templating/template_forgetpassword', $data);
+        $this->load->view('templating/template_loginheader', $data);
+      $this->load->view('templating/template_loginfooter', $data);
     }
 
     // process login

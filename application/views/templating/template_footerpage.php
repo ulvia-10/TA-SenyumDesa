@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-12 col-lg-5 col-xl-4 me-auto mb-5 mb-lg-0">
                 <a class="footer-logo h2 text-primary mb-0 font-w-7" href="index.html">
-                    S<span class="text-white font-w-4">enyum Desa</span>
+                    S<span class="text-white font-w-4">Senyum Desa</span>
                 </a>
                 <p class="my-3 text-light">Terimakasih Telah berpartisipasi pada senyum desa</p>
                 <ul class="list-inline">
