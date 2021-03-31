@@ -55,6 +55,7 @@ class Donasi extends CI_Controller
     //Tampilan detail
     public function detail()
     {
+        $data['data_donasi'] = $this->M_donasi->getDetailDonasi();
         $data = array(
 
             'namafolder'    => "Donasi",
@@ -109,7 +110,7 @@ class Donasi extends CI_Controller
         );
 
         // flashdata
-        $elementHTML = '<div class="alert alert-warning"><b>Pemberitahuan</b> <br> Data Donasi berhasil diupdate pada ' . date('d F Y H.i A') . '</div>';
+        $elementHTML = '<div class="alert alert-success"><b>Pemberitahuan</b> <br> Data Donasi berhasil diupdate pada ' . date('d F Y H.i A') . '</div>';
         $this->session->set_flashdata('pesan', $elementHTML);
 
         $this->M_donasi->update_data($where, $data, 'data_donasi');

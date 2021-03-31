@@ -19,9 +19,6 @@ class Master extends CI_Controller
             $this->session->set_flashdata('msg', '<div class="alert alert-warning"><b>Pemberitahuan</b> <br> <small>Maaf anda harus login terlebih dahulu</small></div>');
             redirect('login');
         }
-
-
-        $this->load->model('M_master');
     }
 
 
