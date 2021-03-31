@@ -9,13 +9,15 @@
 					<div class="mb-2 row">
 						<label class="col-sm-3 col-form-label">Name</label>
 						<div class="col-sm-9">
-							<input class="form-control" type="text" placeholder="Type full name" name="full_name" id="full_name">
+							<input class="form-control" type="text" placeholder="Type full name" name="full_name"
+								id="full_name">
 						</div>
 					</div>
 					<div class="mb-3 row">
 						<label class="col-sm-3 col-form-label">Username</label>
 						<div class="col-sm-9">
-							<input class="form-control" type="text" placeholder="Type username" name="username" id="username">
+							<input class="form-control" type="text" placeholder="Type username" name="username"
+								id="username">
 						</div>
 					</div>
 					<div class="mb-3 row">
@@ -29,38 +31,41 @@
 					<div class="mb-3 row">
 						<label class="col-sm-3 col-form-label">Password</label>
 						<div class="col-sm-9">
-							<input class="form-control" type="password" placeholder="Input max length 6" maxlength="6" name="password" id="password">
+							<input class="form-control" type="password" placeholder="Input max length 6" maxlength="6"
+								name="password" id="password">
 						</div>
 					</div>
-				
+
 					<div class="mb-3 row">
 						<label class="col-sm-3 col-form-label">Telephone</label>
 						<div class="col-sm-9">
-							<input class="form-control m-input digits" type="tel" placeholder="91-(999)-999-999"  name="telp" id="telp"
-								maxlength="12">
+							<input class="form-control m-input digits" type="tel" placeholder="91-(999)-999-999"
+								name="telp" id="telp" maxlength="12">
 						</div>
 					</div>
 					<div class="mb-2 row">
 						<label class="col-sm-3 col-form-label">Tempat Lahir</label>
 						<div class="col-sm-9">
-							<input class="form-control" type="text" placeholder="Type your born place" name="tempat_lahir" id="tempat_lahir">
+							<input class="form-control" type="text" placeholder="Type your born place"
+								name="tempat_lahir" id="tempat_lahir">
 						</div>
 					</div>
-					
+
 					<div class="mb-3 row">
 						<label class="col-sm-3 col-form-label">Date</label>
 						<div class="col-sm-9">
-							<input class="form-control digits" type="date" value="2018-01-01" name="tanggal_lahir" id="tanggal_lahir">
+							<input class="form-control digits" type="date" value="2018-01-01" name="tanggal_lahir"
+								id="tanggal_lahir">
 						</div>
 					</div>
 					<div class="mb-2 row">
 						<label class="col-sm-3 col-form-label">Asal</label>
 						<div class="col-sm-9">
-							<input class="form-control" type="text" placeholder="Type asal kampus/instansi/kerja" name="asal" id="asal">
+							<input class="form-control" type="text" placeholder="Type asal kampus/instansi/kerja"
+								name="asal" id="asal">
 						</div>
 					</div>
 					<div class="row">
-
 						<label class="col-sm-3 col-form-label">Gender</label>
 						<div class="col-sm-9">
 							<div class="m-checkbox-inline custom-radio-ml">
@@ -89,36 +94,31 @@
 							</div>
 						</div>
 					</div>
-                    <div class="row">
-                        <div class="col">
-                          <div class="mb-3 row">
-                            <label class="col-sm-3 col-form-label">Pas Foto</label>
-                            <div class="col-sm-9">
-                              <input class="form-control" type="file">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    <div class="row">
-						
-                    	<label class="col-sm-3 col-form-label">Level</label>
-                        <div class="col-sm-9">
-                        	<div class="m-checkbox-inline custom-radio-ml">
+					<div class="row">
+						<label class="col-sm-3 col-form-label">Level</label>
+						<div class="col-sm-9">
+							<div class="m-checkbox-inline custom-radio-ml">
 								<div class="form-check form-check-inline radio radio-primary">
-									<input class="form-check-input" id="radioinline1" type="radio" name="level" value="pusat">
-									<label class="form-check-label mb-0" for="radioinline1">Option<span class="digits"> Admin Pusat</span></label>
+									<input class="form-check-input" id="radioinline1" type="radio" name="level"
+										value="pusat">
+									<label class="form-check-label mb-0" for="radioinline1">Option<span class="digits">
+											Admin Pusat</span></label>
 								</div>
 								<div class="form-check form-check-inline radio radio-primary">
-									<input class="form-check-input" id="radioinline2" type="radio" name="level" value="korwil">
-									<label class="form-check-label mb-0" for="radioinline2">Option<span class="digits"> Admin Korwil</span></label>
+									<input class="form-check-input" id="radioinline2" type="radio" name="level"
+										value="korwil">
+									<label class="form-check-label mb-0" for="radioinline2">Option<span class="digits">
+											Admin Korwil</span></label>
 								</div>
 								<div class="form-check form-check-inline radio radio-primary">
-									<input class="form-check-input" id="radioinline3" type="radio" name="level" value="anggota">
-									<label class="form-check-label mb-0" for="radioinline3">Option<span class="digits"> Anggota</span></label>
+									<input class="form-check-input" id="radioinline3" type="radio" name="level"
+										value="anggota">
+									<label class="form-check-label mb-0" for="radioinline3">Option<span class="digits">
+											Anggota</span></label>
 								</div>
 							</div>
-                        </div>
-                      </div>
+						</div>
+					</div>
 
 					<div class="form-group">
 
@@ -142,11 +142,12 @@
 							</div>
 						</div>
 					</div>
-					
+
 					<div class="row">
 						<label class="col-sm-3 col-form-label">Address</label>
 						<div class="col-sm-9">
-							<textarea class="form-control" rows="5" cols="5" placeholder="Type Address" name="address" id="address"></textarea>
+							<textarea class="form-control" rows="5" cols="5" placeholder="Type Address" name="address"
+								id="address"></textarea>
 						</div>
 					</div>
 				</div>
@@ -155,7 +156,7 @@
 		<div class="card-footer">
 			<div class="col-sm-9 offset-sm-3">
 				<button class="btn btn-primary" type="submit">Tambah</button>
-				<input class="btn btn-light" type="reset" value="Cancel" >
+				<input class="btn btn-light" type="reset" value="Cancel">
 			</div>
 		</div>
 	</form>
@@ -163,17 +164,16 @@
 
 
 <script>
+	let elementWilayah = $('element-wilayah');
 
-	let elementWilayah = $('#element-wilayah');
-	
 	// sembunyikan
 	elementWilayah.hide();
 
 	// perintah event on click
-	$('input[name="level"]').change(function() {
+	$('input[name="level"]').change(function () {
 
 
-		if ( this.value == "pusat" ) {
+		if (this.value == "pusat") {
 
 			elementWilayah.fadeOut();
 		} else {
@@ -181,6 +181,5 @@
 			elementWilayah.fadeIn();
 		}
 	});
-	
-	
+
 </script>

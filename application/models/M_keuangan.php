@@ -12,11 +12,9 @@ class M_keuangan extends CI_Model
     {
         $keyword = $this->input->post('keyword');
         $this->db->like('judul', $keyword);
-        $this->db->or_like('id_keungan', $keyword);
+        $this->db->or_like('id_keuangan', $keyword);
         return $this->db->get('data_keuangan')->result_array();
     }
-
-
 
     // proses insert
     function processInsertKeuangan()

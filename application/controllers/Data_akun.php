@@ -11,7 +11,7 @@ class Data_akun extends CI_Controller
 
 		// load model
 		$this->load->model('M_dataakun');
-		$this->load->model('Master');
+		$this->load->model('M_master');
 		$this->load->library('form_validation');
 	}
 
@@ -27,9 +27,8 @@ class Data_akun extends CI_Controller
 		//disesuaikan sama dengan nama view$ 
 		$data ['profile'] = $this->M_dataakun->get_dataakun();
 		// $this->load->view('templating/template_backend', $data);
-		$this->load->view('templating/datatabels_header', $data);
-        $this->load->view('templating/datatabels_sidebar', $data);
-        $this->load->view('templating/datatabels_footer', $data);
+		$this->load->view('templating/template_dashboardadmin', $data);
+       
 	}
 	public function edit()
 	{
@@ -40,10 +39,7 @@ class Data_akun extends CI_Controller
 			'title'         => "Edit Account | Senyum Desa"
 		);
 		// $this->load->view('templating/template_backend', $data);
-		$this->load->view('templating/header_dashboardadmin', $data);
-        $this->load->view('templating/sidebar_dashboardadmin', $data);
-        $this->load->view('templating/footer_dashboardadmin', $data);
-    
+		$this->load->view('templating/template_dashboardadmin', $data);
 	}
 	public function detail($id)
 	{
@@ -55,9 +51,7 @@ class Data_akun extends CI_Controller
 		);
 		$data['profile']= $this->M_dataakun->getProfileByID($id);
 		// $this->load->view('templating/template_backend', $data);
-		$this->load->view('templating/header_dashboardadmin', $data);
-        $this->load->view('templating/sidebar_dashboardadmin', $data);
-        $this->load->view('templating/footer_dashboardadmin', $data);
+		$this->load->view('templating/template_dashboardadmin', $data);
 	
 	}
 	public function delete($id)
@@ -72,24 +66,18 @@ class Data_akun extends CI_Controller
 
 
 		$kondisi = ['status_cabang' => "active"];
-		$dataMasterCabang = $this->Master->getDataCabang($kondisi);
+		// $dataMasterCabang = $this->M_master->getDataCabang($kondisi);
 		$data = array(
 
 			'namafolder'	=> "dataakun",
 			'namafileview'	=> "V_tambah_dataakun",
 			'title'			=> "Add Account | Senyum Desa",
 
-			// variable
-			'data_master'	=> $dataMasterCabang
+			// // variable
+			// 'data_master'	=> $dataMasterCabang
 		);
-		// $this->load->view('templating/template_backend', $data);
-		// $this->load->view('templating/datatabels_header', $data);
-        // $this->load->view('templating/datatabels_sidebar', $data);
-        // $this->load->view('templating/datatabels_footer', $data);
-		$this->load->view('templating/header_dashboardadmin', $data);
-        $this->load->view('templating/sidebar_dashboardadmin', $data);
-        $this->load->view('templating/footer_dashboardadmin', $data);
 	
+		$this->load->view('templating/template_dashboardadmin', $data);
     
 	}
 
