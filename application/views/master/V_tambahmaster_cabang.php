@@ -24,7 +24,8 @@
                     <h5>Tambah Master Cabang</h5><span>Isi Data dengan Teliti</span>
                 </div>
                 <div class="card-body">
-                    <form class="needs-validation" novalidate="" action="<?php echo base_url('master/prosesTambah') ?>" method="POST">
+                    <form class="needs-validation" novalidate="" action="<?php echo base_url('master/prosesTambah') ?>"
+                        method="POST">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <label class="form-label" for="validationCustom03">Nama Cabang</label>
@@ -42,9 +43,10 @@
                                 <div class="invalid-feedback">status cabang.</div>
                             </div>
                         </div>
+                        <br><br>
 
                         <button class="btn btn-primary" type="submit">Submit form</button>
-                        <a href="<?= base_url('master'); ?>" class="btn btn-light" type="submit">Cancel</button>
+                        <a href="<?= base_url('master'); ?>" class="btn btn-light" type="submit">Cancel</a>
                     </form>
                 </div>
             </div>
@@ -52,5 +54,5 @@
         </div>
     </div>
 </div>
-</div>
+
 <!-- Container-fluid Ends-->

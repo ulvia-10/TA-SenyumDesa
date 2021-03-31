@@ -28,4 +28,16 @@ class Page extends CI_Controller
         $this->load->view('templating/template_headerpage', $data);
         $this->load->view('templating/template_footerpage', $data);
     }
+    function about()
+    {
+
+        $data = array(
+            'namafolder'    => "page",
+            'namafileview'  => "V_about",
+            'title'         => "Senyum Desa"
+        );
+        // templating
+        $this->load->view('templating/template_headerpage', $data);
+        $this->load->view('templating/template_footerpage', $data);
+    }
 }

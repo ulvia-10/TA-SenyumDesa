@@ -4,11 +4,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class M_dataakun extends CI_Model
 {
-    // count all
-    public function count_all(){
-        return $this->db->count_all('akun_profile'); // Untuk menghitung semua data akun profile
-      }
-    public function get_dataakun(){ 
+
+
+
   
         // return $this->db->query($sql);
         $query = $this->db->query('SELECT a.id_profile, a.full_name,a.username,a.level,b.id_cabang,b.name_cabang 

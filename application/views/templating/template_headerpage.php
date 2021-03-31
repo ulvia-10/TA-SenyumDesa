@@ -106,7 +106,9 @@
                                             <ul class="dropdown-menu">
                                                 <li><a class="dropdown-item" href="<?= base_url('Page'); ?>">Beranda</a>
                                                 </li>
-                                                <li><a class="dropdown-item" href="index.html">Tentang Senyum Desa</a>
+                                                <li><a class="dropdown-item"
+                                                        href="<?= base_url('Page/about'); ?>">Tentang
+                                                        Senyum Desa</a>
                                                 </li>
                                                 <li><a class="dropdown-item" href="index-2.html">Visi Dan Misi</a>
                                                 </li>

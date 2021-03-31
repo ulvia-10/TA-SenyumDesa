@@ -1,17 +1,21 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Data_akun extends CI_Controller {
+class Data_akun extends CI_Controller
+{
 
-	
-    function __construct() {
+
+	function __construct()
+	{
 		parent::__construct();
-		// load model
-       	$this->load->model('M_dataakun');
-       	$this->load->model('Master');
-		$this->load->library('form_validation');
 
-    }
+		// load model
+		$this->load->model('M_dataakun');
+		$this->load->model('Master');
+		$this->load->library('form_validation');
+	}
+
+    
 	public function index()
 	{
 		$data = array(
@@ -65,10 +69,10 @@ class Data_akun extends CI_Controller {
 	}
 	public function tambah()
 	{
-		
+
 
 		$kondisi = ['status_cabang' => "active"];
-		$dataMasterCabang = $this->Master->getDataCabang( $kondisi );
+		$dataMasterCabang = $this->Master->getDataCabang($kondisi);
 		$data = array(
 
 			'namafolder'	=> "dataakun",
@@ -90,10 +94,11 @@ class Data_akun extends CI_Controller {
 	}
 
 	// proses tambah
-	function prosesTambah() {
+	function prosesTambah()
+	{
 
 		// print_r( $this->input->post() );
-		$this->load->helper(array('form','url'));
+		$this->load->helper(array('form', 'url'));
 		$this->load->library('form_validation');
 
 		$this->form_validation->set_rules('id_profile','id_profile','required');
@@ -126,5 +131,3 @@ class Data_akun extends CI_Controller {
 		}
 	}
 }
-
-    
