@@ -22,11 +22,22 @@
     <form class="form theme-form" action="<?php echo base_url('Keuangan/prosesTambah') ?>" method="POST">
         <div class="card-body">
             <div class="row">
-                <div class="col">
+                <div class="col-md-6">
                     <div class="mb-3">
-                        <label class="form-label" for="judul">judul</label>
+                        <label class="form-label" for="judul">Judul</label>
                         <input class="form-control form-control-lg" name="judul" id="judul" type="text"
                             placeholder="Masukan judul">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label" for="judul">Cabang</label>
+                        <select name="cabang" id="" class="form-control">
+                            
+                            <?php foreach ( $dataCabang->result_array() AS $row ) { ?>
+                            <option value="<?php echo $row['id_cabang'] ?>"><?php echo $row['name_cabang'] ?></option>
+                            <?php } ?>
+                        </select>
                     </div>
                 </div>
             </div>
