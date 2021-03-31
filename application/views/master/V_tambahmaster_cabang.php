@@ -28,15 +28,15 @@
                         method="POST">
                         <div class="row g-3">
                             <div class="col-md-6">
-                                <label class="form-label" for="nama_cabang">Nama Cabang</label>
-                                <input class="form-control" name="nama_cabang" id="nama_cabang" type="text"
-                                    placeholder="Nama Cabang" required="">
+                                <label class="form-label" for="validationCustom03">Nama Cabang</label>
+                                <input class="form-control" name="nama_cabang" id="validationCustom03" type="text"
+                                    placeholder="nama Cabang" required="">
                                 <div class="invalid-feedback">Please provide a valid Nama Cabang.</div>
                             </div>
                             <div class="col-md-3">
-                                <label class="form-label" for="status_cabang">Status cabang</label>
-                                <select class="form-select" name="status_cabang" id="status_cabang" required="">
-                                    <option selected="" disabled="" value="">Apakah Status Pada Cabang Wilayah?</option>
+                                <label class="form-label" for="validationCustom04">Status cabang</label>
+                                <select class="form-select" name="status_cabang" id="validationCustom04" required="">
+                                    <option selected="" disabled="" value="">pilih...</option>
                                     <option value="active">Aktif</option>
                                     <option value="inactive">Tidak Aktif</option>
                                 </select>

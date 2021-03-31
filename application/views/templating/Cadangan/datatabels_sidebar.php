@@ -47,7 +47,7 @@
                          </li>
 
                          <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
-                                 href="<?= base_url('Data_akun'); ?>"><i data-feather="git-pull-request"> </i><span>Data
+                                 href="<?= base_url('data_akun'); ?>"><i data-feather="git-pull-request"> </i><span>Data
                                      Akun</span></a></li>
                          <li class="sidebar-list">
                              <a class="sidebar-link sidebar-title link-nav" href="<?= base_url('master'); ?>"><i
