@@ -10,6 +10,9 @@ class Master extends CI_Controller
 
         parent::__construct();
 
+        $this->load->model('M_master');
+        $this->load->library('form_validation');
+
         // pengecekan sesi 
         if (empty($this->session->userdata('sess_fullname'))) {
 
@@ -19,55 +22,90 @@ class Master extends CI_Controller
     }
 
 
-    // load view for master_cabang
+    // Tampilan Master Cabang Tabel
     public function index()
     {
         $data = array(
 
             'namafolder'    => "master",
             'namafileview'  => "V_master_cabang",
-            'title'         => "Maaster Cabang"
+            'title'         => "Master Cabang"
         );
-        $this->load->view('templating/datatabels_header', $data);
-        $this->load->view('templating/datatabels_sidebar', $data);
-        $this->load->view('templating/datatabels_footer', $data);
+
+        $data['master_cabang'] = $this->M_master->getallwilayah();
+        if ($this->input->post('keyword')) {
+            #code...
+            $data['master_cabang'] = $this->M_master->cariData();
+        }
+
+        $this->load->view('templating/Template_dashboardadmin', $data);
     }
 
-    // load view for master_cabang
-    public function edit()
-    {
-        $data = array(
-
-            'namafolder'    => "master",
-            'namafileview'    => "V_editmaster_cabang",
-            'title'         => "Maaster Cabang"
-        );
-        $this->load->view('templating/datatabels_header', $data);
-        $this->load->view('templating/datatabels_sidebar', $data);
-        $this->load->view('templating/datatabels_footer', $data);
-    }
+    //Tampilan Tambah Master Cabang
     public function tambah()
     {
         $data = array(
 
             'namafolder'    => "master",
             'namafileview'    => "V_tambahmaster_cabang",
-            'title'         => "Maaster Cabang"
+            'title'         => "Master Cabang"
         );
-        $this->load->view('templating/datatabels_header', $data);
-        $this->load->view('templating/datatabels_sidebar', $data);
-        $this->load->view('templating/datatabels_footer', $data);
+        $this->load->view('templating/Template_dashboardadmin', $data);
     }
+    //Tampilan detail
     public function detail()
     {
         $data = array(
 
             'namafolder'    => "master",
             'namafileview'  => "V_detailmaster_cabang",
-            'title'         => "Maaster Cabang"
+            'title'         => "Master Cabang"
         );
-        $this->load->view('templating/datatabels_header', $data);
-        $this->load->view('templating/datatabels_sidebar', $data);
-        $this->load->view('templating/datatabels_footer', $data);
+        $this->load->view('templating/Template_dashboardadmin', $data);
+    }
+
+
+    // proses sistem mastercabang
+    // proses tambah
+    function prosesTambah()
+    {
+
+        $this->M_master->processInsertCabang();
+    }
+
+    // proses hapus
+    function hapus($id_cabang)
+    {
+
+        $this->M_master->processDeleteCabang($id_cabang);
+    }
+
+    public function prosesedit($masterid)
+    {
+        $where = array('id_cabang' => $masterid);
+        $data['master_cabang'] = $this->M_master->edit_data($where, 'master_cabang')->result();
+        $this->load->view('templating/dashboardadmin/Template_dashboardadmin2');
+        $this->load->view('master/V_editmaster_cabang', $data);
+        $this->load->view('templating/dashboardadmin/template_footer');
+    }
+
+    function update()
+    {
+        $id_cabang = $this->input->post('id_cabang');
+        $name_cabang = $this->input->post('name_cabang');
+        $status_cabang = $this->input->post('status_cabang');
+
+        $data = array(
+            'name_cabang' => $name_cabang,
+            'status_cabang' => $status_cabang
+
+        );
+
+        $where = array(
+            'id_cabang' => $id_cabang
+        );
+
+        $this->M_master->update_data($where, $data, 'master_cabang');
+        redirect('master');
     }
 }

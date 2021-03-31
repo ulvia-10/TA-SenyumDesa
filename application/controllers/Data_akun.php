@@ -6,9 +6,10 @@ class Data_akun extends CI_Controller {
 	
     function __construct() {
 		parent::__construct();
+       
 		// load model
        	$this->load->model('M_dataakun');
-       	// $this->load->model('M_master');
+       	$this->load->model('Master');
 
     }
     
@@ -20,10 +21,7 @@ class Data_akun extends CI_Controller {
 			'namafolder'	=> "dataakun",
 			'namafileview'	=> "V_dataakun"
 		);
-		//disesuaikan sama dengan nama view$ 
-		$data ['profile'] = $this->M_dataakun->get_dataakun();
 		$this->load->view('templating/template_backend', $data);
-	
     
 	}
 	public function edit()
@@ -34,18 +32,6 @@ class Data_akun extends CI_Controller {
 			'namafileview'	=> "V_edit_dataakun"
 		);
 		$this->load->view('templating/template_backend', $data);
-    
-	}
-	public function detail($id)
-	{
-		$data = array(
-
-			'namafolder'	=> "dataakun",
-			'namafileview'	=> "V_detail_dataakun"
-		);
-		$data['profile']= $this->M_dataakun->getProfileByID($id);
-		$this->load->view('templating/template_backend', $data);
-	
     
 	}
 	public function tambah()
@@ -63,14 +49,6 @@ class Data_akun extends CI_Controller {
 		);
 		$this->load->view('templating/template_backend', $data);
     
-	}
-
-
-
-	// proses tambah
-	function prosesTambah() {
-
-		print_r( $this->input->post() );
 	}
 }
 
