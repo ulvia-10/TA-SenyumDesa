@@ -94,45 +94,5 @@
                   </div>
               </div>
           </div>
-
-          <!-- hapus -->
-          <a href="#" data-bs-toggle="modal" data-bs-target="#aksi-hapus-<?php echo $msr['id_cabang'] ?>"
-              class="badge badge-danger "> <i class="fa fa-trash" aria-hidden="true"></i></a>
-
-          <<<<<<< HEAD <div class="modal fade" id="aksi-hapus-<?php echo $msr['id_cabang'] ?>" tabindex=" -1"
-              role="dialog" aria-labelledby="exampleModalCenter" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                      <div class="modal-body">
-                          <h4>Hapus Cabang</h4>
-                          <p>Apakah anda yakin ingin menghapus data cabang
-                              <b><?php echo $msr['name_cabang'] ?></b>.
-                          </p>
-                      </div>
-                      <div class="modal-footer">
-                          <button class="btn btn-primary btn-sm" type="button" data-bs-dismiss="modal">Batal</button>
-                          <a href="<?php echo base_url('master/hapus/' . $msr['id_cabang']) ?>"
-                              class="btn btn-danger btn-sm" type="button"><i class="fa fa-trash"></i> Hapus</a>
-                      </div>
-                  </div>
-              </div>
-      </div>
-      </td>
-      </td>
-      <?php
-                                }
-                                    ?>
-      </tbody>
-      </table>
-  </div>
-  </div>
-  </div>
-  </div>
-
-
-  </div>
-  </div>
-  =======
-  </div>
-  </div>
-  >>>>>>> 3e8c958d3017138b3264c5bbf119ad8369388e7d
+        </div>
+    </div>

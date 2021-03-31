@@ -11,6 +11,8 @@ class Keuangan extends CI_Controller
         parent::__construct();
 
         $this->load->model('M_keuangan');
+        $this->load->model('M_master');
+
         $this->load->library('form_validation');
 
         // pengecekan sesi 
@@ -44,11 +46,17 @@ class Keuangan extends CI_Controller
     //Tampilan Tambah 
     public function tambah()
     {
+
+        $getDataCabang = $this->M_master->getallwilayah();
+
         $data = array(
 
             'namafolder'    => "keuangan",
             'namafileview'    => "V_tambahkeuangan",
-            'title'         => "data keuangan"
+            'title'         => "data keuangan",
+
+            // variable
+            'dataCabang'    => $getDataCabang
         );
         $this->load->view('templating/Template_dashboardadmin', $data);
     }

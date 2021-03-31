@@ -20,18 +20,19 @@ class M_keuangan extends CI_Model
 
     // proses insert
     function processInsertKeuangan()
-    {
+    {   
+
+        $id_profile = $this->session->userdata('sess_id_profile');
 
         $data = array(
-
-
+            'id_cabang'  => $this->input->post('cabang'),
+            'id_profile' => $id_profile,
             'judul'   => $this->input->post('judul'),
             'deskripsi' => $this->input->post('deskripsi'),
             'jenis_keuangan' => $this->input->post('jenis_keuangan'),
             'nominal' => $this->input->post('nominal'),
             'tipe' => $this->input->post('tipe'),
         );
-
         $this->db->insert('data_keuangan', $data);
 
 
