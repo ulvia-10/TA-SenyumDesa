@@ -6,7 +6,10 @@ class M_keuangan extends CI_Model
 {
     public function getallkeuangan()
     {
-        return $this->db->get('data_keuangan');
+        $query  = $this->db->query('SELECT a.id_keuangan, a.judul, a.jenis_keuangan, a.tanggal_laporan, b.id_cabang, b.name_cabang
+        from data_keuangan a, master_cabang b
+        where a.id_cabang = b.id_cabang');
+        return $query;
     }
     public function cariData()
     {
@@ -18,7 +21,7 @@ class M_keuangan extends CI_Model
 
     // proses insert
     function processInsertKeuangan()
-    {   
+    {
 
         $id_profile = $this->session->userdata('sess_id_profile');
 

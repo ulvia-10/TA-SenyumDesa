@@ -24,19 +24,18 @@
                     <h5>Tambah Master Cabang</h5><span>Isi Data dengan Teliti</span>
                 </div>
                 <div class="card-body">
-                    <form class="needs-validation" novalidate="" action="<?php echo base_url('master/prosesTambah') ?>"
-                        method="POST">
+                    <form class="needs-validation" action="<?php echo base_url('master/prosesTambah') ?>" method="POST">
                         <div class="row g-3">
                             <div class="col-md-6">
-                                <label class="form-label" for="validationCustom03">Nama Cabang</label>
-                                <input class="form-control" name="nama_cabang" id="validationCustom03" type="text"
-                                    placeholder="nama Cabang" required="">
+                                <label class="form-label" for="nama_cabang">Nama Cabang</label>
+                                <input class="form-control" name="nama_cabang" id="nama_cabang" type="text"
+                                    placeholder="Nama Cabang" required="">
                                 <div class="invalid-feedback">Please provide a valid Nama Cabang.</div>
                             </div>
                             <div class="col-md-3">
-                                <label class="form-label" for="validationCustom04">Status cabang</label>
-                                <select class="form-select" name="status_cabang" id="validationCustom04" required="">
-                                    <option selected="" disabled="" value="">pilih...</option>
+                                <label class="form-label" for="status_cabang">Status cabang</label>
+                                <select class="form-select" name="status_cabang" id="status_cabang" required="">
+                                    <option selected="" disabled="" value="">Apakah Status Pada Cabang Wilayah?</option>
                                     <option value="active">Aktif</option>
                                     <option value="inactive">Tidak Aktif</option>
                                 </select>
@@ -46,6 +45,7 @@
                         <br><br>
 
                         <button class="btn btn-primary" type="submit">Submit form</button>
+                        <input class="btn btn-warning" type="reset" value="Reset">
                         <a href="<?= base_url('master'); ?>" class="btn btn-light" type="submit">Cancel</a>
                     </form>
                 </div>

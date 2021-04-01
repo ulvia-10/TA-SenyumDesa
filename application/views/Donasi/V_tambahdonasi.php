@@ -26,7 +26,7 @@
                     <div class="mb-3">
                         <label class="form-label" for="no_rekening">No Rekening</label>
                         <input class="form-control form-control-lg" name="no_rekening" id="no_rekening" type="text"
-                            placeholder="Masukan No Rekeneing">
+                            placeholder="Masukan No Rekeneing" required="">
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                     <div class="mb-3">
                         <label class="form-label" for="nama_donatur">Nama Donatur</label>
                         <input class="form-control" name="nama_donatur" id="nama_donatur" type="text"
-                            placeholder="Masukan Nama Donatur">
+                            placeholder="Masukan Nama Donatur" required="">
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                     <div class="mb-3">
                         <label class="form-label" for="jumlahdonasi">Jumlah Donasi</label>
                         <input class="form-control form-control-sm" name="jml_donasi" id="jumlahdonasi" type="text"
-                            placeholder="Masukan Jumlah Donasi">
+                            placeholder="Masukan Jumlah Donasi" required="">
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label" for="status">Status</label>
-                        <select class="form-select form-control-lg digits" name="status" id="status">
+                        <select class="form-select form-control-lg digits" name="status" id="status" required="">
                             <option value="Lunas">Lunas</option>
                             <option value="Belum Lunas">Belum Lunas</option>
                             <option value="Kadaluwarsa">Kadaluwarsa</option>

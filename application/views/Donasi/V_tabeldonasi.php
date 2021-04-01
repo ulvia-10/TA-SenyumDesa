@@ -46,9 +46,10 @@
                                     <td> <?= $no++; ?></td>
                                     <td><?= $dns["no_rekening"]; ?></td>
                                     <td><?= $dns["nama_donatur"]; ?></td>
-                                    <td><?= $dns["tgl_donasi"]; ?></td>
                                     <td><?= $dns["status"]; ?></td>
+                                    <td><?= $dns["tgl_donasi"]; ?></td>
                                     <td>
+
 
                                         <!-- edit -->
                                         <a href="<?= base_url(); ?>Donasi/prosesedit/<?= $dns['Id_donasi']; ?>"
