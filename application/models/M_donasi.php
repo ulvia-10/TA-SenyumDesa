@@ -43,6 +43,14 @@ class M_donasi extends CI_Model
         redirect('Donasi');
     }
 
+    function getallDetail()
+    {
+        $this->db->select('*');
+        $this->db->from('data_donasi');
+        $this->db->join('master_cabang', 'data_donasi.Id_donasi=master_cabang.id_cabang');
+        $query = $this->db->get();
+        //return $query->result();
+    }
 
 
     // hapus
@@ -72,5 +80,8 @@ class M_donasi extends CI_Model
     {
         $this->db->where($where);
         $this->db->update($table, $data);
+
+        $elementHTML = '<div class="alert alert-success"><b>Pemberitahuan</b> <br> Data Cabang Berhasil Di Update ' . date('d F Y H.i A') . '</div>';
+        $this->session->set_flashdata('pesan', $elementHTML);
     }
 }

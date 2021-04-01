@@ -8,6 +8,7 @@ class M_master extends CI_Model
     {
         return $this->db->get('master_cabang');
     }
+
     public function cariData()
     {
         $keyword = $this->input->post('keyword');
@@ -15,6 +16,7 @@ class M_master extends CI_Model
         $this->db->or_like('id_cabang', $keyword);
         return $this->db->get('master_cabang')->result_array();
     }
+
 
 
 

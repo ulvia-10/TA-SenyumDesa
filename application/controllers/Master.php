@@ -82,6 +82,7 @@ class Master extends CI_Controller
 
     public function prosesedit($masterid)
     {
+        $data['title'] = 'Edit Senyum Desa';
         $where = array('id_cabang' => $masterid);
         $data['master_cabang'] = $this->M_master->edit_data($where, 'master_cabang')->result();
         $this->load->view('templating/dashboardadmin/Template_dashboardadmin2');

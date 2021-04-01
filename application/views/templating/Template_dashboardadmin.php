@@ -41,6 +41,10 @@
     <link id="color" rel="stylesheet" href="<?php echo base_url() ?>assets/pusatbackend/css/color-1.css" media="screen">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/pusatbackend/css/responsive.css">
+
+
+    <!-- latest jquery-->
+    <script src="<?php echo base_url() ?>assets/pusatbackend/js/jquery-3.5.1.min.js"></script>
 </head>
 
 <body onload="startTime()">
@@ -278,34 +282,38 @@
                                 </li>
 
                                 <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
-                                        href="<?= base_url('Data_akun'); ?>"><i data-feather="git-pull-request">
-                                        </i><span>Data
+                                        href="<?= base_url('Data_akun'); ?>"><i data-feather="user"></i></i><span>Data
                                             Akun</span></a></li>
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="<?= base_url('master'); ?>"><i
-                                            data-feather="monitor">
+                                            data-feather="archive">
                                         </i><span>Data Master Cabang</span></a>
                                 </li>
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="<?= base_url('Donasi'); ?>"><i
-                                            data-feather="monitor">
+                                            data-feather="file-text">
                                         </i><span>Data Donasi</span></a>
+                                </li>
+                                <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title link-nav"
+                                        href="<?= base_url('Keuangan'); ?>"><i data-feather="file">
+                                        </i><span>Data Keuangan</span></a>
                                 </li>
 
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="kanban.html"><i
-                                            data-feather="monitor">
+                                            data-feather="user-check">
                                         </i><span>Profile</span></a>
                                 </li>
 
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="kanban.html"><i
-                                            data-feather="monitor">
+                                            data-feather="book">
                                         </i><span>Rekap Dana </span></a>
                                 </li>
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="kanban.html"><i
-                                            data-feather="monitor">
+                                            data-feather="book-open">
                                         </i><span>Laporan Dana</span></a>
                                 </li>
                             </ul>
@@ -336,8 +344,7 @@
             </footer>
         </div>
     </div>
-    <!-- latest jquery-->
-    <script src="<?php echo base_url() ?>assets/pusatbackend/js/jquery-3.5.1.min.js"></script>
+    
     <!-- Bootstrap js-->
     <script src="<?php echo base_url() ?>assets/pusatbackend/js/bootstrap/bootstrap.bundle.min.js"></script>
     <!-- feather icon js-->

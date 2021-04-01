@@ -30,14 +30,6 @@
                                  <p class="lan-2">Halaman Dashboard.</p>
                              </div>
                          </li>
-                         <li class="sidebar-list">
-                             <label class="badge badge-success">2</label><a class="sidebar-link sidebar-title"
-                                 href="#"><i data-feather="home"></i><span class="lan-3">Dashboard </span></a>
-                             <ul class="sidebar-submenu">
-                                 <li><a class="lan-4" href="index.html">Default</a></li>
-                                 <li><a class="lan-5" href="dashboard-02.html">Ecommerce</a></li>
-                             </ul>
-                         </li>
 
                          <li class="sidebar-main-title">
                              <div>
@@ -81,16 +73,7 @@
                                  <p>UI Components & Elements </p>
                              </div>
                          </li>
-                         <li class="sidebar-list">
-                             <a class="sidebar-link sidebar-title link-nav" href="kanban.html"><i
-                                     data-feather="monitor">
-                                 </i><span>Blog</span></a>
-                         </li>
-                         <li class="sidebar-list">
-                             <a class="sidebar-link sidebar-title link-nav" href="kanban.html"><i
-                                     data-feather="monitor">
-                                 </i><span>information</span></a>
-                         </li>
+                       
                      </ul>
                  </div>
                  <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>

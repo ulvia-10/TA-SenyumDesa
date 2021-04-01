@@ -6,32 +6,34 @@ class M_keuangan extends CI_Model
 {
     public function getallkeuangan()
     {
-        return $this->db->get('data_keuangan');
+        $query  = $this->db->query('SELECT a.id_keuangan, a.judul, a.jenis_keuangan, a.tanggal_laporan, b.id_cabang, b.name_cabang
+        from data_keuangan a, master_cabang b
+        where a.id_cabang = b.id_cabang');
+        return $query;
     }
     public function cariData()
     {
         $keyword = $this->input->post('keyword');
         $this->db->like('judul', $keyword);
-        $this->db->or_like('id_keungan', $keyword);
+        $this->db->or_like('id_keuangan', $keyword);
         return $this->db->get('data_keuangan')->result_array();
     }
-
-
 
     // proses insert
     function processInsertKeuangan()
     {
 
+        $id_profile = $this->session->userdata('sess_id_profile');
+
         $data = array(
-
-
+            'id_cabang'  => $this->input->post('cabang'),
+            'id_profile' => $id_profile,
             'judul'   => $this->input->post('judul'),
             'deskripsi' => $this->input->post('deskripsi'),
             'jenis_keuangan' => $this->input->post('jenis_keuangan'),
             'nominal' => $this->input->post('nominal'),
             'tipe' => $this->input->post('tipe'),
         );
-
         $this->db->insert('data_keuangan', $data);
 
 

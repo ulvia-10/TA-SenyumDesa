@@ -28,19 +28,12 @@
                     </div>
                     <div class="card-body">
                         <?php foreach ($master_cabang as $master) { ?>
-                        <form class="needs-validation" novalidate="" action="<?php echo base_url('master/update') ?>"
-                            method="POST">
+                        <form class="needs-validation" action="<?php echo base_url('master/update') ?>" method="POST">
                             <div class="row g-3">
-
-                                <div class="col-md-3">
-                                    <label class="form-label" for="name_cabang">Id Cabang</label>
-                                    <input class="form-control" type="hiden" name="id_cabang"
-                                        value="<?php echo $master->id_cabang ?>">
-                                    <div class="invalid-feedback">Please provide a valid Nama Cabang.</div>
-                                </div>
-
                                 <div class="col-md-6">
                                     <label class="form-label" for="name_cabang">Nama Cabang</label>
+                                    <input class="form-control" type="hidden" name="id_cabang"
+                                        value="<?php echo $master->id_cabang ?>">
                                     <input class="form-control" name="name_cabang"
                                         value="<?php echo $master->name_cabang ?>" type="text" placeholder="nama Cabang"
                                         required="">
@@ -62,6 +55,7 @@
                             <br><br>
 
                             <button class="btn btn-primary" type="submit" value="simpan">Update</button>
+                            <input class="btn btn-warning" type="reset" value="Reset">
                             <a href="<?= base_url('master'); ?>" class="btn btn-light" type="submit">Cancel</a>
                         </form>
                         <?php } ?>

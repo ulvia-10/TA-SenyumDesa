@@ -25,21 +25,16 @@
         <?php foreach ($data_donasi as $donasi) { ?>
         <form class="form theme-form" action="<?php echo base_url('Donasi/update') ?>" method="POST">
             <div class="card-body">
-                <div class="row">
-                    <div class="col">
-                        <div class="mb-3">
-                            <label class="form-label" for="Id_donasi">Id Donasi</label>
-                            <input class="form-control form-control-lg" name="Id_donasi" id="Id_donasi" type="text"
-                                value="<?php echo $donasi->Id_donasi ?>" placeholder="Masukan No Rekeneing">
-                        </div>
-                    </div>
-                </div>
+
                 <div class="row">
                     <div class="col">
                         <div class="mb-3">
                             <label class="form-label" for="no_rekening">No Rekening</label>
+                            <input class="form-control form-control-lg" name="Id_donasi" id="Id_donasi" type="hidden"
+                                value="<?php echo $donasi->Id_donasi ?>" placeholder="Masukan No Rekeneing">
                             <input class="form-control form-control-lg" name="no_rekening" id="no_rekening" type="text"
-                                value="<?php echo $donasi->no_rekening ?>" placeholder="Masukan No Rekeneing">
+                                value="<?php echo $donasi->no_rekening ?>" placeholder="Masukan No Rekeneing"
+                                required="">
                         </div>
                     </div>
                 </div>
@@ -48,16 +43,19 @@
                         <div class="mb-3">
                             <label class="form-label" for="nama_donatur">Nama Donatur</label>
                             <input class="form-control" name="nama_donatur" id="nama_donatur" type="text"
-                                value="<?php echo $donasi->nama_donatur ?>" placeholder="Masukan Nama Donatur">
+                                value="<?php echo $donasi->nama_donatur ?>" placeholder="Masukan Nama Donatur"
+                                required="">
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col">
                         <div class="mb-3">
                             <label class="form-label" for="jumlahdonasi">Jumlah Donasi</label>
                             <input class="form-control form-control-sm" name="jml_donasi" id="jumlahdonasi" type="text"
-                                value="<?php echo $donasi->jml_donasi ?>" placeholder="Masukan Jumlah Donasi">
+                                value="<?php echo $donasi->jml_donasi ?>" placeholder="Masukan Jumlah Donasi"
+                                required="">
                         </div>
                     </div>
                 </div>
@@ -65,7 +63,7 @@
                     <div class="col">
                         <div class="mb-3">
                             <label class="form-label" for="status">Status</label>
-                            <select class="form-select form-control-lg digits" name="status" id="status"
+                            <select class="form-select form-control-lg digits" name="status" required="" id="status"
                                 value="<?php echo $donasi->status ?>">
                                 <option value="Lunas">Lunas</option>
                                 <option value="Belum Lunas">Belum Lunas</option>

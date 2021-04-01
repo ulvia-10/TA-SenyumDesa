@@ -26,7 +26,7 @@
                     <div class="mb-3">
                         <label class="form-label" for="judul">judul</label>
                         <input class="form-control form-control-lg" name="judul" id="judul" type="text"
-                            placeholder="Masukan judul">
+                            placeholder="Masukan judul" required="">
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                     <div class="mb-3">
                         <label class="form-label" for="deskripsi">Dekripsi</label>
                         <input class="form-control" name="deskripsi" id="deskripsi" type="text"
-                            placeholder="Masukan Nama deskripsi">
+                            placeholder="Masukan Nama deskripsi" required="">
                     </div>
                 </div>
             </div>
@@ -44,16 +44,29 @@
                     <div class="mb-3">
                         <label class="form-label" for="tipe">Tipe</label>
                         <input class="form-control form-control-sm" name="tipe" id="tipe" type="text"
-                            placeholder="Masukan tipe">
+                            placeholder="Masukan tipe" required="">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                     <div class="mb-3">
+                        <label class="form-label" for="cabang">Cabang</label>
+                        <select class="form-select form-control-lg digits" name="cabang" id="cabang" required="">
+                            <?php foreach ($dataCabang->result_array() as $row) { ?>
+                            <option value="<?php echo $row['id_cabang'] ?>"><?php echo $row['name_cabang'] ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
                         <label class="form-label" for="nominal">Nominal</label>
                         <input class="form-control form-control-sm" name="nominal" id="nominal" type="text"
-                            placeholder="Masukan Nominal">
+                            placeholder="Masukan Nominal" required="">
                     </div>
                 </div>
             </div>
@@ -61,7 +74,8 @@
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label" for="jenis_keuangan">Jenis Keuangan</label>
-                        <select class="form-select form-control-lg digits" name="jenis_keuangan" id="jenis_keuangan">
+                        <select class="form-select form-control-lg digits" name="jenis_keuangan" id="jenis_keuangan"
+                            required="">
                             <option value="masuk">Masuk</option>
                             <option value="keluar">Keluar</option>
                         </select>

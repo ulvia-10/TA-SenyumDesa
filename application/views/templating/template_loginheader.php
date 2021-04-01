@@ -151,9 +151,9 @@
                                 </div>
                                 <div class="d-sm-flex align-items-center justify-content-end"> <a
                                         class="btn btn-primary btn-sm ms-3 d-sm-inline-block d-none"
-                                        href="signup.html">Login</a>
+                                        href="<?php echo base_url('login/index') ?>">Login</a>
                                     <a class="btn btn-primary btn-sm ms-3 d-sm-inline-block d-none"
-                                        href="signup.html">Sign Up</a>
+                                    href="<?php echo base_url('login/register') ?>">Sign Up</a>
                                 </div>
                             </nav>
 
