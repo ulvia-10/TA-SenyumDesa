@@ -32,7 +32,7 @@
  						<?= $profile['asal']; ?></p>
 						 <p  class="card-text">
                          <label for="wilayah"><b> Wilayah </b></label>
- 						<?= $profile['wilayah']; ?></p>
+ 						<?= $profile['nama_cabang']; ?></p>
                          <p  class="card-text">
                          <label for="gender"><b> Gender </b></label>
  						<?= $profile['gender']; ?></p>
