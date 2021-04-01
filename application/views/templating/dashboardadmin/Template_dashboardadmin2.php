@@ -13,7 +13,7 @@
     <link rel="icon" href="<?php echo base_url() ?>assets/pusatbackend/images/logo/logo.png" type="image/x-icon">
     <link rel="shortcut icon" href="<?php echo base_url() ?>assets/pusatbackend/images/logo/logo.png"
         type="image/x-icon">
-    <title><?= $title ?></title>
+    <title>Senyum Desa</title>
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap"
         rel="stylesheet">
@@ -290,6 +290,11 @@
                                     <a class="sidebar-link sidebar-title link-nav" href="kanban.html"><i
                                             data-feather="monitor">
                                         </i><span>Data Donasi</span></a>
+                                </li>
+                                <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title link-nav"
+                                        href="<?= base_url('Keuangan'); ?>"><i data-feather="file">
+                                        </i><span>Data Keuangan</span></a>
                                 </li>
 
                                 <li class="sidebar-list">
