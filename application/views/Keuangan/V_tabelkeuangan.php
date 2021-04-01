@@ -32,10 +32,10 @@
                             <thead style=" text-align: center;">
                                 <tr>
                                     <th>No</th>
-                                    <th>Judul</th>
-                                    <th>Dekripsi</th>
-                                    <th>Jenis Keuangan</th>
                                     <th>Tanggal Laporan</th>
+                                    <th>Judul</th>
+                                    <th>Nama Cabang</th>
+                                    <th>Jenis Keuangan</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -44,10 +44,10 @@
                                 foreach ($data_keuangan->result_array() as $kas) { ?>
                                 <tr>
                                     <td> <?= $no++; ?></td>
-                                    <td><?= $kas["judul"]; ?></td>
-                                    <td><?= $kas["deskripsi"]; ?></td>
-                                    <td><?= $kas["jenis_keuangan"]; ?></td>
                                     <td><?= $kas["tanggal_laporan"]; ?></td>
+                                    <td><?= $kas["judul"]; ?></td>
+                                    <td><?= $kas["name_cabang"]; ?></td>
+                                    <td><?= $kas["jenis_keuangan"]; ?></td>
                                     <td>
 
 
