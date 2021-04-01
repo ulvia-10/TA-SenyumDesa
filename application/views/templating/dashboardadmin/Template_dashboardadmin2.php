@@ -13,7 +13,7 @@
     <link rel="icon" href="<?php echo base_url() ?>assets/pusatbackend/images/logo/logo.png" type="image/x-icon">
     <link rel="shortcut icon" href="<?php echo base_url() ?>assets/pusatbackend/images/logo/logo.png"
         type="image/x-icon">
-    <title>Senyum Desa</title>
+    <title><?= $title ?></title>
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap"
         rel="stylesheet">
@@ -278,17 +278,16 @@
                                 </li>
 
                                 <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
-                                        href="<?= base_url('Data_akun'); ?>"><i data-feather="git-pull-request">
-                                        </i><span>Data
+                                        href="<?= base_url('Data_akun'); ?>"><i data-feather="user"></i></i><span>Data
                                             Akun</span></a></li>
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="<?= base_url('master'); ?>"><i
-                                            data-feather="monitor">
+                                            data-feather="archive">
                                         </i><span>Data Master Cabang</span></a>
                                 </li>
                                 <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="kanban.html"><i
-                                            data-feather="monitor">
+                                    <a class="sidebar-link sidebar-title link-nav" href="<?= base_url('Donasi'); ?>"><i
+                                            data-feather="file-text">
                                         </i><span>Data Donasi</span></a>
                                 </li>
                                 <li class="sidebar-list">
@@ -299,18 +298,18 @@
 
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="kanban.html"><i
-                                            data-feather="monitor">
+                                            data-feather="user-check">
                                         </i><span>Profile</span></a>
                                 </li>
 
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="kanban.html"><i
-                                            data-feather="monitor">
+                                            data-feather="book">
                                         </i><span>Rekap Dana </span></a>
                                 </li>
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="kanban.html"><i
-                                            data-feather="monitor">
+                                            data-feather="book-open">
                                         </i><span>Laporan Dana</span></a>
                                 </li>
                             </ul>
