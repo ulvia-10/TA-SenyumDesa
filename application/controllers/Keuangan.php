@@ -27,6 +27,7 @@ class Keuangan extends CI_Controller
     // Tampilan keuangan  Tabel
     public function index()
     {
+
         $data = array(
 
             'namafolder'    => "keuangan",
