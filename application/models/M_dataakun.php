@@ -15,15 +15,17 @@ class M_dataakun extends CI_Model
     }
 
         public function getProfileByID($id){
+            
+            
             $sql = "SELECT akun_profile.*, data_informasiprofile.*, master_cabang.*
-    
             FROM akun_profile
             
-            JOIN data_informasiprofile ON data_informasiprofile.id_profile = akun_profile.id_profile
+            LEFT JOIN data_informasiprofile ON data_informasiprofile.id_profile = akun_profile.id_profile
             JOIN master_cabang ON master_cabang.id_cabang = akun_profile.id_cabang
             
+            
             WHERE akun_profile.id_profile = '$id'";
-    
+
             return $this->db->query($sql)->row_array();
         }
 

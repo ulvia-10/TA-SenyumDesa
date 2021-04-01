@@ -52,6 +52,7 @@ class Data_akun extends CI_Controller
 		$data['profile']= $this->M_dataakun->getProfileByID($id);
 		// $this->load->view('templating/template_backend', $data);
 		$this->load->view('templating/template_dashboardadmin', $data);
+
 	
 	}
 	public function delete($id)
@@ -65,8 +66,8 @@ class Data_akun extends CI_Controller
 	{
 
 
-		$kondisi = ['status_cabang' => "active"];
-		// $dataMasterCabang = $this->M_master->getDataCabang($kondisi);
+		
+		$dataMasterCabang = $this->M_master->getallwilayah();
 		$data = array(
 
 			'namafolder'	=> "dataakun",
@@ -74,7 +75,7 @@ class Data_akun extends CI_Controller
 			'title'			=> "Add Account | Senyum Desa",
 
 			// // variable
-			// 'data_master'	=> $dataMasterCabang
+			'data_master'	=> $dataMasterCabang
 		);
 	
 		$this->load->view('templating/template_dashboardadmin', $data);
@@ -89,7 +90,6 @@ class Data_akun extends CI_Controller
 		$this->load->helper(array('form', 'url'));
 		$this->load->library('form_validation');
 
-		$this->form_validation->set_rules('id_profile','id_profile','required');
 		$this->form_validation->set_rules('full_name','full_name','required');
 		$this->form_validation->set_rules('username','username','required');
 		$this->form_validation->set_rules('email','email','required');
@@ -105,7 +105,9 @@ class Data_akun extends CI_Controller
 		$this->form_validation->set_rules('status_account','status_account','required');
 	
 		if ($this->form_validation->run()==FALSE){
-			$this->load->view('/dataakun/V_dataakun.php');
+
+			// $this->tambah();
+			echo validation_errors();
 		}
 		else{
 			$upload = $this->M_dataakun->upload();
