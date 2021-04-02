@@ -2,7 +2,7 @@
 	<div class="card-header">
 		<h5>Tambah Akun Baru</h5>
 	</div>
-	<form class="form theme-form" action="<?php echo base_url('data_akun/prosesTambah') ?>" method="POST">
+	<form class="form theme-form" action="<?php echo base_url('data_akun/prosesTambah') ?>" method="POST" enctype="multipart/form-data">
 		<div class="card-body">
 			<div class="row">
 				<div class="col">
@@ -20,13 +20,13 @@
 								id="username">
 						</div>
 					</div>
-					<div class="mb-3 row">
+					<!-- <div class="mb-3 row">
 						<label class="col-sm-3 col-form-label">Email</label>
 						<div class="col-sm-9">
 							<input class="form-control" id="exampleInputEmail1" type="email" name="email" id="email"
 								placeholder="Masukkan email yang valid">
 						</div>
-					</div>
+					</div> -->
 
 					<div class="mb-3 row">
 						<label class="col-sm-3 col-form-label">Password</label>
@@ -36,13 +36,13 @@
 						</div>
 					</div>
 
-					<div class="mb-3 row">
+					<!-- <div class="mb-3 row">
 						<label class="col-sm-3 col-form-label">Telephone</label>
 						<div class="col-sm-9">
 							<input class="form-control m-input digits" type="tel" placeholder="91-(999)-999-999"
 								name="telp" id="telp" maxlength="12">
 						</div>
-					</div>
+					</div> -->
 					<div class="mb-2 row">
 						<label class="col-sm-3 col-form-label">Tempat Lahir</label>
 						<div class="col-sm-9">
@@ -70,14 +70,14 @@
 						<div class="col-sm-9">
 							<div class="m-checkbox-inline custom-radio-ml">
 								<div class="form-check form-check-inline radio radio-primary">
-									<input class="form-check-input" id="radioinline4" type="radio" name="gender"
-										value="gender">
+									<input class="form-check-input" id="radioinline4" type="radio" name="gender" id="gender"
+										value="P">
 									<label class="form-check-label mb-0" for="radioinline4"><span class="digits">
 											Female</span></label>
 								</div>
 								<div class="form-check form-check-inline radio radio-primary">
-									<input class="form-check-input" id="radioinline5" type="radio" name="gender"
-										value="gender">
+									<input class="form-check-input" id="radioinline5" type="radio" name="gender" id="gender"
+										value="L">
 									<label class="form-check-label mb-0" for="radioinline5"><span class="digits">
 											Male</span></label>
 								</div>
@@ -99,19 +99,19 @@
 						<div class="col-sm-9">
 							<div class="m-checkbox-inline custom-radio-ml">
 								<div class="form-check form-check-inline radio radio-primary">
-									<input class="form-check-input" id="radioinline1" type="radio" name="level"
+									<input class="form-check-input" id="radioinline1" type="radio" name="level" id="level"
 										value="pusat">
 									<label class="form-check-label mb-0" for="radioinline1">Option<span class="digits">
 											Admin Pusat</span></label>
 								</div>
 								<div class="form-check form-check-inline radio radio-primary">
-									<input class="form-check-input" id="radioinline2" type="radio" name="level"
+									<input class="form-check-input" id="radioinline2" type="radio" name="level" id="level"
 										value="korwil">
 									<label class="form-check-label mb-0" for="radioinline2">Option<span class="digits">
 											Admin Korwil</span></label>
 								</div>
 								<div class="form-check form-check-inline radio radio-primary">
-									<input class="form-check-input" id="radioinline3" type="radio" name="level"
+									<input class="form-check-input" id="radioinline3" type="radio" name="level" id="level"
 										value="anggota">
 									<label class="form-check-label mb-0" for="radioinline3">Option<span class="digits">
 											Anggota</span></label>
@@ -126,8 +126,8 @@
 							<div class="mb-2 row">
 								<label class="col-sm-3 col-form-label">Wilayah</label>
 								<div class="col-sm-9">
-									<select name="wilayah" class="form-select digits" id="">
-										<option value="">-- Pilih salah satu --</option>
+									<select name="name_cabang" class="form-select digits" id="">
+										<option value="name_cabang">-- Pilih salah satu --</option>
 
 										<?php
 										
@@ -142,14 +142,34 @@
 							</div>
 						</div>
 					</div>
-
 					<div class="row">
+
+						<label class="col-sm-3 col-form-label">Status Account</label>
+						<div class="col-sm-9">
+							<div class="m-checkbox-inline custom-radio-ml">
+								<div class="form-check form-check-inline radio radio-primary">
+									<input class="form-check-input" id="radioinline7" type="radio" name="status_account" id="status_account"
+										value="active">
+									<label class="form-check-label mb-0" for="radioinline7"><span class="digits">
+											Active</span></label>
+								</div>
+								<div class="form-check form-check-inline radio radio-primary">
+									<input class="form-check-input" id="radioinline8" type="radio"  name="status_account" id="status_account"
+										value="inactive">
+									<label class="form-check-label mb-0" for="radioinline8"><span class="digits">
+											Inactive</span></label>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<!-- <div class="row">
 						<label class="col-sm-3 col-form-label">Address</label>
 						<div class="col-sm-9">
 							<textarea class="form-control" rows="5" cols="5" placeholder="Type Address" name="address"
 								id="address"></textarea>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>

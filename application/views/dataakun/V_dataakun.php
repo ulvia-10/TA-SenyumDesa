@@ -1,6 +1,6 @@
   <!-- Zero Configuration  Starts-->
   <div class="col-sm-12">
-  <div class="card">
+  	<div class="card">
   		<div class="card-header">
   			<h5>Data Akun Senyum Desa</h5><span>Isi dengan teliti!</span>
   		</div>
@@ -35,20 +35,20 @@
   									class="badge badge-primary">
   									<i class="fa fa-eye" aria-hidden="true"></i></a></a>
 
-                                  <a href="<?= base_url();?>data_akun/edit/<?= $prf['id_profile'];?>"
-                                      class="badge badge-success"><i class="fa fa-edit "></i> </a>
-                                  <!-- hapus -->
-                                  <a href="<?= base_url();?>data_akun/hapus/<?=$prf['id_profile'];?>"
-                                      class="badge badge-danger "> <i class="fa fa-trash" aria-hidden="true"></i></a>
-                              </td>
+  								<a href="<?= base_url();?>data_akun/edit/<?= $prf['id_profile'];?>"
+  									class="badge badge-success"><i class="fa fa-edit "></i> </a>
+  								<!-- hapus -->
+  								<a href="<?= base_url();?>data_akun/delete/<?=$prf['id_profile'];?>"
+  									class="badge badge-danger "> <i class="fa fa-trash" aria-hidden="true"></i></a>
+  							</td>
 
-                              <?php 
+  							<?php 
                                         }
                                          ?>
-                          </tr>
+  						</tr>
 
-                  </table>
-              </div>
-          </div>
-      </div>
+  				</table>
+  			</div>
+  		</div>
+  	</div>
   </div>

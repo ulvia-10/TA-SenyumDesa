@@ -86,7 +86,8 @@ class Login extends CI_Controller
 
                         'sess_id_profile'   => $row['id_profile'],
                         'sess_fullname'     => $row['full_name'],
-                        'sess_level'        => $row['level']
+                        'sess_level'        => $row['level'],
+                        'sess_foto'         => $row['photo']
                     );
                     $this->session->set_userdata($data_session);
 
