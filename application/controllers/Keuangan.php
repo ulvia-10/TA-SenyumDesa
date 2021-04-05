@@ -32,7 +32,7 @@ class Keuangan extends CI_Controller
 
             'namafolder'    => "keuangan",
             'namafileview'  => "V_tabelKeuangan",
-            'title'         => "Keuangan"
+            'title'         => "Kas | Senyum Desa"
         );
 
         $data['data_keuangan'] = $this->M_keuangan->getallkeuangan();

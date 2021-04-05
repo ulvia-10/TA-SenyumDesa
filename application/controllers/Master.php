@@ -29,7 +29,7 @@ class Master extends CI_Controller
 
             'namafolder'    => "master",
             'namafileview'  => "V_master_cabang",
-            'title'         => "Master Cabang"
+            'title'         => "Master Cabang | Senyum Desa"
         );
 
         $data['master_cabang'] = $this->M_master->getallwilayah();
@@ -48,7 +48,7 @@ class Master extends CI_Controller
 
             'namafolder'    => "master",
             'namafileview'    => "V_tambahmaster_cabang",
-            'title'         => "Master Cabang"
+            'title'         => "Master Cabang Senyum Desa"
         );
         $this->load->view('templating/Template_dashboardadmin', $data);
     }
@@ -59,7 +59,7 @@ class Master extends CI_Controller
 
             'namafolder'    => "master",
             'namafileview'  => "V_detailmaster_cabang",
-            'title'         => "Master Cabang"
+            'title'         => "Master Cabang | Senyum Desa"
         );
         $this->load->view('templating/Template_dashboardadmin', $data);
     }

@@ -166,12 +166,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="card-footer">
-			<div class="col-sm-16 offset-sm-6">
-				<button class="btn btn-secondary" type="submit">Edit</button>
-				<input class="btn btn-light" type="reset" value="Cancel">
-			</div>
-		</div>
+		<button class="btn btn-success" type="submit" style="margin-left: 50px;">Edit</button>
+                        <input class="btn btn-primary" type="reset" value="Reset">
+                        <a href="<?= base_url('data_akun'); ?>" class="btn btn-light" type="submit">Cancel</a>
 	</form>
 </div>
 

@@ -218,7 +218,6 @@
                             </div>
                             <ul class="profile-dropdown onhover-show-div">
                                 <li><a href="#"><i data-feather="user"></i><span>Account </span></a></li>
-                                <li><a href="#"><i data-feather="mail"></i><span>Inbox</span></a></li>
                                 <li><a href="#"><i data-feather="settings"></i><span>Settings</span></a></li>
                                 <li><a href="<?= base_url('Login/logout'); ?>"><i data-feather="log-in"> </i><span>Log
                                             out</span></a>
@@ -280,7 +279,11 @@
                                     <a class="sidebar-link " href="<?= base_url('Dashboard'); ?>"><i
                                             data-feather="home"></i><span class="lan-3">Dashboard </span></a>
                                 </li>
-
+                                <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title link-nav" href="<?= base_url('data_akun/profile'); ?>"><i
+                                            data-feather="user-check">
+                                        </i><span>Profile</span></a>
+                                </li>
                                 <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
                                         href="<?= base_url('Data_akun'); ?>"><i data-feather="user"></i></i><span>Data
                                             Akun</span></a></li>
@@ -300,14 +303,9 @@
                                         </i><span>Data Keuangan</span></a>
                                 </li>
 
-                                <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="kanban.html"><i
-                                            data-feather="user-check">
-                                        </i><span>Profile</span></a>
-                                </li>
 
                                 <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="kanban.html"><i
+                                    <a class="sidebar-link sidebar-title link-nav" href="<?= base_url('dana');?>"><i
                                             data-feather="book">
                                         </i><span>Rekap Dana </span></a>
                                 </li>
@@ -337,7 +335,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12 footer-copyright text-center">
-                            <p class="mb-0">Copyright 2020 © Cuba theme by pixelstrap </p>
+                            <p class="mb-0">Copyright 2021 © IT Polinema </p>
                         </div>
                     </div>
                 </div>

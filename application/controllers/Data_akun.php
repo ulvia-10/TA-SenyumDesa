@@ -37,8 +37,20 @@ class Data_akun extends CI_Controller
 		$this->load->view('templating/template_dashboardadmin', $data);
        
 	}
+	
+	public function dana(){
+		$data = array(
+
+			'namafolder'	=> "profile",
+			'namafileview'	=> "V_rekapdana",
+			'title'         => "Profile | Senyum Desa"
+		);
+		$data ['profile'] = $this->M_dataakun->get_allakun();
+		$this->load->view('templating/template_dashboardadmin', $data);
+	}
 	public function edit($id)
 	{
+	
 		$dataMasterCabang = $this->M_master->getallwilayah();
 		$data = array(
 
@@ -62,7 +74,7 @@ class Data_akun extends CI_Controller
 		$this->form_validation->set_rules('level','level','required');
 		// $this->form_validation->set_rules('address','address','required');
 		
-
+		
 		if ($this->form_validation->run() == FALSE){
 			#code...    
 			$data['profile']= $this->M_dataakun->getProfileByID($id);        
@@ -70,11 +82,15 @@ class Data_akun extends CI_Controller
 		}
 		else{
 			// #code...
-			$this->M_dataakun->editdata();
-
-			
+			$this->M_dataakun->editdata($upload);
+			$upload = $this->M_dataakun->upload();
+			if($upload ['result'] == 'success'){
+				$this->M_dataakun->editdata($upload);
+				redirect('akun_profile','refresh');
+			}else{
+				echo $upload['error'];
+			}
 		}
-		
 		
 	}
 	
@@ -88,7 +104,6 @@ class Data_akun extends CI_Controller
 		);
 		$data['profile']= $this->M_dataakun->getProfileByID($id);
 		$this->load->view('templating/template_dashboardadmin', $data);
-
 	
 	}
 	public function delete($id)
@@ -116,7 +131,7 @@ class Data_akun extends CI_Controller
 		);
 	
 		$this->load->view('templating/template_dashboardadmin', $data);
-    
+	
 	}
 
 	// proses tambah

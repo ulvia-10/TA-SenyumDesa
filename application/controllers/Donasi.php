@@ -29,10 +29,10 @@ class Donasi extends CI_Controller
 
             'namafolder'    => "Donasi",
             'namafileview'  => "V_tabeldonasi",
-            'title'         => "Donasi"
+            'title'         => "Donasi | Senyum Desa"
         );
 
-        $data['data_donasi'] = $this->M_donasi->getallDonasi();
+        $data['data_donasi'] = $this->M_donasi->getDonasi();
         if ($this->input->post('keyword')) {
             #code...
             $data['data_donasi'] = $this->M_donasi->cariData();
@@ -48,19 +48,19 @@ class Donasi extends CI_Controller
 
             'namafolder'    => "Donasi",
             'namafileview'    => "V_tambahdonasi",
-            'title'         => "Donasi"
+            'title'         => "Donasi | Senyum Desa "
         );
         $this->load->view('templating/Template_dashboardadmin', $data);
     }
     //Tampilan detail
     public function detail()
     {
-        $data['data_donasi'] = $this->M_donasi->getDetailDonasi();
+        $data['donasi'] = $this->M_donasi->getDetailDonasi();
         $data = array(
 
             'namafolder'    => "Donasi",
             'namafileview'  => "V_detaildonasi",
-            'title'         => "Donasi"
+            'title'         => "Donasi Senyum Desa"
         );
         $this->load->view('templating/Template_dashboardadmin', $data);
     }

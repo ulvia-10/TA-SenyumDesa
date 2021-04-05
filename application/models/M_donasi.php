@@ -4,9 +4,18 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class M_donasi extends CI_Model
 {
-    public function getallDonasi()
+    public function getDonasi()
     {
-        return $this->db->get('data_donasi');
+        
+        $sql = $this->db->query('SELECT akun_profile.*, data_donasi.*, master_cabang.*
+            FROM akun_profile
+            
+            JOIN data_donasi ON data_donasi.id_profile = akun_profile.id_profile
+            LEFT JOIN master_cabang ON master_cabang.id_cabang = akun_profile.id_cabang
+            
+            WHERE akun_profile.id_profile');
+            return $sql;
+            
     }
     public function cariData()
     {
