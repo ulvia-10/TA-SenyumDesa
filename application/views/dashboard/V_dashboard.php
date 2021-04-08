@@ -107,37 +107,7 @@
          				</div>
          			</div>
          		</div>
-         		<div class="col-xl-3 xl-50 chart_data_right box-col-12">
-         			<div class="card">
-         				<div class="card-body">
-         					<div class="media align-items-center">
-         						<div class="media-body right-chart-content">
-         							<h4>$95,900<span class="new-box">Hot</span></h4><span>Purchase Order Value</span>
-         						</div>
-         						<div class="knob-block text-center">
-         							<input class="knob1" data-width="10" data-height="70" data-thickness=".3"
-         								data-angleoffset="0" data-linecap="round" data-fgcolor="#7366ff"
-         								data-bgcolor="#eef5fb" value="60">
-         						</div>
-         					</div>
-         				</div>
-         			</div>
-         		</div>
-         		<div class="col-xl-3 xl-50 chart_data_right second d-none">
-         			<div class="card">
-         				<div class="card-body">
-         					<div class="media align-items-center">
-         						<div class="media-body right-chart-content">
-         							<h4>$95,000<span class="new-box">New</span></h4><span>Product Order Value</span>
-         						</div>
-         						<div class="knob-block text-center">
-         							<input class="knob1" data-width="50" data-height="70" data-thickness=".3"
-         								data-fgcolor="#7366ff" data-linecap="round" data-angleoffset="0" value="60">
-         						</div>
-         					</div>
-         				</div>
-         			</div>
-         		</div>
+        
          		<div class="col-xl-4 xl-50 news box-col-6">
          			<div class="card">
          				<div class="card-header">
@@ -232,54 +202,7 @@
 
          			</div>
          		</div>
-         		<div class="col-xl-4 xl-50 notification box-col-6">
-         			<div class="card">
-         				<div class="card-header card-no-border">
-         					<div class="header-top">
-         						<h5 class="m-0">notification</h5>
-         						<div class="card-header-right-icon">
-         							<select class="button btn btn-primary">
-         								<option>Today</option>
-         								<option>Tomorrow</option>
-         								<option>Yesterday</option>
-         							</select>
-         						</div>
-         					</div>
-         				</div>
-         				<div class="card-body pt-0">
-         					<div class="media">
-         						<div class="media-body">
-         							<p>20-04-2020 <span>10:10</span></p>
-         							<h6>Updated Product<span class="dot-notification"></span></h6><span>Quisque a
-         								consequat ante sit
-         								amet magna...</span>
-         						</div>
-         					</div>
-         					<div class="media">
-         						<div class="media-body">
-         							<p>20-04-2020<span class="ps-1">Today</span><span
-         									class="badge badge-secondary">New</span></p>
-         							<h6>Tello just like your product<span class="dot-notification"></span></h6>
-         							<span>Quisque a
-         								consequat ante sit amet magna... </span>
-         						</div>
-         					</div>
-         					<div class="media">
-         						<div class="media-body">
-         							<div class="d-flex mb-3">
-         								<div class="inner-img"><img class="img-fluid"
-         										src="<?php echo base_url() ?>assets/pusatbackend/images/notification/1.jpg"
-         										alt="Product-1"></div>
-         								<div class="inner-img"><img class="img-fluid"
-         										src="<?php echo base_url() ?>assets/pusatbackend/images/notification/2.jpg"
-         										alt="Product-2"></div>
-         							</div><span class="mt-3">Quisque a consequat ante sit amet magna...</span>
-         						</div>
-         					</div>
-         				</div>
-         			</div>
-         		</div>
-
+         	
 
          		<div class="col-xl-4 col-lg-12 xl-50 calendar-sec box-col-6">
          			<div class="card gradient-primary o-hidden">

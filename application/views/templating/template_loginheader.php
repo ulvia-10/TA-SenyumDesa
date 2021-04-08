@@ -166,8 +166,7 @@
 
         <!--hero section start-->
 
-        <section class="hero-banner position-relative custom-pt-1 custom-pb-2 bg-dark"
-            data-bg-img="<?= base_url('assets/Home/images/bg/bg1.png'); ?>">
+   
 
             <!-- Main Content -->
             <?php $this->load->view($namafolder . '/' . $namafileview); ?>

@@ -7,7 +7,7 @@
                   <div class="card hovercard text-center">
                     <div class="cardheader"></div>
                     <div class="user-image">
-                      <div class="avatar"><img alt="" src="http://admin.pixelstrap.com/cuba/assets/images/user/7.jpg"></div>
+                      <div class="avatar"><img src="<?=base_url();?>/assets/images/<?=$profile['photo'];?>"></div>
                       <div class="icon-wrapper"><i class="icofont icofont-pencil-alt-5"> <a href="<?= base_url('data_akun/edit'); ?>"></a></i></div>
                     </div>
                     <div class="info">
@@ -21,7 +21,7 @@
                             </div>
                             <div class="col-md-6">
                               <div class="ttl-info text-start">
-                                <h6><i class="fa fa-calendar"></i>   BOD</h6><span><?= $profile['tanggal_lahir']; ?></span>
+                                <h6><i class="fa fa-calendar"></i> BOD</h6><span><?= $profile['tanggal_lahir']; ?></span>
                               </div>
                             </div>
                           </div>

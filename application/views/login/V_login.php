@@ -1,26 +1,5 @@
-<div class="container">
-    <div class="row text-white text-center z-index-1">
-        <div class="col">
-            <h1 class="text-white">Senyum Desa</h1>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb justify-content-center bg-transparent p-0 m-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Ayo Mengabdi</a>
-                    </li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <!-- / .row -->
-</div>
-<!-- / .container -->
-<div class="shape-1 bottom">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#fff" fill-opacity="1"
-            d="M0,288L48,288C96,288,192,288,288,266.7C384,245,480,203,576,208C672,213,768,267,864,245.3C960,224,1056,128,1152,96C1248,64,1344,96,1392,112L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-        </path>
-    </svg>
-</div>
-</section>
+
+
 
 <!--hero section end-->
 

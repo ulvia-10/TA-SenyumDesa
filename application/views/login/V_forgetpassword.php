@@ -8,7 +8,6 @@
           <div class="col-12">     
             <div class="login-card">
               <div>
-                <div><a class="logo" href="index.html"><img class="img-fluid for-light" src="http://admin.pixelstrap.com/cuba/assets/images/logo/login.png" alt="looginpage"><img class="img-fluid for-dark" src="../assets/images/logo/logo_dark.png" alt="looginpage"></a></div>
                 <div class="login-main"> 
                   <form class="theme-form">
                     <h4>Create Your Password</h4>

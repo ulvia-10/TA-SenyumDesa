@@ -37,17 +37,17 @@ class Data_akun extends CI_Controller
 		$this->load->view('templating/template_dashboardadmin', $data);
        
 	}
-	
-	public function dana(){
+	public function profile(){
 		$data = array(
 
 			'namafolder'	=> "profile",
-			'namafileview'	=> "V_rekapdana",
+			'namafileview'	=> "V_profile",
 			'title'         => "Profile | Senyum Desa"
 		);
 		$data ['profile'] = $this->M_dataakun->get_allakun();
 		$this->load->view('templating/template_dashboardadmin', $data);
 	}
+
 	public function edit($id)
 	{
 	

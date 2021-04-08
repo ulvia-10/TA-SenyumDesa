@@ -47,9 +47,9 @@
                         <h5 class="mb-4 text-white">Service</h5>
                         <ul class="list-unstyled mb-0">
                             <li class="mb-3"><a class="list-group-item-action text-light"
-                                    href="index-4.html#">wilayah</a>
+                                    href="index-4.html#">Wilayah</a>
                             </li>
-                            <li class="mb-3"><a class="list-group-item-action text-light" href="index-4.html#">pengurus
+                            <li class="mb-3"><a class="list-group-item-action text-light" href="index-4.html#">Pengurus
                                     Pusat</a>
                             </li>
                             <li class="mb-3"><a class="list-group-item-action text-light" href="login.html">Login</a>
@@ -59,13 +59,13 @@
                         </ul>
                     </div>
                     <div class="col-12 col-sm-4 mt-6 mt-sm-0">
-                        <h5 class="mb-4 text-white">Senyum desa</h5>
+                        <h5 class="mb-4 text-white">Senyum Desa</h5>
                         <div class="mb-3">
-                            <p class="mb-0 text-light">Mambulu, Mambulu Bar., Tambelangan, Kabupaten Sampang, Jawa Timur
+                            <p class="mb-0 text-light">Kabupaten Sampang, Jawa Timur
                             </p>
                         </div>
                         <div class="mb-3">
-                            <a class="btn-link text-light" href="#"> IG:Senyuum Desa
+                            <a class="btn-link text-light" href="#"> IG: Senyum Desa
                                 indonesia</a>
                         </div>
                         <div>
@@ -81,7 +81,7 @@
             </div>
         </div>
         <div class="row align-items-center">
-            <div class="col-md-6 text-light">
+            <div class="col-md-6 text-light" style="margin-left:350px;">
                 Copy Right ©2021 senyum Desa | Web Developer <i class="lar la-heart text-primary heartBeat2"></i> <u><a
                         class="text-primary" href="index-4.html#">Luvia</a></u></div>
 
