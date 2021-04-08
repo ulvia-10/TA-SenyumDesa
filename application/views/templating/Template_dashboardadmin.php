@@ -14,11 +14,14 @@
     <link rel="shortcut icon" href="<?php echo base_url() ?>assets/pusatbackend/images/logo/logo.png"
         type="image/x-icon">
     <title><?= $title ?></title>
+
     <!-- Google font-->
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap"
         rel="stylesheet">
+
+
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/pusatbackend/css/fontawesome.css">
     <!-- ico-font-->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/pusatbackend/css/vendors/icofont.css">
@@ -31,6 +34,11 @@
         href="<?php echo base_url() ?>assets/pusatbackend/css/vendors/feather-icon.css">
     <!-- Plugins css start-->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/pusatbackend/css/vendors/scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('assets/pusatbackend/css/vendors/animate.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('assets/pusatbackend/css/vendors/chartist.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('assets/pusatbackend/css/vendors/date-picker.css'); ?>">
+    <link rel="stylesheet" type="text/css"
+        href="<?php echo base_url() ?>assets/pusatbackend/css/vendors/date-time-picker.css">
     <link rel="stylesheet" type="text/css"
         href="<?php echo base_url() ?>assets/pusatbackend/css/vendors/datatables.css">
     <!-- Plugins css Ends-->
@@ -41,10 +49,6 @@
     <link id="color" rel="stylesheet" href="<?php echo base_url() ?>assets/pusatbackend/css/color-1.css" media="screen">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/pusatbackend/css/responsive.css">
-
-
-    <!-- latest jquery-->
-    <script src="<?php echo base_url() ?>assets/pusatbackend/js/jquery-3.5.1.min.js"></script>
 </head>
 
 <body onload="startTime()">
@@ -90,8 +94,7 @@
                         </li>
                         <li> <span class="header-search"><i data-feather="search"></i></span></li>
                         <li class="onhover-dropdown">
-                            <div class="notification-box"><i data-feather="bell"> </i><span
-                                    class="badge rounded-pill badge-secondary">4 </span></div>
+                            <div class="notification-box"><i data-feather="bell"> </i></div>
                             <ul class="notification-dropdown onhover-show-div">
                                 <li><i data-feather="bell"></i>
                                     <h6 class="f-18 mb-0">Notitications</h6>
@@ -218,6 +221,7 @@
                             </div>
                             <ul class="profile-dropdown onhover-show-div">
                                 <li><a href="#"><i data-feather="user"></i><span>Account </span></a></li>
+                                <li><a href="#"><i data-feather="mail"></i><span>Inbox</span></a></li>
                                 <li><a href="#"><i data-feather="settings"></i><span>Settings</span></a></li>
                                 <li><a href="<?= base_url('Login/logout'); ?>"><i data-feather="log-in"> </i><span>Log
                                             out</span></a>
@@ -269,21 +273,12 @@
                                     <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2"
                                             aria-hidden="true"></i></div>
                                 </li>
-                                <li class="sidebar-main-title">
-                                    <div>
-                                        <h6 class="lan-1">Dashboard</h6>
-                                        <p class="lan-2">Halaman Dashboard.</p>
-                                    </div>
-                                </li>
+                                <br><br>
                                 <li class="sidebar-list">
                                     <a class="sidebar-link " href="<?= base_url('Dashboard'); ?>"><i
                                             data-feather="home"></i><span class="lan-3">Dashboard </span></a>
                                 </li>
-                                <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="<?= base_url('data_akun/profile'); ?>"><i
-                                            data-feather="user-check">
-                                        </i><span>Profile</span></a>
-                                </li>
+
                                 <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
                                         href="<?= base_url('Data_akun'); ?>"><i data-feather="user"></i></i><span>Data
                                             Akun</span></a></li>
@@ -303,11 +298,10 @@
                                         </i><span>Data Keuangan</span></a>
                                 </li>
 
-
                                 <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="<?= base_url('dana');?>"><i
-                                            data-feather="book">
-                                        </i><span>Rekap Dana </span></a>
+                                    <a class="sidebar-link sidebar-title link-nav" href="<?= base_url('Profile'); ?>"><i
+                                            data-feather="user-check">
+                                        </i><span>Profile</span></a>
                                 </li>
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="kanban.html"><i
@@ -335,14 +329,21 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-12 footer-copyright text-center">
-                            <p class="mb-0">Copyright 2021 © IT Polinema </p>
+                            <p class="mb-0">Copyright 2021 © Senyum Desa </p>
                         </div>
                     </div>
                 </div>
             </footer>
         </div>
     </div>
-    
+    <!-- latest jquery-->
+    <script src="<?php echo base_url() ?>assets/pusatbackend/js/datepicker/date-time-picker/moment.min.js"></script>
+    <script
+        src="<?php echo base_url() ?>assets/pusatbackend/js/datepicker/date-time-picker/tempusdominus-bootstrap-4.min.js">
+    </script>
+    <script src="<?php echo base_url() ?>assets/pusatbackend/js/datepicker/date-time-picker/datetimepicker.custom.js">
+    </script>
+    <script src="<?php echo base_url() ?>assets/pusatbackend/js/jquery-3.5.1.min.js"></script>
     <!-- Bootstrap js-->
     <script src="<?php echo base_url() ?>assets/pusatbackend/js/bootstrap/bootstrap.bundle.min.js"></script>
     <!-- feather icon js-->
@@ -362,8 +363,72 @@
     <!-- Theme js-->
     <script src="<?php echo base_url() ?>assets/pusatbackend/js/script.js"></script>
     <script src="<?php echo base_url() ?>assets/pusatbackend/js/theme-customizer/customizer.js"></script>
-    <!-- login js-->
-    <!-- Plugin used-->
+
+    <!-- Dashboard JS-->
+    <script src="<?= base_url('assets/pusatbackend/js/chart/chartist/chartist.js'); ?>"></script>
+    <script src="<?= base_url('assets/pusatbackend/js/chart/chartist/chartist-plugin-tooltip.js'); ?>"></script>
+    <script src="<?= base_url('assets/pusatbackend/js/chart/knob/knob.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/pusatbackend/js/chart/knob/knob-chart.js'); ?>"></script>
+    <script src="<?= base_url('assets/pusatbackend/js/chart/apex-chart/apex-chart.js'); ?>"></script>
+    <script src="<?= base_url('assets/pusatbackend/js/chart/apex-chart/stock-prices.js'); ?>"></script>
+    <script src="<?= base_url('assets/pusatbackend/js/notify/bootstrap-notify.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/pusatbackend/js/dashboard/default.js'); ?>"></script>
+    <script src="<?= base_url('assets/pusatbackend/js/notify/index.js'); ?>"></script>
+    <script src="<?= base_url('assets/pusatbackend/js/datepicker/date-picker/datepicker.js'); ?>"></script>
+    <script src="<?= base_url('assets/pusatbackend/js/datepicker/date-picker/datepicker.en.js'); ?>"></script>
+    <script src="<?= base_url('assets/pusatbackend/js/datepicker/date-picker/datepicker.custom.js'); ?>"></script>
+    <script src="<?= base_url('assets/pusatbackend/js/typeahead/handlebars.js'); ?>"></script>
+    <script src="<?= base_url('assets/pusatbackend/js/typeahead/typeahead.bundle.js'); ?>"></script>
+    <script src="<?= base_url('assets/pusatbackend/js/typeahead/typeahead.custom.js'); ?>"></script>
+    <script src="<?= base_url('assets/pusatbackend/js/typeahead-search/handlebars.js'); ?>"></script>
+    <script src="<?= base_url('assets/pusatbackend/js/typeahead-search/typeahead-custom.js'); ?>"></script>
+    <script src="<?= base_url('assets/pusatbackend/js/tooltip-init.js'); ?>"></script>
+
+    <!--end  Plugin used-->
+
+    <style>
+    .removeRow {
+        background-color: #FF0000;
+        color: #FFFFFF;
+    }
+    </style>
+    <script>
+    $(document).ready(function() {
+
+        $('.delete_checkbox').click(function() {
+            if ($(this).is(':checked')) {
+                $(this).closest('tr').addClass('removeRow');
+            } else {
+                $(this).closest('tr').removeClass('removeRow');
+            }
+        });
+
+        $('#delete').click(function() {
+            var checkbox = $('.delete_checkbox:checked');
+            if (checkbox.length > 0) {
+                var checkbox_value = [];
+                $(checkbox).each(function() {
+                    checkbox_value.push($(this).val());
+                });
+                $.ajax({
+                    url: "<?php echo base_url(); ?>Master/delete",
+                    method: "POST",
+                    data: {
+                        checkbox_value: checkbox_value
+                    },
+                    success: function() {
+                        $('.removeRow').fadeOut(1500);
+                    }
+                })
+            } else {
+                alert('Select atleast one records');
+            }
+        });
+
+    });
+    </script>
+
+
 </body>
 
 </html>
