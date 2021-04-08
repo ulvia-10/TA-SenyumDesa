@@ -28,7 +28,7 @@
 
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="display" id="basic-1" width="100%" cellspacing="0">
+                        <table class="display" id="API-3" width="100%" cellspacing="0">
                             <thead style=" text-align: center;">
                                 <tr>
                                     <th>No</th>
@@ -88,6 +88,15 @@
                                 }
                                     ?>
                             </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Tanggal Laporan</th>
+                                    <th>Judul</th>
+                                    <th>Nama Cabang</th>
+                                    <th>Jenis Keuangan</th>
+                                </tr>
+                            </tfoot>
                         </table>
                     </div>
                 </div>
@@ -96,4 +105,4 @@
 
 
     </div>
-</div>
+    </di
