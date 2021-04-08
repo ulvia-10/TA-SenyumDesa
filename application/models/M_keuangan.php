@@ -11,6 +11,8 @@ class M_keuangan extends CI_Model
         where a.id_cabang = b.id_cabang');
         return $query;
     }
+
+    // proses  cari data
     public function cariData()
     {
         $keyword = $this->input->post('keyword');
@@ -19,7 +21,18 @@ class M_keuangan extends CI_Model
         return $this->db->get('data_keuangan')->result_array();
     }
 
-    // proses insert
+    // proses detail
+    public function detailKeuangan($id_keuangan)
+    {
+        return $this->db->table('data_keuangan')
+            ->join('master_cabang', 'master_cabang.id_cabang = data_keuangan.id_keuangan', 'Left')
+            ->join('akun_profile', 'akun_profile.id_profile = data_keuangan.id_keuangan', 'left')
+            ->where('id_keuangan', $id_keuangan)
+            ->get()
+            ->getResultArray();
+    }
+
+    // proses insert/tambah data
     function processInsertKeuangan()
     {
 
@@ -47,7 +60,7 @@ class M_keuangan extends CI_Model
 
 
 
-    // hapus
+    // hapus data
     function processDeleteKeuangan($id_keuangan)
     {
 
@@ -65,17 +78,34 @@ class M_keuangan extends CI_Model
     }
 
 
-    function edit_data($where, $table)
+    //proses Edit
+    public function edit($data)
     {
-        return $this->db->get_where($table, $where);
+        $this->db->table('data_keuangan')
+            ->where('id_keuangan', $data['id_keuangan'])
+            ->update($data);
     }
 
-    function update_data($where, $data, $table)
+    public function ubahdata()
     {
-        $this->db->where($where);
-        $this->db->update($table, $data);
 
-        $elementHTML = '<div class="alert alert-success"><b>Pemberitahuan</b> <br> Data Cabang Berhasil Di Update ' . date('d F Y H.i A') . '</div>';
-        $this->session->set_flashdata('pesan', $elementHTML);
+
+        $id_keuangan = $this->input->post('id_keuangan');
+
+        $data = [
+            "id_cabang"   => $this->input->post('name_cabang', true),
+            "judul"    => $this->input->post('judul', true),
+            "deskripsi"        => $this->input->post('deskripsi', true),
+            "jenis_keuangan"     => $this->input->post('jenis_keuangan', true),
+            "tipe"     => $this->input->post('tipe', true),
+            "tanggal_laporan"   => $this->input->post('tanggal_laporan', true),
+        ];
+
+        $this->db->where('id_keuangan', $id_keuangan);
+        $this->db->update('data_keuangan', $data);
+
+        $msg = '<div class="alert alert-info">Informasi pelaporan berhasil diperbarui <br><small>Pada tanggal ' . date('d F Y H.i A') . '</small></div>';
+        $this->session->set_flashdata('flash-data', $msg);
+        redirect('Keuangan/index' . $id_keuangan);
     }
 }
