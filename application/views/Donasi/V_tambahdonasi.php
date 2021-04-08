@@ -42,6 +42,19 @@
             <div class="row">
                 <div class="col">
                     <div class="mb-3">
+                        <label class="form-label" for="cabang">Cabang</label>
+                        <select class="form-select form-control-lg digits" name="cabang" id="cabang" required="">
+                            <option selected="" disabled="" value="">Pilih Cabang Wilayah</option>
+                            <?php foreach ($dataCabang->result_array() as $row) { ?>
+                            <option value="<?php echo $row['id_cabang'] ?>"><?php echo $row['name_cabang'] ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
                         <label class="form-label" for="jumlahdonasi">Jumlah Donasi</label>
                         <input class="form-control form-control-sm" name="jml_donasi" id="jumlahdonasi" type="text"
                             placeholder="Masukan Jumlah Donasi" required="">
