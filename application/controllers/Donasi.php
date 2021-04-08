@@ -11,6 +11,7 @@ class Donasi extends CI_Controller
         parent::__construct();
 
         $this->load->model('M_donasi');
+        $this->load->model('M_master');
         $this->load->library('form_validation');
 
         // pengecekan sesi 
@@ -32,7 +33,7 @@ class Donasi extends CI_Controller
             'title'         => "Donasi | Senyum Desa"
         );
 
-        $data['data_donasi'] = $this->M_donasi->getDonasi();
+        $data['data_donasi'] = $this->M_donasi->getallDonasi();
         if ($this->input->post('keyword')) {
             #code...
             $data['data_donasi'] = $this->M_donasi->cariData();
@@ -44,23 +45,26 @@ class Donasi extends CI_Controller
     //Tampilan Tambah Donasi
     public function tambah()
     {
+        $getDataCabang = $this->M_master->getallwilayah();
         $data = array(
 
             'namafolder'    => "Donasi",
             'namafileview'    => "V_tambahdonasi",
-            'title'         => "Donasi | Senyum Desa "
+            'title'         => "Donasi",
+
+            'dataCabang'    => $getDataCabang
         );
         $this->load->view('templating/Template_dashboardadmin', $data);
     }
     //Tampilan detail
     public function detail()
     {
-        $data['donasi'] = $this->M_donasi->getDetailDonasi();
+        $data['data_donasi'] = $this->M_donasi->getDetailDonasi();
         $data = array(
 
             'namafolder'    => "Donasi",
             'namafileview'  => "V_detaildonasi",
-            'title'         => "Donasi Senyum Desa"
+            'title'         => "Donasi"
         );
         $this->load->view('templating/Template_dashboardadmin', $data);
     }
@@ -84,6 +88,8 @@ class Donasi extends CI_Controller
 
     public function prosesedit($Id_donasi)
     {
+        $data['title'] = 'Edit | Donasi';
+
         $where = array('Id_donasi' => $Id_donasi);
         $data['data_donasi'] = $this->M_donasi->edit_data($where, 'data_donasi')->result();
         $this->load->view('templating/dashboardadmin/Template_dashboardadmin2');
@@ -93,15 +99,19 @@ class Donasi extends CI_Controller
 
     function update()
     {
+
         $Id_donasi = $this->input->post('Id_donasi');
+        $no_rekening = $this->input->post('no_rekening');
         $nama_donatur = $this->input->post('nama_donatur');
         $status = $this->input->post('status');
         $jml_donasi = $this->input->post('jml_donasi');
 
         $data = array(
+            'no_rekening' => $no_rekening,
             'nama_donatur' => $nama_donatur,
             'status'       => $status,
             'jml_donasi'   => $jml_donasi,
+
 
         );
 
