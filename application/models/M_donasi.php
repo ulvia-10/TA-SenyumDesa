@@ -4,18 +4,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class M_donasi extends CI_Model
 {
-    public function getDonasi()
+    public function getallDonasi()
     {
-        
-        $sql = $this->db->query('SELECT akun_profile.*, data_donasi.*, master_cabang.*
-            FROM akun_profile
-            
-            JOIN data_donasi ON data_donasi.id_profile = akun_profile.id_profile
-            LEFT JOIN master_cabang ON master_cabang.id_cabang = akun_profile.id_cabang
-            
-            WHERE akun_profile.id_profile');
-            return $sql;
-            
+        $query  = $this->db->query('SELECT a.Id_donasi, a.no_rekening, a.nama_donatur, a.tgl_donasi, a.status, a.jml_donasi, b.id_cabang, b.name_cabang
+        from data_donasi a, master_cabang b
+        where a.id_cabang = b.id_cabang');
+        return $query;
     }
     public function cariData()
     {
@@ -33,7 +27,7 @@ class M_donasi extends CI_Model
 
         $data = array(
 
-
+            'id_cabang'  => $this->input->post('cabang'),
             'no_rekening'   => $this->input->post('no_rekening'),
             'nama_donatur'   => $this->input->post('nama_donatur'),
             'status' => $this->input->post('status'),
