@@ -47,8 +47,8 @@ class Master extends CI_Controller
         $data = array(
 
             'namafolder'    => "master",
-            'namafileview'    => "V_tambahmaster_cabang",
-            'title'         => "Master Cabang Senyum Desa"
+            'namafileview'    => "V_master_cabang",
+            'title'         => "Master Cabang"
         );
         $this->load->view('templating/Template_dashboardadmin', $data);
     }
@@ -59,7 +59,7 @@ class Master extends CI_Controller
 
             'namafolder'    => "master",
             'namafileview'  => "V_detailmaster_cabang",
-            'title'         => "Master Cabang | Senyum Desa"
+            'title'         => "Master Cabang"
         );
         $this->load->view('templating/Template_dashboardadmin', $data);
     }
@@ -78,6 +78,17 @@ class Master extends CI_Controller
     {
 
         $this->M_master->processDeleteCabang($id_cabang);
+    }
+
+    // Multiple Delete
+    function delete()
+    {
+        if ($this->input->post('checkbox_value')) {
+            $id_cabang = $this->input->post('checkbox_value');
+            for ($count = 0; $count < count($id_cabang); $count++) {
+                $this->M_master->delete($id_cabang[$count]);
+            }
+        }
     }
 
     public function prosesedit($masterid)
