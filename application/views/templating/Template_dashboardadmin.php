@@ -51,6 +51,7 @@
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/pusatbackend/css/responsive.css">
      
+    <script src="<?php echo base_url() ?>assets/pusatbackend/js/jquery-3.5.1.min.js"></script>
 </head>
 
 <body onload="startTime()">
@@ -345,7 +346,6 @@
     </script>
     <script src="<?php echo base_url() ?>assets/pusatbackend/js/datepicker/date-time-picker/datetimepicker.custom.js">
     </script>
-    <script src="<?php echo base_url() ?>assets/pusatbackend/js/jquery-3.5.1.min.js"></script>
     <!-- Bootstrap js-->
     <script src="<?php echo base_url() ?>assets/pusatbackend/js/bootstrap/bootstrap.bundle.min.js"></script>
     <!-- feather icon js-->

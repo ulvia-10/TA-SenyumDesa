@@ -187,3 +187,24 @@
 
 
 <script>
+
+
+	let elementWilayah = $('#element-wilayah');
+
+	// sembunyikan
+	elementWilayah.hide();
+
+	// perintah event on click
+	$('input[name="level"]').change(function () {
+
+
+		if (this.value == "pusat") {
+
+			elementWilayah.fadeOut();
+		} else {
+
+            elementWilayah.fadeIn();
+        }
+    })
+
+</script>
