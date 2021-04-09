@@ -20,7 +20,8 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap"
         rel="stylesheet">
-
+   <!-- latest jquery-->
+  
 
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/pusatbackend/css/fontawesome.css">
     <!-- ico-font-->
@@ -49,6 +50,7 @@
     <link id="color" rel="stylesheet" href="<?php echo base_url() ?>assets/pusatbackend/css/color-1.css" media="screen">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/pusatbackend/css/responsive.css">
+     
 </head>
 
 <body onload="startTime()">
@@ -383,6 +385,7 @@
     <script src="<?= base_url('assets/pusatbackend/js/typeahead-search/handlebars.js'); ?>"></script>
     <script src="<?= base_url('assets/pusatbackend/js/typeahead-search/typeahead-custom.js'); ?>"></script>
     <script src="<?= base_url('assets/pusatbackend/js/tooltip-init.js'); ?>"></script>
+ 
 
     <!--end  Plugin used-->
 

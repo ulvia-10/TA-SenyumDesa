@@ -122,7 +122,7 @@
 
 					<div class="form-group">
 
-						<div class="row" id="element-wilayah">
+						<div class="row" id="#element-wilayah">
 							<div class="mb-2 row">
 								<label class="col-sm-3 col-form-label">Wilayah</label>
 								<div class="col-sm-9">
@@ -142,6 +142,7 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="row">
 
 						<label class="col-sm-3 col-form-label">Status Account</label>
@@ -174,8 +175,9 @@
 			</div>
 		</div>
 		<div class="card-footer">
-			<div class="col-sm-9 offset-sm-3">
+			<div class="col-sm-10 offset-sm-1">
 				<button class="btn btn-primary" type="submit">Tambah</button>
+				<input class="btn btn-warning" type="reset" value="Reset">
 				<input class="btn btn-light" type="reset" value="Cancel">
 			</div>
 		</div>

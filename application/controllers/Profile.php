@@ -38,6 +38,9 @@ class Profile extends CI_Controller
         $this->load->view('Donasi/V_editprofile', $data);
         $this->load->view('templating/dashboardadmin/template_footer');
     }
+    public function changepassword(){
+        
+    }
 
     function update()
     {

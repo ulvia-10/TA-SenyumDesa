@@ -41,6 +41,29 @@ class Login extends CI_Controller
       $this->load->view('templating/template_loginheader', $data);
       $this->load->view('templating/template_loginfooter', $data);
     }
+    function proses_register(){
+       	// print_r( $this->input->post() );
+		$this->load->helper(array('form', 'url'));
+		$this->load->library('form_validation');
+
+		$this->form_validation->set_rules('full_name','full_name','required');
+		$this->form_validation->set_rules('username','username','required');
+		$this->form_validation->set_rules('password','password','required');
+		$this->form_validation->set_rules('tempat_lahir','tempat_lahir','required');
+		$this->form_validation->set_rules('tanggal_lahir','tanggal_lahir','required');
+		$this->form_validation->set_rules('asal','asal','required');
+		$this->form_validation->set_rules('gender','gender','required');
+
+        if ($this->form_validation->run()==FALSE){
+
+			// $this->tambah();
+			echo validation_errors();
+          }  else{
+                    $this->M_login->register();
+                    redirect('akun_profile','refresh');
+              
+            }
+        }
     function forgetpassword()
     {
         $data = array(

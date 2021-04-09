@@ -38,15 +38,13 @@
                   <div class="help-block with-errors"></div>
                 </div>
               </div>
-              <div class="row"></div>
+              <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                   <input id="form_lastname" type="text" name="password" class="form-control" placeholder="Password" required="required" data-error="Password is required.">
                   <div class="help-block with-errors"></div>
                 </div>
-  
-         
-         
+                </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <input id="form_email" type="text" name="tempat_lahir" class="form-control" placeholder="Tempat Lahir" required="required" data-error="Tempat Lahir is required.">

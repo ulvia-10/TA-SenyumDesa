@@ -17,6 +17,7 @@
   							<th>Nama</th>
   							<th>Username</th>
   							<th>Wilayah</th>
+							  <th>Asal</th>
   							<th>Level</th>
   							<th>Action</th>
   						</tr>
@@ -29,6 +30,7 @@
   							<td><?=$prf["full_name"];?></td>
   							<td><?=$prf["username"];?></td>
   							<td><?=$prf["name_cabang"];?></td>
+							  <td><?=$prf["asal"];?></td>
   							<td>
   								<span class="badge badge-info"><?=$prf["level"];?></span></td>
   							<td>

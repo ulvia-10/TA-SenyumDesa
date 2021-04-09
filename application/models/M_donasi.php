@@ -6,10 +6,14 @@ class M_donasi extends CI_Model
 {
     public function getallDonasi()
     {
-        $query  = $this->db->query('SELECT a.Id_donasi, a.no_rekening, a.nama_donatur, a.tgl_donasi, a.status, a.jml_donasi, b.id_cabang, b.name_cabang
-        from data_donasi a, master_cabang b
-        where a.id_cabang = b.id_cabang');
-        return $query;
+        $sql = $this->db->query('SELECT akun_profile.*, data_donasi.*, master_cabang.*
+            FROM akun_profile
+            
+            JOIN data_donasi ON data_donasi.id_profile = akun_profile.id_profile
+            LEFT JOIN master_cabang ON master_cabang.id_cabang = akun_profile.id_cabang
+            
+            WHERE akun_profile.id_profile');
+            return $sql;
     }
     public function cariData()
     {
@@ -18,8 +22,6 @@ class M_donasi extends CI_Model
         $this->db->or_like('Id_donasi', $keyword);
         return $this->db->get('data_donasi')->result_array();
     }
-
-
 
     // proses insert
     function processInsertDonasi()
