@@ -66,13 +66,13 @@
 							<div class="m-checkbox-inline custom-radio-ml">
 								<div class="form-check form-check-inline radio radio-primary">
 									<input class="form-check-input" id="radioinline4" type="radio" name="gender"
-										value="P">
+										value="P" <?php echo $profile['gender'] == "P" ? 'checked=""' : '' ?>>
 									<label class="form-check-label mb-0" for="radioinline4"><span class="digits">
 											Female</span></label>
 								</div>
 								<div class="form-check form-check-inline radio radio-primary">
 									<input class="form-check-input" id="radioinline5" type="radio" name="gender"
-										value="L">
+										value="L" <?php echo $profile['gender'] == "L" ? 'checked=""' : '' ?>>
 									<label class="form-check-label mb-0" for="radioinline5"><span class="digits">
 											Male</span></label>
 								</div>
@@ -84,7 +84,7 @@
 							<div class="mb-3 row">
 								<label class="col-sm-3 col-form-label">Pas Foto</label>
 								<div class="col-sm-9">
-									<input class="form-control" type="file" name="photo" id="photo" value="<?= $profile['photo'] ;?>">
+									<input class="form-control" type="file" name="photo" id="photo">
 								</div>
 							</div>
 						</div>
@@ -95,19 +95,19 @@
 							<div class="m-checkbox-inline custom-radio-ml">
 								<div class="form-check form-check-inline radio radio-primary">
 									<input class="form-check-input" id="radioinline1" type="radio" name="level"
-										value="pusat">
+										value="pusat" <?php echo $profile['level'] == "pusat" ? 'checked=""' : '' ?>>
 									<label class="form-check-label mb-0" for="radioinline1">Option<span class="digits">
 											Admin Pusat</span></label>
 								</div>
 								<div class="form-check form-check-inline radio radio-primary">
 									<input class="form-check-input" id="radioinline2" type="radio" name="level"
-										value="korwil">
+										value="korwil" <?php echo $profile['level'] == "korwil" ? 'checked=""' : '' ?>>
 									<label class="form-check-label mb-0" for="radioinline2">Option<span class="digits">
 											Admin Korwil</span></label>
 								</div>
 								<div class="form-check form-check-inline radio radio-primary">
 									<input class="form-check-input" id="radioinline3" type="radio" name="level"
-										value="anggota">
+										value="anggota" <?php echo $profile['level'] == "anggota" ? 'checked=""' : '' ?>>
 									<label class="form-check-label mb-0" for="radioinline3">Option<span class="digits">
 											Anggota</span></label>
 								</div>
@@ -184,11 +184,13 @@
 
 		if (this.value == "pusat") {
 
-			elementWilayah.fadeOut();
+			elementWilayah.hide();
+
 		} else {
 
-			elementWilayah.fadeIn();
+			elementWilayah.show();
 		}
+
 	});
 
 </script>

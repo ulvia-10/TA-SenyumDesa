@@ -202,8 +202,8 @@
 			elementWilayah.fadeOut();
 		} else {
 
-			elementWilayah.fadeIn();
-		}
-	});
+            elementWilayah.fadeIn();
+        }
+    })
 
 </script>
