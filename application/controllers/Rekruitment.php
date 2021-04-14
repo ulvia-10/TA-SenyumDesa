@@ -75,7 +75,9 @@ class Rekruitment extends CI_Controller
 
 			'namafolder'	=> "calon_anggota",
 			'namafileview'	=> "V_formulir.php",
-			'title'         => "Formulir | Senyum Desa"
+			'title'         => "Formulir | Senyum Desa",
+
+			'profile'	=> $this->M_rekruitment->getDataProfile()
 		);
 		$this->load->view('templating/template_calonanggota', $data);
        
@@ -86,25 +88,22 @@ class Rekruitment extends CI_Controller
 
 			'namafolder'	=> "calon_anggota",
 			'namafileview'	=> "V_contact.php",
-			'title'         => "Contact Us | Senyum Desa"
+			'title'         => "Contact Us | Senyum Desa",
 		);
 		//disesuaikan sama dengan nama view$ 
 		$this->load->view('templating/template_calonanggota', $data);
        
 	}
-	public function prosestambah($upload){
+	public function prosestambah(){
 			// print_r( $this->input->post() );
 			$this->load->helper(array('form', 'url'));
 			$this->load->library('form_validation');
 	
 			$this->form_validation->set_rules('full_name','full_name','required');
 			// $this->form_validation->set_rules('email','email','required');
-			$this->form_validation->set_rules('password','password','required');
 			// $this->form_validation->set_rules('telp','telp','required');
 			$this->form_validation->set_rules('asal','asal','required');
 			$this->form_validation->set_rules('reason_join','reason_join','required');
-			$this->form_validation->set_rules('address','address','required');
-			$this->form_validation->set_rules('telp','telp','required');
 			$this->form_validation->set_rules('bukti_follow','bukti_follow','required');
 	
 		
@@ -114,13 +113,42 @@ class Rekruitment extends CI_Controller
 				echo validation_errors();
 			}
 			else{
-				$upload = $this->M_rekruitment->upload();
-				if($upload ['result'] == 'success'){
-					$this->M_rekruitment->tambahdata($upload);
+				$uploadCV = $this->M_rekruitment->upload('cv');
+				$uploadBuktiBayar = $this->M_rekruitment->upload('bukti_bayar');
+				$uploadFoto = $this->M_rekruitment->upload('photo');
+				
+				// status kondisi upload multiple | 0 = error semua | 1 = sebagian error | 2 = sebagian | 3 = berhasil semua
+				$kondisi = 0;
+
+
+				if ( $uploadCV['result'] == "success" ) $kondisi++;
+				if ( $uploadBuktiBayar['result'] == "success" ) $kondisi++;
+				if ( $uploadFoto['result'] == "success" ) $kondisi++;
+
+
+				if ( $kondisi == 3 ) { // sudah berhasil input semua ? 
+
+
+					// variable upload 
+					$cv  = $uploadCV['file']['file_name'];
+					$buktibayar  = $uploadBuktiBayar['file']['file_name'];
+					$foto  = $uploadFoto['file']['file_name'];
+
+					$this->M_rekruitment->tambahdata( $cv, $buktibayar, $foto );
 					$this->session->set_flashdata('flash-data','ditambahkan');
-					redirect('akun_profile','refresh');
-				}else{
-					echo $upload['error'];
+
+				} else {
+
+					echo $uploadCV['error'];
+					echo '<hr>';
+					
+					echo $uploadBuktiBayar['error'];
+					echo '<hr>';
+
+					echo $uploadFoto['error'];
+					echo '<hr>';
+
+					
 				}
 			}
 	}

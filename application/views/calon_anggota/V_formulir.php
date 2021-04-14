@@ -52,9 +52,7 @@
 												<label for="full_name" class="control-label">Nama Lengkap</label>
 												<input id="full_name" class="form-control" type="text" name="full_name"
 													spellcheck="false" autocomplete="off" data-rule-required="true"
-													data-rule-alphanumeric="true"
-													data-msg-required="Isi Nama Lengkap Anda"
-													data-msg-alphanumeric="Mohon untuk tidak memasukkan nama panggilan/julukan.">
+													data-msg-required="Isi Nama Lengkap Anda" value="<?php echo $profile['full_name'] ?>">
 												<small class="help-block">Bukan nama panggilan/julukan.</small>
 											</div>
 											<div class="form-group">

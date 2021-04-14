@@ -59,9 +59,8 @@ class Login extends CI_Controller
         // $this->form_validation->set_rules('telp','telp','required');
 		$this->form_validation->set_rules('tempat_lahir','tempat_lahir','required');
 		$this->form_validation->set_rules('tanggal_lahir','tanggal_lahir','required');
-		$this->form_validation->set_rules('asal','asal','required');
 		$this->form_validation->set_rules('gender','gender','required');
-        // $this->form_validation->set_rules('address','address','required');
+        $this->form_validation->set_rules('address','address','required');
 
         if ($this->form_validation->run()==FALSE){
 

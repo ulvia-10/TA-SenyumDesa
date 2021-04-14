@@ -15,6 +15,9 @@
 			<div class="row">
 				<div class="col-lg-8 col-md-10 ms-auto me-auto">
 					<div class="register-form text-center">
+
+
+
 						<form id="contact-form" action="<?php echo base_url('login/proses_register')?>" method="post">
 							<div class="row">
 								<div class="col-md-6">
@@ -45,7 +48,7 @@
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input id="telp" type="tel" name="telp" class="form-control"
+										<input id="telp" type="number" name="telp" class="form-control"
 											placeholder="Nomor Whatsapp" required="required"
 											data-error="Nomor is required" maxlength="12">
 										<div class="help-block with-errors"></div>
@@ -93,7 +96,7 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input class="form-control" type="date" value="2021-04-12" name="tgl_tragedi"
+										<input class="form-control" type="date" value="2021-04-12" name="tanggal_lahir"
 											id="tgl_tragedi">
 										<small>Pilih tanggal Lahir</small>
 										<div class="help-block with-errors"></div>
@@ -109,7 +112,7 @@
 							</div>
 							<div class="row">
 								<div class="col">
-									<a  class="btn btn-primary">Create Account</a>
+									<button class="" type="submit">Buat Akun</button>
 								</div>
 							</div>
 						</form>
