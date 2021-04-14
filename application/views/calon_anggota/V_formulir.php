@@ -92,7 +92,7 @@
 													</p>
 												</div>
 											</div>
-											<!-- <div class="form-group">
+											<div class="form-group">
 												<label class="col-sm-3 control-label" for="form-control-22">Upload
 													CV</label>
 												<div class="col-sm-9">
@@ -112,7 +112,7 @@
 														<small>Allowed type : PDF</small>
 													</p>
 												</div>
-											</div> -->
+											</div>
 											<div class="row">
 												<label class="col-sm-3 col-form-label">Bukti Follow</label>
 												<div class="col-sm-9">
@@ -136,7 +136,7 @@
 													</div>
 												</div>
 											</div>
-											<!-- <div class="form-group">
+											<div class="form-group">
 												<label class="col-sm-3 control-label" for="form-control-22">Bukti
 													Pembayaran</label>
 												<div class="col-sm-9">
@@ -156,7 +156,7 @@
 														<small>Allowed type : jpg jpeg png</small>
 													</p>
 												</div>
-											</div> -->
+											</div>
 											<div class="form-group">
 												<button class="btn btn-primary btn-block btn-next" type="submit">Daftar
 													<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
