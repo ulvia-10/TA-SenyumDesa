@@ -1,6 +1,6 @@
 <div class="card">
 	<div class="card-header">
-		<h5>Update Exist Account
+		<h5>Edit Akun
 	</div>
 	<form class="form theme-form" action="<?php echo base_url('data_akun/edit') ?>" method="POST" enctype="multipart/form-data">
 		<div class="card-body">

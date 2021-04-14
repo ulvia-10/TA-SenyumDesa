@@ -5,9 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Cuba admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
-    <meta name="keywords"
+   <meta name="keywords"
         content="admin template, Cuba admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="pixelstrap">
     <link rel="icon" href="<?php echo base_url() ?>assets/pusatbackend/images/logo/logo.png" type="image/x-icon">
@@ -100,7 +98,7 @@
                             <div class="notification-box"><i data-feather="bell"> </i></div>
                             <ul class="notification-dropdown onhover-show-div">
                                 <li><i data-feather="bell"></i>
-                                    <h6 class="f-18 mb-0">Notitications</h6>
+                                    <h6 class="f-18 mb-0">Notifications</h6>
                                 </li>
                                 <li>
                                     <p><i class="fa fa-circle-o me-3 font-primary"> </i>Delivery processing <span
@@ -120,53 +118,6 @@
                                 </li>
                                 <li><a class="btn btn-primary" href="#">Check all notification</a></li>
                             </ul>
-                        </li>
-                        <li class="onhover-dropdown">
-                            <div class="notification-box"><i data-feather="star"></i></div>
-                            <div class="onhover-show-div bookmark-flip">
-                                <div class="flip-card">
-                                    <div class="flip-card-inner">
-                                        <div class="front">
-                                            <ul class="droplet-dropdown bookmark-dropdown">
-                                                <li class="gradient-primary"><i data-feather="star"></i>
-                                                    <h6 class="f-18 mb-0">Bookmark</h6>
-                                                </li>
-                                                <li>
-                                                    <div class="row">
-                                                        <div class="col-4 text-center"><i data-feather="file-text"></i>
-                                                        </div>
-                                                        <div class="col-4 text-center"><i data-feather="activity"></i>
-                                                        </div>
-                                                        <div class="col-4 text-center"><i data-feather="users"></i>
-                                                        </div>
-                                                        <div class="col-4 text-center"><i data-feather="clipboard"></i>
-                                                        </div>
-                                                        <div class="col-4 text-center"><i data-feather="anchor"></i>
-                                                        </div>
-                                                        <div class="col-4 text-center"><i data-feather="settings"></i>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="text-center">
-                                                    <button class="flip-btn" id="flip-btn">Add New Bookmark</button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="back">
-                                            <ul>
-                                                <li>
-                                                    <div class="droplet-dropdown bookmark-dropdown flip-back-content">
-                                                        <input type="text" placeholder="search...">
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <button class="d-block flip-back" id="flip-back">Back</button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </li>
                         <li>
                             <div class="mode"><i class="fa fa-moon-o"></i></div>
@@ -224,8 +175,6 @@
                             </div>
                             <ul class="profile-dropdown onhover-show-div">
                                 <li><a href="#"><i data-feather="user"></i><span>Account </span></a></li>
-                                <li><a href="#"><i data-feather="mail"></i><span>Inbox</span></a></li>
-                                <li><a href="#"><i data-feather="settings"></i><span>Settings</span></a></li>
                                 <li><a href="<?= base_url('Login/logout'); ?>"><i data-feather="log-in"> </i><span>Log
                                             out</span></a>
                                 </li>
@@ -281,7 +230,11 @@
                                     <a class="sidebar-link " href="<?= base_url('Dashboard'); ?>"><i
                                             data-feather="home"></i><span class="lan-3">Dashboard </span></a>
                                 </li>
-
+                                <li class="sidebar-list">
+                                    <a class="sidebar-link sidebar-title link-nav" href="<?= base_url('Profile'); ?>"><i
+                                            data-feather="user-check">
+                                        </i><span>Profile</span></a>
+                                </li>
                                 <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
                                         href="<?= base_url('Data_akun'); ?>"><i data-feather="user"></i></i><span>Data
                                             Akun</span></a></li>
@@ -301,11 +254,7 @@
                                         </i><span>Data Keuangan</span></a>
                                 </li>
 
-                                <li class="sidebar-list">
-                                    <a class="sidebar-link sidebar-title link-nav" href="<?= base_url('Profile'); ?>"><i
-                                            data-feather="user-check">
-                                        </i><span>Profile</span></a>
-                                </li>
+                              
                                 <li class="sidebar-list">
                                     <a class="sidebar-link sidebar-title link-nav" href="kanban.html"><i
                                             data-feather="book-open">

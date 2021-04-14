@@ -3,7 +3,7 @@
 <footer class="bg-light py-3">
         <div class="row align-items-center">
             <div class="col-md-6 text-light" style="margin-left:400px;">
-                Copy Right © 2021 Senyum Desa | Web Development <i class="lar la-heart text-primary heartBeat2"></i> <u><a
+                Copy Right © 2021 Senyum Desa | IT Polinema<i class="lar la-heart text-primary heartBeat2"></i> <u><a
                         class="text-primary" href="index-4.html#">Luvia</a></u></div>
 
         </div>

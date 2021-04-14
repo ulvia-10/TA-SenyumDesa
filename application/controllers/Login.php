@@ -12,12 +12,16 @@ class Login extends CI_Controller
 
         // load model
         $this->load->model('M_login');
+        $this->load->library('form_validation');
     }
 
 
     // main view tampilan
     function index()
     {
+        if ($this->session->userdata('email')) {
+			redirect('akun_profile');
+		}
 
         $data = array(
             'namafolder'    => "login",
@@ -41,6 +45,8 @@ class Login extends CI_Controller
       $this->load->view('templating/template_loginheader', $data);
       $this->load->view('templating/template_loginfooter', $data);
     }
+
+
     function proses_register(){
        	// print_r( $this->input->post() );
 		$this->load->helper(array('form', 'url'));
@@ -48,11 +54,14 @@ class Login extends CI_Controller
 
 		$this->form_validation->set_rules('full_name','full_name','required');
 		$this->form_validation->set_rules('username','username','required');
+        // $this->form_validation->set_rules('email','email','required');
 		$this->form_validation->set_rules('password','password','required');
+        // $this->form_validation->set_rules('telp','telp','required');
 		$this->form_validation->set_rules('tempat_lahir','tempat_lahir','required');
 		$this->form_validation->set_rules('tanggal_lahir','tanggal_lahir','required');
 		$this->form_validation->set_rules('asal','asal','required');
 		$this->form_validation->set_rules('gender','gender','required');
+        // $this->form_validation->set_rules('address','address','required');
 
         if ($this->form_validation->run()==FALSE){
 
@@ -64,6 +73,7 @@ class Login extends CI_Controller
               
             }
         }
+
     function forgetpassword()
     {
         $data = array(
@@ -123,12 +133,16 @@ class Login extends CI_Controller
                             break;
 
                         case 'korwil':
-                            # code...
+                            // redirect('dashboard/indexkorwil');
                             break;
 
                         case 'anggota':
-                            # code...
+                           redirect('rekruitment');
                             break;
+                            
+                        case 'calon_anggota':
+                            redirect('rekruitment/indexcalonanggota');
+                             break;
                     }
 
 
@@ -136,13 +150,18 @@ class Login extends CI_Controller
                     // echo "Bener ". $row['level'];
                 } else {
 
-                    echo "pw salah";
+                    echo "Mohon maaf Password yang Anda masukkan salah! Mohon coba lagi ";
                     // wrong password
+                    $this->session->set_flashdata('msg', '<div class="alert alert-danger"><small>Password Salah! </small></div>');
+                    redirect('login');
                 }
             } else {
 
 
                 echo "Akun tidak aktif";
+                //flashdata 
+                $this->session->set_flashdata('msg', '<div class="alert alert-danger"><small>Akun '.$username.' tidak aktif </small></div>');
+                redirect('login');
             }
         } else {
 

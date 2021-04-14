@@ -1,38 +1,31 @@
-<!-- tap on top starts-->
-<div class="tap-top"><i data-feather="chevrons-up"></i></div>
-    <!-- tap on tap ends-->
-    <!-- page-wrapper Start-->
-    <div class="page-wrapper">
-      <div class="container-fluid p-0">
-        <div class="row">
-          <div class="col-12">     
-            <div class="login-card">
-              <div>
-                <div class="login-main"> 
-                  <form class="theme-form">
-                    <h4>Create Your Password</h4>
-                    <div class="form-group">
-                      <label class="col-form-label">New Password</label>
-                      <input class="form-control" type="password" name="login[password]" required="" placeholder="*********">
-                      <div class="show-hide"><span class="show"></span></div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-form-label">Retype Password</label>
-                      <input class="form-control" type="password" name="login[password]" required="" placeholder="*********">
-                    </div>
-                    <div class="form-group mb-0">
-                      <div class="checkbox p-0">
-                        <input id="checkbox1" type="checkbox">
-                        <label class="text-muted" for="checkbox1">Remember password</label>
-                      </div>
-                      <button class="btn btn-primary btn-block" type="submit">Done </button>
-                    </div>
-                    <p class="mt-4 mb-0">Don't have account?<a class="ms-2" href="<?php echo base_url('login/processLogin') ?>">Create Account</a></p>
-                  </form>
+<section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 col-12">
+                <img class="img-fluid" src="http://themeht.com/winck/ltr/assets/images/about/04.png" alt="">
                 </div>
-              </div>
+                <div class="col-lg-5 col-12">
+                    <div>
+                        <h2 class="mb-3">Forget Password</h2>
+                        <!-- Flashdata -->
+                        <?php echo $this->session->flashdata('msg') ?>
+                        <form action="<?php echo base_url('login/processLogin') ?>" method="POST">
+                        <div class="form-group">
+                                <input type="text" class="form-control" name="email" placeholder="Type your email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="username" placeholder="Type New Password">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="password" placeholder="Retype new Password">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Change</button>
+                        </form>
+                        <div class="d-flex align-items-center mt-4"> <span class="text-muted me-1">Do you have an account?</span>
+                            <a href="<?php echo base_url('login/index') ?>">Sign In</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
+    </section>

@@ -113,7 +113,7 @@ class M_dataakun extends CI_Model
             $this->db->insert( 'akun_profile', $data );
 
             //flashdata 
-            $elementHTML = '<div class="alert alert-primary alert-dismissible fade show"><b>Pemberitahuan</b> <br> Akun berhasil ditambahkan pada ' . date('d F Y H.i A') . '</div>';
+            $elementHTML = '<div class="alert alert-primary alert-dismissible fade show"><br> Akun berhasil ditambahkan pada ' . date('d F Y H.i A') . '</div>';
             $this->session->set_flashdata('msg', $elementHTML);
 
             redirect('data_akun/index');
@@ -124,7 +124,7 @@ class M_dataakun extends CI_Model
             $config['upload_path'] = './assets/images/';    
             $config['allowed_types'] = 'jpg|png|jpeg';
             $this->load->library('upload', $config);
-            if($this->upload->do_upload('userfile')){
+            if($this->upload->do_upload('photo')){
                 $return = array('result' => 'success', 'file' => $this->upload->data(), 'error' => '');      
                 return $return;
             }else{    

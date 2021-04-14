@@ -12,6 +12,7 @@ class Profile extends CI_Controller
 
         // load model
         $this->load->model('M_login');
+        $this->load->model('M_dataakun');
     }
 
 
@@ -22,7 +23,7 @@ class Profile extends CI_Controller
         $data = array(
             'namafolder'    => "profile",
             'namafileview'  => "V_editProfile",
-            'title'         => "Profile"
+            'title'         => "Profile | Senyum Desa"
         );
         // templating
         $this->load->view('templating/Template_dashboardadmin', $data);
@@ -32,8 +33,9 @@ class Profile extends CI_Controller
     {
         $data['title'] = 'Edit | Donasi';
 
-        $where = array('id_profile' => $id_profile);
-        $data['akun_profile'] = $this->M_profile->edit_data($where, 'akun_profile')->result();
+        // $where = array('id_profile' => $id_profile);
+        $data['profile']= $this->M_dataakun->getProfileByID($id);
+        // $data['akun_profile'] = $this->M_profile->edit_data($where, 'akun_profile')->result();
         $this->load->view('templating/dashboardadmin/Template_dashboardadmin2');
         $this->load->view('Donasi/V_editprofile', $data);
         $this->load->view('templating/dashboardadmin/template_footer');

@@ -27,4 +27,14 @@ class Dashboard extends CI_Controller
         );
         $this->load->view('templating/template_dashboardadmin', $data);
     }
+    public function indexkorwil()
+    {
+        $data = array(
+
+            'namafolder'    => "korwil",
+            'namafileview'  => "V_korwil",
+            'title'         => "Dashboard Korwil| Senyum Desa"
+        );
+        $this->load->view('templating/template_korwil', $data);
+    }
 }

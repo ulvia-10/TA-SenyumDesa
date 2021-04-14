@@ -6,7 +6,7 @@
             </div>
             <div class="col-12 col-lg-7 col-xl-6 order-lg-1">
                 <h1 class="display-4 mb-3">
-                    Senyum Desa<span class="font-w-7">Indonesia</span>
+                    Senyum Desa ~<span class="font-w-7">Indonesia</span>
                 </h1>
                 <!-- Text -->
                 <p class="lead text-muted mb-4">Senyum Desa mempunyai tujuan yakni sebagai wadah bagi para generasi muda
@@ -48,8 +48,8 @@
                         <div class="row align-items-center">
                             <div class="col-12 col-sm-4">
                                 <div class="counter">
-                                    <div class="counter-desc"> <span class="count-number h2 text-primary" data-to="50"
-                                            data-speed="2000">50</span>
+                                    <div class="counter-desc"> <span class="count-number h2 text-primary" data-to="500"
+                                            data-speed="2000">200</span>
                                         <span class="h2 text-primary">+</span>
                                         <h6 class="text-muted mb-0">Anggota</h6>
                                     </div>
@@ -66,8 +66,8 @@
                             </div>
                             <div class="col-12 col-sm-4 mt-2 mt-sm-0">
                                 <div class="counter">
-                                    <div class="counter-desc"> <span class="count-number h2 text-primary" data-to="120"
-                                            data-speed="2000">120</span>
+                                    <div class="counter-desc"> <span class="count-number h2 text-primary" data-to="20"
+                                            data-speed="2000">20</span>
                                         <span class="h2 text-primary">+</span>
                                         <h6 class="text-muted mb-0">Cabang Wilayah</h6>
                                     </div>

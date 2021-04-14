@@ -7,7 +7,7 @@
                 <a class="footer-logo h2 text-primary mb-0 font-w-7" href="index.html">
                     S<span class="text-white font-w-4">Senyum Desa</span>
                 </a>
-                <p class="my-3 text-light">Terimakasih Telah berpartisipasi pada senyum desa</p>
+                <p class="my-3 text-light">Terimakasih <br> Telah berpartisipasi di Senyum Desa! </p>
                 <ul class="list-inline">
                     <li class="list-inline-item"><a class="border rounded px-2 py-1 text-light" href="index-4.html#"><i
                                 class="la la-facebook"></i></a>

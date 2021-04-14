@@ -165,7 +165,7 @@ class Data_akun extends CI_Controller
 			if($upload ['result'] == 'success'){
 				$this->M_dataakun->tambahdataakun($upload);
 				$this->session->set_flashdata('flash-data','ditambahkan');
-				// redirect('akun_profile','refresh');
+				redirect('akun_profile','refresh');
 			}else{
 				echo $upload['error'];
 			}

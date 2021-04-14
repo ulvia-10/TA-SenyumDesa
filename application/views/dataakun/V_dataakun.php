@@ -20,7 +20,7 @@
 <div class="col-sm-12">
     <div class="card">
         <div class="card-header">
-            <h5>Data Akun Senyum Desa</h5><span>Data Akun di seluruh Cabang Senyum Desa</span>
+            <h5>Data Akun Senyum Desa</h5><span>Data Akun Ini,Data seluruh akun di seluruh Cabang</span>
         </div>
         <div class="card-body">
 
@@ -36,6 +36,7 @@
                             <th>Username</th>
                             <th>Wilayah</th>
                             <th>Level</th>
+                            <th>Asal</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -48,7 +49,7 @@
                             <td><?= $prf["username"]; ?></td>
                             <td><?= $prf["name_cabang"]; ?></td>
                             <td><span class="badge badge-info"><?=$prf["level"];?></span></td>
-                           
+                            <td><?= $prf["asal"]; ?></td>
                             <td>
                                 <!-- detail -->
                                 <a href="<?= base_url(); ?>data_akun/detail/<?= $prf['id_profile']; ?>"

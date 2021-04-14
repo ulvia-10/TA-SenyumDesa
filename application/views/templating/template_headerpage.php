@@ -66,7 +66,7 @@
         <!-- preloader start -->
 
         <div id="ht-preloader">
-            <div class="loader clear-loader"> <span>S</span>
+            <div class="loader clear-loader"> 
             <span>S</span>
                 <span>e</span>
                 <span>n</span>
@@ -132,7 +132,7 @@
                                                         Coming soon Open donasi</a>
                                                 </li>
                                                 <li><a class="dropdown-item" href="product-single.html">
-                                                        kegiatan</a>
+                                                        Kegiatan</a>
                                                 </li>
                                             </ul>
                                         </li>

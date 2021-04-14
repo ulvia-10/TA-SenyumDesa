@@ -2,15 +2,9 @@
          	<div class="page-title">
          		<div class="row">
          			<div class="col-6">
-         				<h3>Default</h3>
+         				<h3>Dashboard</h3>
          			</div>
-         			<div class="col-6">
-         				<ol class="breadcrumb">
-         					<li class="breadcrumb-item"><a href="index.html"> <i data-feather="home"></i></a></li>
-         					<li class="breadcrumb-item">Dashboard</li>
-         					<li class="breadcrumb-item active">Default </li>
-         				</ol>
-         			</div>
+         			
          		</div>
          	</div>
          </div>
@@ -141,68 +135,6 @@
          				</div>
          			</div>
          		</div>
-         		<div class="col-xl-4 xl-50 appointment-sec box-col-6">
-         			<div class="row">
-         				<div class="col-xl-12 appointment">
-         					<div class="card">
-         						<div class="card-header card-no-border">
-         							<div class="header-top">
-         								<h5 class="m-0">appointment</h5>
-         								<div class="card-header-right-icon">
-         									<select class="button btn btn-primary">
-         										<option>Today</option>
-         										<option>Tomorrow</option>
-         										<option>Yesterday</option>
-         									</select>
-         								</div>
-         							</div>
-         						</div>
-         						<div class="card-body pt-0">
-         							<div class="appointment-table table-responsive">
-         								<table class="table table-bordernone">
-         									<tbody>
-         										<tr>
-         											<td><img class="img-fluid img-40 rounded-circle mb-3"
-         													src="<?php echo base_url() ?>assets/pusatbackend/images/appointment/app-ent.jpg"
-         													alt="Image description">
-         												<div class="status-circle bg-primary"></div>
-         											</td>
-         											<td class="img-content-box"><span class="d-block">Venter
-         													Loren</span><span class="font-roboto">Now</span></td>
-         											<td>
-         												<p class="m-0 font-primary">28 Sept</p>
-         											</td>
-         											<td class="text-end">
-         												<div class="button btn btn-primary">Done<i
-         														class="fa fa-check-circle ms-2"></i></div>
-         											</td>
-         										</tr>
-         										<tr>
-         											<td><img class="img-fluid img-40 rounded-circle"
-         													src="<?php echo base_url() ?>assets/pusatbackend/images/appointment/app-ent.jpg"
-         													alt="Image description">
-         												<div class="status-circle bg-primary"></div>
-         											</td>
-         											<td class="img-content-box"><span class="d-block">John
-         													Loren</span><span class="font-roboto">11:00</span></td>
-         											<td>
-         												<p class="m-0 font-primary">22 Sept</p>
-         											</td>
-         											<td class="text-end">
-         												<div class="button btn btn-danger">Pending<i
-         														class="fa fa-check-circle ms-2"></i></div>
-         											</td>
-         										</tr>
-         									</tbody>
-         								</table>
-         							</div>
-         						</div>
-         					</div>
-         				</div>
-
-         			</div>
-         		</div>
-         	
 
          		<div class="col-xl-4 col-lg-12 xl-50 calendar-sec box-col-6">
          			<div class="card gradient-primary o-hidden">
