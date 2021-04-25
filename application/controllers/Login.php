@@ -46,8 +46,22 @@ class Login extends CI_Controller
       $this->load->view('templating/template_loginfooter', $data);
     }
 
+    function changepassword()
+    {
+        $data = array(
+            'namafolder' => "login",
+            'namafileview' => "V_changepassword",
+            'title' => "Change Password | Senyum Desa"
 
-    function proses_register(){
+        );
+      // templating
+      $this->load->view('templating/template_loginheader', $data);
+      $this->load->view('templating/template_loginfooter', $data);
+    }
+
+
+    function proses_register()
+    {
        	// print_r( $this->input->post() );
 		$this->load->helper(array('form', 'url'));
 		$this->load->library('form_validation');
@@ -55,7 +69,17 @@ class Login extends CI_Controller
 		$this->form_validation->set_rules('full_name','full_name','required');
 		$this->form_validation->set_rules('username','username','required');
         // $this->form_validation->set_rules('email','email','required');
-		$this->form_validation->set_rules('password','password','required');
+		// $this->form_validation->set_rules('password','password','required');
+        $this->form_validation->set_rules(
+			'password1',
+			'Password',
+			'required|trim|min_length[6]|matches[password2]',
+			[
+				'matches' => 'Password Dont Match!',
+				'min_length' => 'Password Dont Short!'
+			]
+		);
+		$this->form_validation->set_rules('password2', 'Password', 'required|trim|matches[password1]');
         // $this->form_validation->set_rules('telp','telp','required');
 		$this->form_validation->set_rules('tempat_lahir','tempat_lahir','required');
 		$this->form_validation->set_rules('tanggal_lahir','tanggal_lahir','required');
@@ -77,7 +101,8 @@ class Login extends CI_Controller
     {
         $data = array(
             'namafolder' => "login",
-            'namafileview' => "V_forgetpassword"
+            'namafileview' => "V_forgetpassword",
+            'title' => "Forget Password | Senyum Desa"
         );
         $this->load->view('templating/template_loginheader', $data);
       $this->load->view('templating/template_loginfooter', $data);
@@ -120,6 +145,7 @@ class Login extends CI_Controller
                         'sess_fullname'     => $row['full_name'],
                         'sess_level'        => $row['level'],
                         'sess_foto'         => $row['photo']
+                        
                     );
                     $this->session->set_userdata($data_session);
 

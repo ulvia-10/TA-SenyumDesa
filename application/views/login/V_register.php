@@ -16,8 +16,6 @@
 				<div class="col-lg-8 col-md-10 ms-auto me-auto">
 					<div class="register-form text-center">
 
-
-
 						<form id="contact-form" action="<?php echo base_url('login/proses_register')?>" method="post">
 							<div class="row">
 								<div class="col-md-6">
@@ -58,19 +56,20 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input id="form_password" type="password" name="password" class="form-control"
+										<input id="password1" type="password" name="password1" class="form-control"
 											placeholder="Password" required="required"
 											data-error="password is required." maxlength="6">
+											<?= form_error('password1', '<small class="text-danger pl-3">', '</small>'); ?>
 										<div class="help-block with-errors"></div>
 									</div>
 								</div>
-								<!-- <div class="col-md-6">
+								<div class="col-md-6">
 									<div class="form-group">
-										<input id="form_password1" type="password" name="password" class="form-control"
-											placeholder="Confirm Password" required="required" data-error="Confirm Password is required." maxlength="6" >
+										<input id="password2" type="password" name="password2" class="form-control"
+											placeholder="Repeat Password" required="required" data-error="Confirm Password is required." maxlength="6" >
 										<div class="help-block with-errors"></div>
 									</div>
-								</div> -->
+								</div>
 							</div>
 							<div class="row">
 								<div class="col-md-6">
@@ -104,7 +103,7 @@
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input id="form_password" type="text" name="address" class="form-control"
+										<input id="form_alamat" type="text" name="address" class="form-control"
 											placeholder="Alamat" required="required" data-error="Alamat is required.">
 										<div class="help-block with-errors"></div>
 									</div>

@@ -42,7 +42,7 @@
                         </p>
                         <p class="card-text">
                             <label for="created_at"><b> Tanggal Pembuatan akun: </b></label>
-                            <?= $profile['created_at']; ?>
+                            <?= date('d-m-Y H:i:s',strtotime($profile['created_at'])); ?>
                         </p>
                         <p class="card-text">
                             <label for="email"><b> Email: </b></label>
@@ -60,7 +60,7 @@
                         </p>
                         <p class="card-text">
                             <label for="tanggal_lahir"><b> Tanggal lahir: </b></label>
-                            <?= $profile['tanggal_lahir']; ?>
+                            <?= date('d-m-Y',strtotime($profile['tanggal_lahir'])); ?>
                         </p>
                         <p class="card-text">
                             <label for="asal"><b> Asal: </b></label>

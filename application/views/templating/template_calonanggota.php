@@ -82,7 +82,8 @@
 								Hi,<?php echo $this->session->userdata('sess_fullname') ?></h4>
 						</li>
 						<li class="dropdown">
-							<a class="dropdown-toggle" href="theme-1.html#" role="button" data-toggle="dropdown"
+						<!-- notification -->
+							<!-- <a class="dropdown-toggle" href="theme-1.html#" role="button" data-toggle="dropdown"
 								aria-haspopup="true">
 								<span class="icon-with-child hidden-xs">
 									<span class="icon"> <i class="fa fa-bell" aria-hidden="true"></i></span>
@@ -93,7 +94,7 @@
 									<span class="badge badge-primary pull-right">7</span>
 									Notifications
 								</span>
-							</a>
+							</a> -->
 							<div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
 								<div class="dropdown-header">
 									<a class="dropdown-link" href="theme-1.html#">Mark all as read</a>
@@ -207,16 +208,14 @@
 						</li>
 						<li class="dropdown hidden-xs">
 							<button class="navbar-account-btn" data-toggle="dropdown" aria-haspopup="true">
-								<img class="circle" width="36" height="36"
-									src="http://demo.madebytilde.com/elephant-v1.4.0/theme-1/img/0180441436.jpg"
-									<?php echo $this->session->userdata('sess_foto') ?> alt="Teddy Wilson">
+								<img class="circle" src="<?= base_url('./assets/images/' . $profile['photo']); ?>" width="36" height="36" alt="Teddy Wilson">
 								<span><?php echo $this->session->userdata('sess_fullname') ?></span>
 								<span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu dropdown-menu-right" style="text-align:center;">
 								<li><a href="<?= base_url('rekruitment/profilecalon');?>"> <i class="fa fa-user"
 											aria-hidden="true"></i> My Profile</a></li>
-								<li><a href="<?= base_url('login/logout');?>"> <i class="fa fa-power-off"
+								<li><a href="<?= base_url('login/logout');?>" data-toggle="modal" data-target="#successModalAlertColored" > <i class="fa fa-power-off"
 											aria-hidden="true"></i> Log Out</a></li>
 							</ul>
 						</li>
@@ -269,7 +268,7 @@
 								</a>
 							</li> -->
 
-							<li class="sidenav-heading">Account</li>
+							<li class="sidenav-heading">Akun</li>
 
 
 							<li class="sidenav-item">
@@ -281,7 +280,7 @@
 							</li>
 							</li>
 
-							<li class="sidenav-heading">Recruitement</li>
+							<li class="sidenav-heading">Pendaftaran</li>
 							<li class="sidenav-item ">
 								<a href="<?= base_url('rekruitment/formulir');?>">
 									<span class="sidenav-icon icon"> <i class="fa fa-book" aria-hidden="true"></i>
@@ -291,19 +290,9 @@
 							</li>
 
 							</li>
-
-
-							<li class="sidenav-item">
-								<a href="<?= base_url('rekruitment/contacts');?>">
-									<span class="sidenav-icon icon icon-works"><i class="fa fa-phone fa-xs"
-											aria-hidden="true"></i></span>
-									<span class="sidenav-label">Contacts Us</span>
-								</a>
-							</li>
-
 							<li class="sidenav-heading">Log Out</li>
 							<li class="sidenav-item">
-								<a href="<?= base_url('Login/logout');?>">
+								<a href="<?= base_url('login/logout');?>">
 									<span class="sidenav-icon icon icon-works"> <i class="fa fa-power-off"
 											aria-hidden="true"></i> </span>
 									<span class="sidenav-label">Log Out</span>

@@ -153,9 +153,9 @@
                                     </ul>
                                 </div>
                                 <div class="d-sm-flex align-items-center justify-content-end ms-auto"> <a
-                                        class="btn btn-light btn-sm" href="<?= base_url('Login'); ?>">Login</a> <a
+                                        class="btn btn-light btn-sm" href="<?= base_url('login'); ?>">Login</a> <a
                                         class="btn btn-light btn-sm ms-3 d-sm-inline-block d-none"
-                                        href="signup.html">Sign Up</a>
+                                        href="<?= base_url('login/register'); ?>">Sign Up</a>
                                 </div>
                             </nav>
 

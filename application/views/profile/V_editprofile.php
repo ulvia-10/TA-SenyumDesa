@@ -31,7 +31,7 @@
                      <form  action="<?php echo base_url('profile/changepassword') ?>" method="POST">
                          <div class="row mb-2">
                              <div class="col-auto"><img class="img-70 rounded-circle" alt=""
-                                     src="../assets/images/user/7.jpg"></div>
+                             src='<?= base_url() ?>assets/images/<?= $profile["photo"]; ?>' ></div>
                              <div class="col">
                                  <h3 class="mb-1"><?php echo $this->session->userdata('sess_fullname') ?></h3>
                                  <p class="mb-4"><?php echo ucfirst($this->session->userdata('sess_level')) ?></p>
@@ -39,14 +39,14 @@
                          </div>
                          <div class="mb-3">
                              <label class="form-label">Old Password</label>
-                             <input class="form-control" name="password" type="password" value="password" maxlength="6">
+                             <input class="form-control" name="password" type="password" value="<?= $profile['password'] ;?>" maxlength="6" >
                          </div>
                          <div class="mb-3">
                              <label class="form-label">New Password</label>
                              <input class="form-control" name="password" type="password" value="password" maxlength="6">
                          </div>
                          <div class="form-footer">
-                             <button class="btn btn-primary btn-block">Save</button>
+                             <button class="btn btn-secondary btn-block">Save <i class="fa fa-clipboard" aria-hidden="true"></i> </button>
                          </div>
                      </form>
                  </div>
@@ -72,7 +72,7 @@
                                      value="<?php echo $akun_profile->id_profile ?>" placeholder="id profile"> -->
                                  <label class="form-label">Username</label>
                                  <input class="form-control" name="username" id="username" type="text"
-                                     value="" placeholder="Username"
+                                     value="<?= $profile['username'] ;?>" placeholder="Username"
                                      required="">
                              </div>
                          </div>
@@ -80,7 +80,7 @@
                              <div class="mb-3">
                                  <label class="form-label">Full Name</label>
                                  <input class="form-control" name="full_name" id="full_name" type="text"
-                                     value="" placeholder="Nama Lengkap" required="">
+                                     value="<?= $profile['full_name'] ;?>" placeholder="Nama Lengkap" required="">
                              </div>
                          </div>
                          <div class="col-sm-6 col-md-6">
@@ -94,7 +94,7 @@
                              <div class="mb-3">
                                  <label class="form-label">Tempat Lahir</label>
                                  <input class="form-control" name="tempat_lahir" id="tempat_lahir" type="text"
-                                     value="" placeholder="Tempat Lahir"
+                                     value="<?= $profile['tempat_lahir'] ;?>" placeholder="Tempat Lahir"
                                      required="">
                              </div>
                          </div>
@@ -102,19 +102,19 @@
                              <div class="mb-3">
                                  <label class="form-label">Asal</label>
                                  <input class="form-control" name="asal" id="asal" type="text"
-                                     value="" placeholder="Asal pekerjaan" required="">
+                                     value="<?= $profile['asal'] ;?>" placeholder="Asal pekerjaan" required="">
                              </div>
                          </div>
                          <div class="col-sm-6 col-md-6">
                              <div class="mb-3">
                                  <label class="form-label">Foto</label>
                                  <input class="form-control" name="photo" id="photo" type="file"
-                                     value="" placeholder="Asal pekerjaan" required="">
+                                     value="<?= $profile['photo'] ;?>" required="">
                              </div>
                          </div>
                      </div>
                      <div class="card-footer text-end">
-                         <button class="btn btn-primary" type="submit">Update Profile</button>
+                         <button class="btn btn-primary" type="submit">Update Profile  <i class="fa fa-pencil" aria-hidden="true"></i> </button>
                      </div>
              </form>
          </div>

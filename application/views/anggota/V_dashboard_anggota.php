@@ -1,178 +1,26 @@
-  <!-- content -->
-
-        <div class="layout-content-body">
-          <div class="row gutter-xs">
-            <div class="col-xs-6 col-md-3">
-              <div class="card">
-                <div class="card-values">
-                  <div class="p-x">
-                    <small>Visitors</small>
-                    <h3 class="card-title fw-l">185,118</h3>
-                  </div>
-                </div>
-                <div class="card-chart">
-                  <canvas data-chart="line" data-animation="false" data-labels='["Jun 21", "Jun 20", "Jun 19", "Jun 18", "Jun 17", "Jun 16", "Jun 15"]' data-values='[{"colorStop1": "#e5e5f5", "colorStop2": "#ffffff", "y0": 0, "y1": 36, "borderColor": "#7e7dcf", "data": [25250, 23370, 25568, 28961, 26762, 30072, 25135]}]' data-scales='{"yAxes": [{ "ticks": {"max": 31072}}]}' data-hide='["legend", "points", "scalesX", "scalesY", "tooltips"]' height="50"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-6 col-md-3">
-              <div class="card">
-                <div class="card-values">
-                  <div class="p-x">
-                    <small>New visitors</small>
-                    <h3 class="card-title fw-l">68,494</h3>
-                  </div>
-                </div>
-                <div class="card-chart">
-                  <canvas data-chart="line" data-animation="false" data-labels='["Jun 21", "Jun 20", "Jun 19", "Jun 18", "Jun 17", "Jun 16", "Jun 15"]' data-values='[{"colorStop1": "#e5e5f5", "colorStop2": "#ffffff", "y0": 0, "y1": 36,"borderColor": "#7e7dcf", "data": [8796, 11317, 8678, 9452, 8453, 11853, 9945]}]' data-scales='{"yAxes": [{ "ticks": {"max": 12853}}]}' data-hide='["legend", "points", "scalesX", "scalesY", "tooltips"]' height="50"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-6 col-md-3">
-              <div class="card">
-                <div class="card-values">
-                  <div class="p-x">
-                    <small>Pageviews</small>
-                    <h3 class="card-title fw-l">925,590</h3>
-                  </div>
-                </div>
-                <div class="card-chart">
-                  <canvas data-chart="line" data-animation="false" data-labels='["Jun 21", "Jun 20", "Jun 19", "Jun 18", "Jun 17", "Jun 16", "Jun 15"]' data-values='[{"colorStop1": "#e5e5f5", "colorStop2": "#ffffff", "y0": 0, "y1": 36,"borderColor": "#7e7dcf", "data": [116196, 145160, 124419, 147004, 134740, 120846, 137225]}]' data-scales='{"yAxes": [{ "ticks": {"max": 157004}}]}' data-hide='["legend", "points", "scalesX", "scalesY", "tooltips"]' height="50"></canvas>
-                </div>
-              </div>
-            </div>
-          
-          </div>
-          <div class="row gutter-xs">
-            <div class="col-xs-12 col-md-6">
-              <div class="card">
-                <div class="card-body">
-                  <div class="pull-left">
-                    <h4 class="card-title">Audience Overview</h4>
-                  </div>
-                  <div class="pull-right" data-toggle="buttons">
-                    <label class="btn btn-outline-primary btn-xs btn-pill active">
-                      <input type="radio" name="options" id="option1" autocomplete="off" checked="checked"> Past 24hr
-                    </label>
-                    <label class="btn btn-outline-primary btn-xs btn-pill">
-                      <input type="radio" name="options" id="option2" autocomplete="off"> Past 7 days
-                    </label>
-                    <label class="btn btn-outline-primary btn-xs btn-pill">
-                      <input type="radio" name="options" id="option3" autocomplete="off"> Past 30 days
-                    </label>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="card-chart">
-                    <canvas data-chart="line" data-animation="false" data-labels='["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]' data-values='[{"label": "This week", "backgroundColor": "#7e7dcf", "borderColor": "#7e7dcf", "data": [5022, 11017, 12230, 8801, 14102, 21512, 9932]}, {"label": "Last week", "backgroundColor": "#1db2c6", "borderColor": "#1db2c6", "data": [5012, 7203, 10204, 15052, 14820, 21805, 13203]}]' data-tooltips='{"mode": "label"}' data-hide='["gridLinesX", "legend", "points"]' data-scales='{"yAxes": [{"gridLines": {"color": "#f5f5f5"}, "ticks": {"fontColor": "#bcc1c6", "maxTicksLimit": 5}}], "xAxes": [{ "gridLines": {"color": "#f5f5f5"}, "ticks": {"fontColor": "#bcc1c6"}} ]}' height="128"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-          <div class="row gutter-xs">
-            <div class="col-md-8 col-md-push-4">
-              <div class="row gutter-xs">
-                <div class="col-md-6">
-                
-        
-                </div>
-              
-              </div>
-            </div>
-            <div class="col-md-4 col-md-pull-8">
-              <div class="card">
-                <div class="card-header">
-                  <div class="card-actions">
-                    <button type="button" class="card-action card-toggler" title="Collapse"></button>
-                    <button type="button" class="card-action card-reload" title="Reload"></button>
-                    <button type="button" class="card-action card-remove" title="Remove"></button>
-                  </div>
-                  <strong>Activity Log</strong>
-                </div>
-                <div class="card-body">
-                  <div class="timeline">
-                    <div class="timeline-item">
-                      <div class="timeline-segment">
-                        <span class="timeline-divider"></span>
-                      </div>
-                      <div class="timeline-content"></div>
-                    </div>
-                    <div class="timeline-item">
-                      <div class="timeline-segment">
-                        <img class="timeline-media img-circle" width="40" height="40" src="<?php echo base_url() ?>assets/img/0299419341.jpg" alt="Harry Jones">
-                      </div>
-                      <div class="timeline-content">
-                        <div class="timeline-row">
-                          <a href="dashboard-1.html#">Harry Jones</a>
-                          <small>5 min ago</small>
-                        </div>
-                        <div class="timeline-row">
-                          A user accepted a request to receive a transferred repository.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="timeline-item">
-                      <div class="timeline-segment">
-                        <img class="timeline-media img-circle" width="40" height="40" src="<?php echo base_url() ?>assets/img/0180441436.jpg" alt="Teddy Wilson">
-                      </div>
-                      <div class="timeline-content">
-                        <div class="timeline-row">
-                          <a href="dashboard-1.html#">Teddy Wilson</a>
-                          <small>5 min ago</small>
-                        </div>
-                        <div class="timeline-row">
-                          A user sent a request to transfer a repository to another user or organization.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="timeline-item">
-                      <div class="timeline-segment">
-                        <img class="timeline-media img-circle" width="40" height="40" src="<?php echo base_url() ?>assets/img/0310728269.jpg" alt="Daniel Taylor">
-                      </div>
-                      <div class="timeline-content">
-                        <div class="timeline-row">
-                          <a href="dashboard-1.html#">Daniel Taylor</a>
-                          <small>7 min ago</small>
-                        </div>
-                        <div class="timeline-row">
-                          A collaborator was added to a repository.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="timeline-item">
-                      <div class="timeline-segment">
-                        <img class="timeline-media img-circle" width="40" height="40" src="<?php echo base_url() ?>assets/img/0299419341.jpg" alt="Harry Jones">
-                      </div>
-                      <div class="timeline-content">
-                        <div class="timeline-row">
-                          <a href="dashboard-1.html#">Harry Jones</a>
-                          <small>9 min ago</small>
-                        </div>
-                        <div class="timeline-row">
-                          A collaborator was added to a repository.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="timeline-item">
-                      <div class="timeline-segment">
-                        <img class="timeline-media img-circle" width="40" height="40" src="<?php echo base_url() ?>assets/img/0180441436.jpg" alt="Teddy Wilson">
-                      </div>
-                      <div class="timeline-content">
-                        <div class="timeline-row">
-                          <a href="dashboard-1.html#">Teddy Wilson</a>
-                          <small>11 min ago</small>
-                        </div>
-                        <div class="timeline-row">
-                          A repository <a href="dashboard-1.html#">elephant</a> was created.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <button class="btn btn-primary btn-sm btn-block" type="button">See all</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+<br> <br>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xl-6 xl-100 box-col-12">
+			<div class="card">
+				<div class="cal-date-widget card-body">
+					<div class="row">
+						<div class="col-xl-6 col-xs-12 col-md-6 col-sm-6">
+							<div class="cal-info text-center">
+							<img src="<?= base_url('assets/Home/images/hero/logo.png'); ?>" class="img-thumbnail" style="width: 75%;"  alt="...">
+								<div class="d-inline-block mt-2"><span class="b-r-dark pe-3">March</span><span
+										class="ps-3">2018</span></div>
+								<p class="mt-4 f-14 text-dark">Hi! <span><?php echo $this->session->userdata('sess_fullname') ?></span> <br> Anggota  Senyum Desa! <i class="fas fa-hand-holding-heart    "></i> </p>
+							</div>
+						</div>
+						<div class="col-xl-6 col-xs-12 col-md-6 col-sm-6">
+							<div class="cal-datepicker">
+								<div class="datepicker-here float-sm-end" data-language="en"> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -50,7 +50,7 @@
                             <td><?= $prf["name_cabang"]; ?></td>
                             <td><span class="badge badge-info"><?=$prf["level"];?></span></td>
                             <td><?= $prf["asal"]; ?></td>
-                            <td>
+                                <td>
                                 <!-- detail -->
                                 <a href="<?= base_url(); ?>data_akun/detail/<?= $prf['id_profile']; ?>"
                                     class="badge badge-primary">

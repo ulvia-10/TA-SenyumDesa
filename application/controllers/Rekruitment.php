@@ -9,6 +9,8 @@ class Rekruitment extends CI_Controller
         	// load model
 		$this->load->model('M_rekruitment');
 		$this->load->model('M_dataakun');
+		$this->load->model('M_master');
+		$this->load->model('M_login');
 		$this->load->library('form_validation');
 
 		// pengecekan sesi 
@@ -28,7 +30,7 @@ class Rekruitment extends CI_Controller
 			'title'         => "Home | Senyum Desa"
 		);
 		//disesuaikan sama dengan nama view$ 
-		$this->load->view('templating/template_anggota', $data);
+		$this->load->view('templating/template_anggotanew', $data);
        
 	}
 	public function indexcalonanggota()
@@ -39,6 +41,7 @@ class Rekruitment extends CI_Controller
 			'namafileview'	=> "V_dashboard_calon.php",
 			'title'         => "Recruitment | Senyum Desa"
 		);
+		$data['profile']= $this->M_rekruitment->getDataProfile();
 		//disesuaikan sama dengan nama view$ 
 		$this->load->view('templating/template_calonanggota', $data);
        
@@ -51,10 +54,12 @@ class Rekruitment extends CI_Controller
 			'namafileview'	=> "V_petunjuk.php",
 			'title'         => "Petunjuk Pendaftaran | Senyum Desa"
 		);
+		$data['profile']= $this->M_rekruitment->getDataProfile();
 		//disesuaikan sama dengan nama view$ 
 		$this->load->view('templating/template_calonanggota', $data);
        
 	}
+
 	public function profilecalon()
 	{
 		$data = array(
@@ -63,21 +68,31 @@ class Rekruitment extends CI_Controller
 			'namafileview'	=> "V_profile.php",
 			'title'         => "Profile | Senyum Desa"
 		);
-		//disesuaikan sama dengan nama view$ 
-		$data['profile'] = $this->db->get_where('akun_profile', ['username' =>  $this->session->userdata('username')])->row_array();
+		// $data['profile'] = $this->db->get_where('akun_profile', ['full_name' =>  $this->session->userdata('full_name')])->row_array();
+		// // //disesuaikan sama dengan nama view$ 
+		$data['profile']= $this->M_rekruitment->getDataProfile();
+
+		
 		$this->load->view('templating/template_calonanggota', $data);
 
        
 	}
+	
 	public function formulir()
 	{
+		$dataMasterCabang = $this->M_master->getallwilayah();
+
 		$data = array(
 
 			'namafolder'	=> "calon_anggota",
 			'namafileview'	=> "V_formulir.php",
 			'title'         => "Formulir | Senyum Desa",
 
-			'profile'	=> $this->M_rekruitment->getDataProfile()
+			'profile'	=> $this->M_rekruitment->getDataProfile(),
+	
+			// // variable
+			'data_master'	=> $dataMasterCabang
+
 		);
 		$this->load->view('templating/template_calonanggota', $data);
        
@@ -91,9 +106,13 @@ class Rekruitment extends CI_Controller
 			'title'         => "Contact Us | Senyum Desa",
 		);
 		//disesuaikan sama dengan nama view$ 
+		$data['profile']= $this->M_rekruitment->getDataProfile();
 		$this->load->view('templating/template_calonanggota', $data);
        
 	}
+	// public function totalKegiatan(){
+	// 	sele
+	// }
 	public function prosestambah(){
 			// print_r( $this->input->post() );
 			$this->load->helper(array('form', 'url'));

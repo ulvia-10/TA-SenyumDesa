@@ -13,6 +13,7 @@ class Profile extends CI_Controller
         // load model
         $this->load->model('M_login');
         $this->load->model('M_dataakun');
+        $this->load->model('M_rekruitment');
     }
 
 
@@ -25,8 +26,10 @@ class Profile extends CI_Controller
             'namafileview'  => "V_editProfile",
             'title'         => "Profile | Senyum Desa"
         );
+        $data['profile']= $this->M_rekruitment->getDataProfile();
+        $this->load->view('templating/template_dashboardadmin', $data);
         // templating
-        $this->load->view('templating/Template_dashboardadmin', $data);
+     
     }
 
     public function prosesedit($id_profile)

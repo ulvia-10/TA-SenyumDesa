@@ -24,15 +24,15 @@
                         <form action="<?php echo base_url('login/processLogin') ?>" method="POST">
 
                             <div class="form-group">
-                                <input type="text" class="form-control" name="username" placeholder="username">
+                                <input type="text" class="form-control" name="username" placeholder="Username">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" name="password" placeholder="password">
-                                <br><a class="btn-link" href="<?php echo base_url('login/forgetpassword') ?>">Forgot Password?</a>
+                                <input type="password" class="form-control" name="password" placeholder="Password">
+                                <br><a class="btn-link" style="margin-left:300px;" href="<?php echo base_url('login/forgetpassword') ?>">Forgot Password?</a>
                             </div>
-                            <button type="submit" class="btn btn-primary">Login</button>
+                            <button type="submit" class="btn btn-primary" >Login Now</button>
                         </form>
-                        <div class="d-flex align-items-center mt-4"> <span class="text-muted me-1">Don't have an
+                        <div class="d-flex align-items-center mt-4" > <span class="text-muted me-1">Don't have an
                                 account?</span>
                             <a href="<?php echo base_url('login/register') ?>">Sign Up</a>
                         </div>

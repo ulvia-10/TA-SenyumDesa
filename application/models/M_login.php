@@ -17,6 +17,7 @@ class M_login extends CI_Model
         $password = password_hash( $this->input->post('password'), PASSWORD_BCRYPT );
 
         $dataProfile = array(
+            'id_profile'    => $this->input->post('id_profile'),
             'full_name'    => $this->input->post('full_name'),
             'username'    => $this->input->post('username'),
             'password'     => $password,
@@ -31,10 +32,6 @@ class M_login extends CI_Model
         // ambil id_profile yang terakhir kali di masukkan
         $ambilId_profile = $this->db->insert_id();
 
-
-
-
-
         // tabel informasiprofile 
         $dataInformasiProfile = array(
 
@@ -47,15 +44,11 @@ class M_login extends CI_Model
         // execute
         $this->db->insert( 'data_informasiprofile', $dataInformasiProfile );
 
-
-
-
-
         //flashdata 
         $elementHTML = '<div class="alert alert-primary alert-dismissible fade show"><b>Pemberitahuan</b> <br> Akun berhasil ditambahkan pada ' . date('d F Y H.i A') . '</div>';
         $this->session->set_flashdata('msg', $elementHTML);
  
-        redirect('login/register');
+        redirect('login/index');
       
     }
 }

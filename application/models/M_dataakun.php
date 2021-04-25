@@ -27,7 +27,7 @@ class M_dataakun extends CI_Model
 
         public function getProfileByID($id){
             
-            $sql = "SELECT akun_profile.*, data_informasiprofile.*, master_cabang.*
+            $sql = "SELECT akun_profile.*, data_informasiprofile.*, master_cabang.name_cabang
             FROM akun_profile
             
             LEFT JOIN data_informasiprofile ON data_informasiprofile.id_profile = akun_profile.id_profile
@@ -61,8 +61,6 @@ class M_dataakun extends CI_Model
             'photo'  => $upload ['file']['file_name']
     ];
     
-        // $this->db->where('id_profile',  $id_profile);
-        // $this->db->update('akun_profile', $data);
         //flashdata 
         print_r($data);
         $msg = '<div class="alert alert-info">Akun berhasil diperbarui <br><small>Pada tanggal '.date('d F Y H.i A').'</small></div>';

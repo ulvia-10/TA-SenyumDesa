@@ -80,7 +80,7 @@
 
 								<div class="col-xs-6 col-sm-9" style="margin-left: 90px;">
 									<div class="pricing-card">
-										<div class="pricing-card-header bg-primary">
+										<div class="pricing-card-header bg-warning">
 											<h4 class="m-y-sm">Tahap Wawancara <i class="fa fa-microphone"
 													aria-hidden="true"></i></h4>
 										</div>
@@ -116,9 +116,6 @@
 										sistem
 									</small>
 								</p>
-								<li class="divider"></li>
-								<button href="#tab-3" class="btn btn-primary btn-pill btn-next"
-									type="button">Continue</button>
 							</div>
 						</div>
 
@@ -129,7 +126,7 @@
 
 								<div class="col-xs-6 col-sm-9" style="margin-left: 90px;">
 									<div class="pricing-card">
-										<div class="pricing-card-header bg-primary">
+										<div class="pricing-card-header bg-default">
 											<h4 class="m-y-sm">Tahap Pembekalan <i
 													class="fas fa-hand-holding-heart    "></i></h4>
 										</div>

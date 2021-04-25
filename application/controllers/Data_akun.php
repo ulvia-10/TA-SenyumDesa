@@ -23,7 +23,7 @@ class Data_akun extends CI_Controller
         }
 	}
 
-    
+	
 	public function index()
 	{
 		$data = array(
@@ -47,7 +47,6 @@ class Data_akun extends CI_Controller
 		$data ['profile'] = $this->M_dataakun->get_allakun();
 		$this->load->view('templating/template_dashboardadmin', $data);
 	}
-
 	public function edit($id)
 	{
 	
@@ -97,7 +96,6 @@ class Data_akun extends CI_Controller
 	public function detail($id)
 	{
 		$data = array(
-
 			'namafolder'	=> "dataakun",
 			'namafileview'	=> "V_detail_dataakun",
 			'title'         => "Detail Akun | Senyum Desa"
@@ -106,6 +104,7 @@ class Data_akun extends CI_Controller
 		$this->load->view('templating/template_dashboardadmin', $data);
 	
 	}
+	
 	public function delete($id)
 	{
 		$this->M_dataakun->hapusdataakun($id);
@@ -117,8 +116,6 @@ class Data_akun extends CI_Controller
 	public function tambah()
 	{
 
-
-		
 		$dataMasterCabang = $this->M_master->getallwilayah();
 		$data = array(
 

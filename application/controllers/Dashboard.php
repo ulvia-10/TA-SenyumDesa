@@ -8,6 +8,7 @@ class Dashboard extends CI_Controller
     {
 
         parent::__construct();
+        $this->load->model('M_rekruitment');
 
         // pengecekan sesi 
         if (empty($this->session->userdata('sess_fullname'))) {
@@ -25,6 +26,7 @@ class Dashboard extends CI_Controller
             'namafileview'  => "V_dashboard",
             'title'         => "Dashboard | Senyum Desa"
         );
+        $data['profile']= $this->M_rekruitment->getDataProfile();
         $this->load->view('templating/template_dashboardadmin', $data);
     }
     public function indexkorwil()

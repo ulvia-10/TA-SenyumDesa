@@ -5,16 +5,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class M_rekruitment extends CI_Model
 {
 
-
-
     function getDataProfile() {
 
+
         $id_profile = $this->session->userdata('sess_id_profile');
+        $sql ="SELECT akun_profile.*, data_informasiprofile.*, master_cabang.name_cabang, master_cabang.status_cabang
+        FROM akun_profile
+        LEFT JOIN data_informasiprofile ON data_informasiprofile.id_profile = akun_profile.id_profile
+        LEFT JOIN master_cabang ON master_cabang.id_cabang = akun_profile.id_cabang
+       
+        WHERE akun_profile.id_profile = '$id_profile'";
+        $query = $this->db->query($sql)->row_array();
 
-        $this->db->where('id_profile', $id_profile);
-        return $this->db->get('akun_profile')->row_array();
+        return $query;
     }
-
+   
 
 
     public function tambahdata( $cv, $buktibayar, $foto){
@@ -22,7 +27,7 @@ class M_rekruitment extends CI_Model
         $id_profile = $this->session->userdata('sess_id_profile');
 
         $data = array(
-            
+            'id_cabang'   => $this->input->post('name_cabang'),
             'full_name'    => $this->input->post('full_name'),
             'asal'         => $this->input->post('asal'),
             'reason_join'  => $this->input->post('reason_join'),
@@ -37,7 +42,7 @@ class M_rekruitment extends CI_Model
         $this->db->update( 'akun_profile', $data );
 
         //flashdata 
-        $elementHTML = '<div class="alert alert-primary alert-dismissible fade show"><b>Pemberitahuan</b> <br> Akun berhasil ditambahkan pada ' . date('d F Y H.i A') . '</div>';
+        $elementHTML = '<div class="alert alert-primary alert-dismissible fade show"><b>Pemberitahuan</b> <br> Data berhasil ditambahkan pada ' . date('d F Y H.i A') . '</div>';
         $this->session->set_flashdata('msg', $elementHTML);
 
         redirect('rekruitment/formulir');
