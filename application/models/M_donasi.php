@@ -4,17 +4,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class M_donasi extends CI_Model
 {
+    //tampilan Donasi
     public function getallDonasi()
     {
-        $sql = $this->db->query('SELECT akun_profile.*, data_donasi.*, master_cabang.*
-            FROM akun_profile
-            
-            JOIN data_donasi ON data_donasi.id_profile = akun_profile.id_profile
-            LEFT JOIN master_cabang ON master_cabang.id_cabang = akun_profile.id_cabang
-            
-            WHERE akun_profile.id_profile');
-            return $sql;
+        $this->db->select('data_donasi.Id_donasi, data_donasi.no_rekening, data_donasi.nama_donatur, data_donasi.tgl_donasi, master_cabang.id_cabang, master_cabang.name_cabang')
+            ->from('data_donasi')
+            ->join('master_cabang', 'data_donasi.id_cabang = master_cabang.id_cabang');
+        return $this->db->get();
     }
+    //tampilan Cari Data
     public function cariData()
     {
         $keyword = $this->input->post('keyword');
@@ -23,7 +21,7 @@ class M_donasi extends CI_Model
         return $this->db->get('data_donasi')->result_array();
     }
 
-    // proses insert
+    // Proses Tambah Donasi
     function processInsertDonasi()
     {
 
@@ -48,6 +46,7 @@ class M_donasi extends CI_Model
         redirect('Donasi');
     }
 
+    // Menunjukan Semua Detail DOnasi
     function getallDetail()
     {
         $this->db->select('*');
@@ -57,24 +56,21 @@ class M_donasi extends CI_Model
         //return $query->result();
     }
 
-
-    // hapus
+    // hapus Donasi
     function processDeleteDonasi($Id_donasi)
     {
-
-
         $this->db->where('Id_donasi', $Id_donasi);
         $this->db->delete('data_donasi');
-
-
         // flashdata
         $elementHTML = '<div class="alert alert-warning"><b>Pemberitahuan</b> <br> Data Donasi berhasil dihapus pada ' . date('d F Y H.i A') . '</div>';
         $this->session->set_flashdata('pesan', $elementHTML);
-
         // redirect
         redirect('Donasi');
     }
 
+    //edit donasi
+    /**===========================================================*/
+    /** Fungsi UPDATE */
 
     function edit_data($where, $table)
     {
@@ -86,7 +82,8 @@ class M_donasi extends CI_Model
         $this->db->where($where);
         $this->db->update($table, $data);
 
-        $elementHTML = '<div class="alert alert-success"><b>Pemberitahuan</b> <br> Data Cabang Berhasil Di Update ' . date('d F Y H.i A') . '</div>';
+        $elementHTML = '<div class="alert alert-success"><b>Pemberitahuan</b> <br> Data Donasi berhasil ditambahkan pada ' . date('d F Y H.i A') . '</div>';
         $this->session->set_flashdata('pesan', $elementHTML);
     }
+    /**===========================================================*/
 }

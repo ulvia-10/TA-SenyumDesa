@@ -159,6 +159,7 @@ class Login extends CI_Controller
 
                         case 'korwil':
                             // redirect('dashboard/indexkorwil');
+                            redirect('adminkorwil/dashboard');
                             break;
 
                         case 'anggota':

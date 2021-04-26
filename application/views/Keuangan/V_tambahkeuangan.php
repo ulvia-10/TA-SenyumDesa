@@ -24,7 +24,7 @@
             <div class="row">
                 <div class="col">
                     <div class="mb-3">
-                        <label class="form-label" for="judul">judul</label>
+                        <label class="form-label" for="judul">Judul</label>
                         <input class="form-control form-control-lg" name="judul" id="judul" type="text"
                             placeholder="Masukan judul" required="">
                     </div>
@@ -33,9 +33,9 @@
             <div class="row">
                 <div class="col">
                     <div class="mb-3">
-                        <label class="form-label" for="deskripsi">Dekripsi</label>
-                        <input class="form-control" name="deskripsi" id="deskripsi" type="text"
-                            placeholder="Masukan Nama deskripsi" required="">
+                        <label class="form-label" for="deskripsi">Deskripsi</label>
+                        <textarea class="form-control form-control-lg" name="deskripsi" id="deskripsi" type="text"
+                            placeholder="Masukan deskripsi" required=""></textarea>
                     </div>
                 </div>
             </div>
@@ -43,16 +43,37 @@
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label" for="tipe">Tipe</label>
-                        <input class="form-control form-control-sm" name="tipe" id="tipe" type="text"
-                            placeholder="Masukan tipe" required="">
+                        <select class="form-select form-control-lg digits" name="tipe" id="tipe" required="">
+                            <option selected="" disabled="" value="">Pilih Tipe</option>
+                            <option value="pendaftaran">Pendaftaran</option>
+                            <option value="sosialisasi">sosialisasi</option>
+                            <option value="raker">Rapat Kerja</option>
+                            <option value="danadarurat">Dana Darurat</option>
+                        </select>
                     </div>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="mb-3">
+                        <label class="form-label" for="jenis_keuangan">Jenis Keuangan</label>
+                        <select class="form-select form-control-lg digits" name="jenis_keuangan" id="jenis_keuangan"
+                            required="">
+                            <option selected="" disabled="" value="">Pilih Jenis Kas</option>
+                            <option value="masuk">Masuk</option>
+                            <option value="keluar">Keluar</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col">
                     <div class="mb-3">
                         <label class="form-label" for="cabang">Cabang</label>
                         <select class="form-select form-control-lg digits" name="cabang" id="cabang" required="">
+                            <option selected="" disabled="" value="">Pilih Cabang Wilayah</option>
                             <?php foreach ($dataCabang->result_array() as $row) { ?>
                             <option value="<?php echo $row['id_cabang'] ?>"><?php echo $row['name_cabang'] ?></option>
                             <?php } ?>
@@ -70,18 +91,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                    <div class="mb-3">
-                        <label class="form-label" for="jenis_keuangan">Jenis Keuangan</label>
-                        <select class="form-select form-control-lg digits" name="jenis_keuangan" id="jenis_keuangan"
-                            required="">
-                            <option value="masuk">Masuk</option>
-                            <option value="keluar">Keluar</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
+
 
 
         </div>

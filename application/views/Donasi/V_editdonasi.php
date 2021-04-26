@@ -49,6 +49,8 @@
                     </div>
                 </div>
 
+
+
                 <div class="row">
                     <div class="col">
                         <div class="mb-3">
@@ -59,6 +61,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col">
                         <div class="mb-3">
@@ -69,6 +72,17 @@
                                 <option value="Belum Lunas">Belum Lunas</option>
                                 <option value="Kadaluwarsa">Kadaluwarsa</option>
                             </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3">
+                            <label class="form-label" for="tgl_donasi">Tanggal Donasi</label>
+                            <input class="form-control" name="tgl_donasi" id="tgl_donasi" type="date"
+                                value="<?php echo $donasi->tgl_donasi ?>" placeholder="perubahan Tanggal Donasi"
+                                required="">
                         </div>
                     </div>
                 </div>
@@ -85,5 +99,3 @@
     </div>
 
 </div>
-
-<!-- Container-fluid Ends-->

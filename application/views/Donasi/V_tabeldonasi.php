@@ -36,9 +36,6 @@
                             <th>No Rekening</th>
                             <th>Nama Donatur</th>
                             <th>Nama Cabang</th>
-                            <th>Nama Petugas</th>
-                            <th>Status </th>
-                            <th>Jumlah Donasi</th>
                             <th>Tanggal Donasi</th>
                             <th>Action</th>
                         </tr>
@@ -52,15 +49,12 @@
                             <td><?= $dns["no_rekening"]; ?></td>
                             <td><?= $dns["nama_donatur"]; ?></td>
                             <td><?= $dns["name_cabang"]; ?></td>
-                            <td><?= $dns["full_name"]; ?></td>
-                            <td><?= $dns["status"]; ?></td>
-                            <td><?= $dns["jml_donasi"]; ?></td>
                             <td><?= $dns["tgl_donasi"]; ?></td>
                             <td>
 
 
                                 <!-- edit -->
-                                <a href="<?= base_url(); ?>Donasi/prosesedit/<?= $dns['Id_donasi']; ?>"
+                                <a href="<?= base_url(); ?>Donasi/edit/<?= $dns['Id_donasi']; ?>"
                                     class="badge badge-success"><i class="fa fa-edit "></i> </a>
 
                                 <!-- hapus -->
@@ -101,8 +95,6 @@
                             <th>No Rekening</th>
                             <th>Nama Donatur</th>
                             <th>Nama Cabang</th>
-                            <th>Status </th>
-                            <th>Jumlah Donasi</th>
                             <th>Tanggal Donasi</th>
                         </tr>
                     </tfoot>

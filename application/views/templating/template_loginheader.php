@@ -147,6 +147,15 @@
 												</li>
 											</ul>
 										</li>
+										    <!-- *************************DONASI***************************** -->
+											<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle"
+                                                href="index-4.html#" data-bs-toggle="dropdown">Donasi <i class="fa fa-hand-o-down" aria-hidden="true"></i></a>
+                                            <ul class="dropdown-menu">
+											<li><a class="dropdown-item" href="<?= base_url('donasi/donasinonanggota'); ?>">Tambah Bukti Donasi</a></li>
+                                                <li><a class="dropdown-item" href="feature-blog.html">Daftar Donasi</a>
+                                                </li>
+                                            </ul>
+                                        </li>
 									</ul>
 								</div>
 								<div class="d-sm-flex align-items-center justify-content-end"> <a

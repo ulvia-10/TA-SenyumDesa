@@ -64,13 +64,38 @@ class Master extends CI_Controller
         $this->load->view('templating/Template_dashboardadmin', $data);
     }
 
+    public function edit()
+    {
+        $data = array(
+
+            'namafolder'    => "master",
+            'namafileview'    => "V_master_cabang",
+            'title'         => "Master Cabang"
+        );
+        $this->load->view('templating/Template_dashboardadmin', $data);
+    }
 
     // proses sistem mastercabang
-    // proses tambah
-    function prosesTambah()
-    {
 
-        $this->M_master->processInsertCabang();
+
+    // proses tambah
+    public function prosesTambah()
+    {
+        $data = array();
+
+        if ($this->input->post('submit')) { // Jika user menekan tombol Submit (Simpan) pada form
+            // lakukan upload file dengan memanggil function upload yang ada di GambarModel.php
+            $upload = $this->M_master->upload();
+
+            if ($upload['result'] == "success") { // Jika proses upload sukses
+                // Panggil function save yang ada di M_master.php untuk menyimpan data ke database
+                $this->M_master->save($upload);
+
+                redirect('Master/index'); // Redirect kembali ke halaman awal / halaman view data
+            } else { // Jika proses upload gagal
+                $this->session->set_flashdata('flash-data', 'ditambahkan'); // Ambil pesan error uploadnya untuk dikirim ke file form dan ditampilkan
+            }
+        }
     }
 
     // proses hapus
@@ -91,33 +116,46 @@ class Master extends CI_Controller
         }
     }
 
-    public function prosesedit($masterid)
+
+    //Proses Edit Cabang
+    public function update()
     {
-        $data['title'] = 'Edit Senyum Desa';
-        $where = array('id_cabang' => $masterid);
-        $data['master_cabang'] = $this->M_master->edit_data($where, 'master_cabang')->result();
-        $this->load->view('templating/dashboardadmin/Template_dashboardadmin2');
+        $id_cabang = $this->uri->segment(3);
+
+        $config['upload_path'] = './assets/images/';
+        $config['allowed_types'] = 'jpg|png|jpeg';
+        $config['max_size']    = '2048';
+        $config['remove_space'] = TRUE;
+
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload('photo')) //sesuai dengan name pada form 
+        {
+            echo 'anda belum upload';
+        } else {
+            //tampung data dari form
+            $name_cabang = $this->input->post('name_cabang');
+            $status_cabang = $this->input->post('status_cabang');
+            $file = $this->upload->data();
+            $photo = $file['file_name'];
+
+            $this->M_master->update(
+                array(
+                    'name_cabang' => $name_cabang,
+                    'status_cabang' => $status_cabang,
+                    'photo' => $photo
+                ),
+                array(
+                    'id_cabang' => $this->input->post('id_cabang')
+                )
+            );
+            $this->session->set_flashdata('flash-data', 'ditambahkan');
+            redirect('master/index');
+        }
+
+        $data['master_cabang'] = $this->M_master->get_by_id($id_cabang);
+        $this->load->view('templating/dashboardadmin/template_dashboardadmin2', $data);
         $this->load->view('master/V_editmaster_cabang', $data);
-        $this->load->view('templating/dashboardadmin/template_footer');
-    }
-
-    function update()
-    {
-        $id_cabang = $this->input->post('id_cabang');
-        $name_cabang = $this->input->post('name_cabang');
-        $status_cabang = $this->input->post('status_cabang');
-
-        $data = array(
-            'name_cabang' => $name_cabang,
-            'status_cabang' => $status_cabang
-
-        );
-
-        $where = array(
-            'id_cabang' => $id_cabang
-        );
-
-        $this->M_master->update_data($where, $data, 'master_cabang');
-        redirect('master');
+        $this->load->view('templating/dashboardadmin/template_footer', $data);
     }
 }

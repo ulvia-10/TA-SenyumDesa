@@ -16,8 +16,8 @@
  					<p class="card-text">
  						<label for="username"><b> Username: </b></label>
  						<?= $donasi['username']; ?></p>
-					<p class="card-text">
- 						<label for="created_at"><b> Tanggal Pembuatan akun:  </b></label>
+ 					<p class="card-text">
+ 						<label for="created_at"><b> Tanggal Pembuatan akun: </b></label>
  						<?= $donasi['created_at']; ?></p>
  					<p class="card-text">
  						<label for="email"><b> Email: </b></label>

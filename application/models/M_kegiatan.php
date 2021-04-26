@@ -34,12 +34,13 @@ class M_kegiatan extends CI_Model
 
     public function timeline(){
         $id_profile = $this->session->userdata('sess_id_profile');
-        $sql= "SELECT akun_profile.*, data_kegiatan.*
-        FROM data_kegiatan
+        $sql= " SELECT akun_profile.*, data_kegiatan.*
+        FROM akun_profile
        
-        LEFT JOIN akun_profile ON akun_profile.id_kegiatan = akun_profile.id_kegiatan   
+        LEFT JOIN data_kegiatan ON akun_profile.id_profile = akun_profile.id_profile   
        
-        WHERE data_kegiatan.id_profile  = '$id_profile'AND data_kegiatan.status = 'publish'";
+        WHERE akun_profile.id_profile  = '$id_profile'AND data_kegiatan.status = 'publish'";
+       
         return $this ->db->query($sql);
 
     }
