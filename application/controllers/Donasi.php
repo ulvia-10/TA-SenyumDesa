@@ -14,12 +14,12 @@ class Donasi extends CI_Controller
         $this->load->model('M_master');
         $this->load->library('form_validation');
 
-        // // pengecekan sesi 
-        // if (empty($this->session->userdata('sess_fullname'))) {
+        // pengecekan sesi 
+        if (empty($this->session->userdata('sess_fullname'))) {
 
-        //     $this->session->set_flashdata('msg', '<div class="alert alert-warning"><b>Pemberitahuan</b> <br> <small>Maaf anda harus login terlebih dahulu</small></div>');
-        //     redirect('login');
-        // }
+            $this->session->set_flashdata('msg', '<div class="alert alert-warning"><b>Pemberitahuan</b> <br> <small>Maaf anda harus login terlebih dahulu</small></div>');
+            redirect('login');
+        }
     }
 
 
@@ -132,4 +132,48 @@ class Donasi extends CI_Controller
         redirect('Donasi/index');
     }
     /**===========================================================*/
+    // Anggota 
+    //riwayat donasi anggota 
+    public function riwayatdonasi()
+    {
+        // $getDataCabang = $this->M_master->getallwilayah();
+        
+        $data = array(
+
+            'namafolder'    => "anggota",
+            'namafileview'    => "V_history_donasi",
+            'title'         => "Donasi",
+        );
+        $this->load->view('templating/Template_anggotanew', $data);
+    }
+    // tambah donasi 
+    public function tambahbuktidonasi()
+    {
+        // $getDataCabang = $this->M_master->getallwilayah();
+        
+        $data = array(
+
+            'namafolder'    => "anggota",
+            'namafileview'    => "V_tambah_buktidonasi",
+            'title'         => "Donasi",
+        );
+        $this->load->view('templating/Template_anggotanew', $data);
+    }
+// riwayat donasi non anggota
+public function riwayatdonasinonanggota()
+{
+  
+    $data = array(
+
+        'namafolder'    => "donasi",
+        'namafileview'    => "V_riwayat_nondonasi",
+        'title'         => "Donasi Non Anggota | Senyum Desa",
+
+       
+    );
+    $this->load->view('templating/template_loginheader', $data);
+  
+    
+}
+
 }

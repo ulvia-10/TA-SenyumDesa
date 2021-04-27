@@ -1,11 +1,10 @@
 <div class="container-fluid">
     <div class="page-title">
-    <h6>Yuk upload buktimu disini <i class="fa fa-hand-o-down" aria-hidden="true"></i></h6>
-    <a href="<?= base_url(); ?>keuangan/tambahbuktikas/" class="btn btn-success btn-sm mb-3">
+    <a href="<?= base_url(); ?>donasi/tambahbuktidonasi/" class="btn btn-secondary btn-sm mb-3">
                     <i class="fa fa-plus" aria-hidden="true"></i>Upload Bukti</a>
         <div class="row">
             <div class="col-6" >
-                <h6>Riwayat Pembayaran Kas</h6>
+                <h6>Riwayat Pembayaran Donasi</h6>
             </div>
         </div>
     </div>

@@ -15,7 +15,7 @@
   							<div class="cd-timeline-img cd-picture bg-primary"><i class="icon-pencil-alt"></i></div>
   							<div class="cd-timeline-content">
 							  <img src="<?$kgt?>" alt="">
-  								<h4><?=$kgt['judul']?><span></h4>
+  								<h5><?=$kgt['judul']?><span></h5>
   								<p class="m-0"><?=$kgt['deskripsi'];?></p><span
   									class="cd-date"><?= date('d-m-Y',strtotime($kgt['tanggal_kegiatan']));?>
   									<!-- <span class="counter">

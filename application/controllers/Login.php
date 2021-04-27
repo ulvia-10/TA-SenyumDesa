@@ -142,6 +142,7 @@ class Login extends CI_Controller
                     $data_session = array(
 
                         'sess_id_profile'   => $row['id_profile'],
+                        'sess_id_cabang'    => $row['id_cabang'],
                         'sess_fullname'     => $row['full_name'],
                         'sess_level'        => $row['level'],
                         'sess_foto'         => $row['photo']

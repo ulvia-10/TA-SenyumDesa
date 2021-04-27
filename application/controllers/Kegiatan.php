@@ -133,6 +133,7 @@ public function index()
 		$this->load->view('templating/template_anggotanew', $data);
        
 	}
+	
 
 
 }

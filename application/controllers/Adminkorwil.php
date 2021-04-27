@@ -12,6 +12,7 @@ class Adminkorwil extends CI_Controller
         parent::__construct();
         $this->load->model('M_korwil');
         $this->load->model('M_master');
+        $this->load->model('M_kegiatan');
 
         // pengecekan sesi 
         if (empty($this->session->userdata('sess_fullname'))) {
@@ -119,7 +120,9 @@ class Adminkorwil extends CI_Controller
         );
 
         // $data['notif'] = $this->db->get('tbl_notif')->result_array();
-        //$data['notif'] = $this->M_korwil->Notifikasi();
+        $data['kegiatan_publish'] = $this->M_kegiatan->datakegiatan( "publish" );
+        $data['kegiatan_expired'] = $this->M_kegiatan->datakegiatan( "expired" );
+        $data['kegiatan_draft'] = $this->M_kegiatan->datakegiatan( "draft" );
         $this->load->view('templating/korwil/template_korwil', $data);
     } 
 
@@ -328,6 +331,10 @@ class Adminkorwil extends CI_Controller
     }
 
     //--------------  *** END controller keuangan****/--------------------------------------------------------//
+    function tambahkegiatankorwil()
+    {
 
-    // end function
+        $this->M_kegiatan->tambahkegiatankorwil();
+    }
+    
 }

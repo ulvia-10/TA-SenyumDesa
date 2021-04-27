@@ -210,9 +210,16 @@
 								</li>
 								<li class="sidebar-list">
 									<a class="sidebar-link sidebar-title link-nav" href="<?= base_url('kegiatan/historypembayaran'); ?>"><i
-											data-feather="slack">
-										</i><span>Riwayat Pembayaran Kas</span></a>
+											data-feather="shopping-bag">
+										</i><span>Kas</span></a>
 								</li>
+								<!-- donasi -->
+								<li class="sidebar-list">
+									<a class="sidebar-link sidebar-title link-nav" href="<?= base_url('donasi/riwayatdonasi'); ?>"><i
+											data-feather="airplay">
+										</i><span>Donasi</span></a>
+								</li>
+							
                                 <li class="sidebar-list">
 									<a class="sidebar-link sidebar-title link-nav" href="<?= base_url('login/logout'); ?>"><i
 											data-feather="power">

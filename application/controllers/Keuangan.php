@@ -91,4 +91,18 @@ class Keuangan extends CI_Controller
     public function edit()
     {
     }
+    // ANGGOTA DATA KAS TAMBAH 
+    public function tambahbuktikas()
+    {
+        $data = array(
+
+            'namafolder'    => "anggota",
+            'namafileview'    => "V_tambah_buktikas",
+            'title'         => "Kas | Senyum Desa",
+
+            // // variable
+            // 'dataCabang'    => $getDataCabang
+        );
+        $this->load->view('templating/Template_anggotanew', $data);
+    }
 }
